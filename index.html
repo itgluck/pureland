@@ -65,7 +65,7 @@
 			bottom: .4em;
 		}
 	.logo img{
-		width: 3em;
+		width: 4em;
 	}
 	</style>
 
@@ -148,15 +148,15 @@
 			info.update();
 		}
 
-		function zoomToFeature(e) {
-			map.fitBounds(e.target.getBounds());
-		}
+		// function zoomToFeature(e) {
+		// 	map.setView(e.target.getBounds());
+		// }
 
 		function onEachFeature(feature, layer) {
 			layer.on({
 				mouseover: highlightFeature,
 				mouseout: resetHighlight,
-				click: zoomToFeature
+				// click: zoomToFeature
 			});
 		}
 
@@ -187,7 +187,7 @@
 				// title="Состояние площадки",
 				grades = [1, 2, 3, 4, 5 ],
 				labels = [],
-				from, to;
+				from;
 
 			for (var i = 0; i < grades.length; i++) {
 				from = grades[i];
@@ -204,7 +204,9 @@
 		legend.addTo(map);
 
 	</script>
-	<div class="logo" ><a href="mailto:it.gluck@ya.ru?subject=Проект: Чистая Страна&body=Внесите свой вклад в чистоту города, отправьте фото мусорных контейнеров (в каком бы состоянии они не находились) - вместе мы сделаем город чище!!!"><img src="./logo_m.png" ></a></div>
+	<div class="logo" >
+		<a href="mailto:it.gluck@ya.ru?subject=Проект: Чистая Страна&body=Внесите свой вклад в чистоту города, отправьте фото мусорных контейнеров (в каком бы состоянии они не находились) - вместе мы сделаем город чище!!!">
+		<img src="./logo_m.png" ></a></div>
 </body>
 
 </html>
