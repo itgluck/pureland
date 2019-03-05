@@ -57,12 +57,22 @@
 			margin-right: 8px;
 			opacity: 0.7;
 		}
+		.logo{
+			position: absolute;
+			
+			z-index: 1000;
+			left: 1em;
+			bottom: .4em;
+		}
+	.logo img{
+		width: 3em;
+	}
 	</style>
 
 </head>
 
 <body>
-123
+загрузка карты..
 	<div id="map"></div>
 
 	<script type="text/javascript" src="points.js"></script>
@@ -156,7 +166,7 @@
 
 			pointToLayer: function (feature, latlng) {
 			return L.circleMarker(latlng, {
-				radius: 8,
+				radius: 12,
 				fillColor: "#ff7800",
 				color: "#000",
 				weight: 1,
@@ -194,6 +204,7 @@
 		legend.addTo(map);
 
 	</script>
+	<div class="logo" ><a href="mailto:it.gluck@ya.ru?subject=Проект: Чистая Страна&body=Внесите свой вклад в чистоту города, отправьте фото мусорных контейнеров (в каком бы состоянии они не находились) - вместе мы сделаем город чище!!!"><img src="./logo_m.png" ></a></div>
 </body>
 
 </html>
