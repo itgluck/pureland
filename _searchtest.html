@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Поиск руководителей структуры ИМПЕРИАЛ</title>
+
+	<link rel="stylesheet" href="../dist/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="../dist/leaflet.ie.css" /><![endif]-->
+	<script src="../dist/leaflet.js"></script>
+	<script src="../dist/L.GeoSearch/leaflet-search.js"></script>
+	<link rel="stylesheet" href="mobile.css" />
+	<link rel="stylesheet" href="../dist/L.GeoSearch/leaflet-search.css" />
+	<link rel="stylesheet" href="../dist/L.GeoSearch/src/css/l.geosearch.css" />
+	<script src="../src/js/l.control.geosearch.js"></script>
+
+	<script src="./city.js"></script>
+</head>
+<body>
+
+	<div id="map" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+
+	<script type="text/javascript">
+
+		var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+			cloudmadeAttribution = '<a href="http://klg.tema12.com/" target="_blank">ИМПЕРИАЛ</a> &copy; 2013 | <a href= "mailto:it.gluck@ya.ru" target="_blank">Написать письмо</a>',
+			cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18,minZoom: 3, attribution: cloudmadeAttribution}),
+			latlng = new L.LatLng(57.563, 50.97656);
+
+		var map = new L.Map('map', {center: latlng, zoom: 5, layers: [cloudmade]});
+		
+				
+		// Search	
+		var markersLayer = new L.LayerGroup();	//layer contain searched elements
+	map.addLayer(markersLayer);
+
+	map.addControl( new L.Control.Search({layer: markersLayer}) );  //inizialize search control
+
+	////////////populate map with markers from sample data
+	for(i in customer) {
+		var title = customer[i].city,	//value searched
+			loc = customer[i].loc,		//position found
+			description = customer[i].description,
+			marker = new L.Marker(new L.latLng(loc), {title: title} );//se property searched
+		marker.bindPopup(description);
+		markersLayer.addLayer(marker);
+	}
+	new L.Control.GeoSearch({
+            provider: new L.GeoSearch.Provider.Google(1)
+			
+        }).addTo(map);
+
+	</script>
+</body>
+</html>
