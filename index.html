@@ -4,11 +4,8 @@
 <head>
 	<title>Чистая страна</title>
 
-	<!-- <link rel="stylesheet" href="../dist/leaflet.css" /> -->
-	<!--[if lte IE 8]><link rel="stylesheet" href="../../dist/leaflet.ie.css" /><![endif]-->
-	<!-- <script src="../dist/leaflet.js"></script><link rel="stylesheet" href="../dist/screen.css" /> -->
-
-
+	<link rel="shortcut icon" type="image/png" href="./logo_m.png"/>
+<!-- <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
 		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -205,7 +202,7 @@
 			}
 		}).addTo(map);
 
-		// map.attributionControl.addAttribution('Чистая страна &copy; <a href="mailto:it.gluck@ya.ru">IT_GLu(:k</a>');
+		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru">IT_GLu(:k</a>');
 		var legend = L.control({ position: 'bottomright', width: '3em' });
 
 		legend.onAdd = function (map) {
@@ -233,7 +230,7 @@
 	</script>
 	<div class="logo">
 		<a
-			href="mailto:it.gluck@ya.ru?subject=Проект: Чистая Страна&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок. Вместе мы сделаем город чище!!!">
+			href="mailto:pronin.s@i-labs.ru?subject=Проект: Чистая Страна&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок. Вместе мы сделаем город чище!По вопросам тел. +79673549307">
 			<img src="./logo_m.png"></a></div>
 </body>
 
