@@ -96,12 +96,12 @@ var statesData = {
             "geometry": { "type": "Point", "coordinates": [20.535780,54.683431] }
         },
         {
-            "type": "Feature", "id": "18",
+            "type": "Feature", "id": "19",
             "properties": { 'date':"07.03.2019г","street": "ул. 1-я Большая Окружная 12", 'img':"./img/42.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.418927,54.720922] }
         },
         {
-            "type": "Feature", "id": "18",
+            "type": "Feature", "id": "20",
             "properties": { 'date':"07.03.2019г","street": "ул. 1-я Большая Окружная 12", 'img':"./img/41.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.418499,54.720923] }
         },
