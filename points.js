@@ -82,7 +82,7 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "16",
-            "properties": { 'date':"07.03.2019г","street": "ул. Ломоносова", 'img':"./img/38-1.jpg","status": 1,'c_date':'','c_img':'' },
+            "properties": { 'date':"07.03.2019г","street": "ул. Ломоносова", 'img':"./img/34.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.458966,54.746785] }
         },
         {
@@ -94,6 +94,16 @@ var statesData = {
             "type": "Feature", "id": "18",
             "properties": { 'date':"07.03.2019г","street": "ул. Дзержинского 91", 'img':"./img/40.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.535780,54.683431] }
+        },
+        {
+            "type": "Feature", "id": "18",
+            "properties": { 'date':"07.03.2019г","street": "ул. 1-я Большая Окружная 12", 'img':"./img/42.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.418927,54.720922] }
+        },
+        {
+            "type": "Feature", "id": "18",
+            "properties": { 'date':"07.03.2019г","street": "ул. 1-я Большая Окружная 12", 'img':"./img/41.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.418499,54.720923] }
         },
     ]
 };
