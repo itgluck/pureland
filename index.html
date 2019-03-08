@@ -4,8 +4,8 @@
 <head>
 	<title>Чистая страна</title>
 
-	<link rel="shortcut icon" type="image/png" href="./logo_m.png"/>
-<!-- <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/> -->
+	<link rel="shortcut icon" type="image/png" href="./logo_m.png" />
+	<!-- <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
 		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -26,6 +26,18 @@
 			height: 100%;
 			width: 100vw;
 		}
+
+		.leaflet-popup-content-wrapper {
+			padding: 1px;
+			text-align: center;
+			width: 24em;
+			border-radius: 12px;
+
+			
+		}
+		.leaflet-popup-content-wrapper img {
+				width: 100%;
+			}
 
 		.info {
 			padding: 1.2em .9em;
@@ -50,6 +62,7 @@
 		.info img {
 			max-width: 18em;
 		}
+
 		.legend {
 			text-align: left;
 			line-height: 18px;
@@ -68,17 +81,18 @@
 			position: absolute;
 			z-index: 1000;
 			left: 1.5em;
-			bottom: 1.3em;			
+			bottom: 1.3em;
 			/* width: 4em; */
 			/* box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); */
 		}
 
 		.logo img {
-		width: 3.6em;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    padding: 4px;
-    border-radius: 5px;
+			width: 3.6em;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+			padding: 4px;
+			border-radius: 5px;
 		}
+
 		@media (max-width: 24em),
 		(max-height : 26em) {
 			.legend {
@@ -88,12 +102,10 @@
 			.logo {
 				position: absolute;
 				right: 1em;
-				bottom: 1em;		
-			width: 5em;
+				bottom: 1em;
+				width: 5em;
 			}
 		}
-
-	
 	</style>
 
 </head>
@@ -104,12 +116,12 @@
 	<script type="text/javascript" src="points.js"></script>
 	<script type="text/javascript">
 
-		var map = L.map('map', { minZoom: 12 }).setView([54.706753, 20.509485], 12);
+		var map = L.map('map', { minZoom: 12 }).setView([54.706753, 20.509485], 11);
 
 		var tile = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions" target="blank">CartoDB</a>'
 		}).addTo(map);
-		
+
 		// control that shows state info on hover
 		var info = L.control();
 
@@ -165,7 +177,15 @@
 			}
 
 			info.update(layer.feature.properties);
+			if (layer.feature.properties.status >= 4) {
+				layer.bindPopup('<h4>Проведена уборка</h4><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date + '</h2>');
+			}
+
 		}
+		// 	var popup = L.popup()
+		// .setLatLng(latlng)
+		// .setContent('<p>Hello world!<br />This is a nice popup.</p>')
+		// .openOn(map);
 
 		var geojson;
 
@@ -182,7 +202,7 @@
 			layer.on({
 				mouseover: highlightFeature,
 				mouseout: resetHighlight,
-				// click: zoomToFeature
+				click: highlightFeature
 			});
 		}
 
@@ -230,7 +250,7 @@
 	</script>
 	<div class="logo">
 		<a
-			href="mailto:pronin.s@i-labs.ru?subject=Проект: Чистая Страна&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок. Вместе мы сделаем город чище!По вопросам тел. +79673549307">
+			href="mailto:pronin.s@i-labs.ru?subject=Проект: Чистая Страна&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок. Вместе мы сделаем город чище!По вопросам тел. 89673549307">
 			<img src="./logo_m.png"></a></div>
 </body>
 

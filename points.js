@@ -62,8 +62,38 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "13",
-            "properties": { 'date':"06.03.2019г","street": "ул. Дубовая аллея", 'img':"./img/06.jpg","status": 1 },
+            "properties": { 'date':"06.03.2019г","street": "ул. Дубовая аллея", 'img':"./img/06.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.423825,54.718966] }
+        },
+        {
+            "type": "Feature", "id": "14",
+            "properties": { 'date':"07.03.2019г","street": "пер. Первый Ржевский, 19А", 'img':"./img/36.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.537812,54.685333] }
+        },
+        {
+            "type": "Feature", "id": "15",
+            "properties": { 'date':"06.03.2019г","street": "ул. Ломоносова", 'img':"./img/37.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.456463,54.741020] }
+        },
+        {
+            "type": "Feature", "id": "16",
+            "properties": { 'date':"07.03.2019г","street": "ул. Ломоносова", 'img':"./img/38.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.459776,54.746636] }
+        },
+        {
+            "type": "Feature", "id": "16",
+            "properties": { 'date':"07.03.2019г","street": "ул. Ломоносова", 'img':"./img/38-1.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.458966,54.746785] }
+        },
+        {
+            "type": "Feature", "id": "17",
+            "properties": { 'date':"07.03.2019г","street": "ул. Подполковника Емельянова 64", 'img':"./img/39.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.542944,54.681944] }
+        },
+        {
+            "type": "Feature", "id": "18",
+            "properties": { 'date':"07.03.2019г","street": "ул. Дзержинского 91", 'img':"./img/40.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.535780,54.683431] }
         },
     ]
 };
