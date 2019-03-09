@@ -105,5 +105,15 @@ var statesData = {
             "properties": { 'date':"07.03.2019г","street": "ул. 1-я Большая Окружная 12", 'img':"./img/41.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.418499,54.720923] }
         },
+        {
+            "type": "Feature", "id": "21",
+            "properties": { 'date':"09.03.2019г","street": "ул. Яблочная 49", 'img':"./img/43.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.539771,54.690187] }
+        },
+        {
+            "type": "Feature", "id": "22",
+            "properties": { 'date':"09.03.2019г","street": "ул.Радищева 72", 'img':"./img/44.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.460093,54.712795] }
+        },
     ]
 };
