@@ -115,5 +115,10 @@ var statesData = {
             "properties": { 'date':"09.03.2019г","street": "ул.Радищева 72", 'img':"./img/44.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.460093,54.712795] }
         },
+        {
+            "type": "Feature", "id": "23",
+            "properties": { 'date':"10.03.2019г","street": "ул.Госпитальная 34", 'img':"./img/45.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.511618,54.726230] }
+        },
     ]
 };
