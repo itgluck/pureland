@@ -150,5 +150,10 @@ var statesData = {
             "properties": { 'date':"11.03.2019","street": "ул. Стрелецкая", 'img':"./img/50.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.544471,54.716489] }
         },
+        {
+            "type": "Feature", "id": "30",
+            "properties": { 'date':"11.03.2019","street": "ул. Грига 8", 'img':"./img/51.jpg","status": 1,'c_date':'','c_img':'' },
+            "geometry": { "type": "Point", "coordinates": [20.531922,54.710908] }
+        },
     ]
 };
