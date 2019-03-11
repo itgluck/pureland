@@ -60,7 +60,10 @@
 		}
 
 		.info img {
-			max-width: 18em;
+			max-width: 18em;			
+			border-radius: 7px;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+			
 		}
 
 		.legend {
@@ -186,11 +189,6 @@
 			}
 
 		}
-		// 	var popup = L.popup()
-		// .setLatLng(latlng)
-		// .setContent('<p>Hello world!<br />This is a nice popup.</p>')
-		// .openOn(map);
-
 		var geojson;
 
 		function resetHighlight(e) {
@@ -226,7 +224,7 @@
 			}
 		}).addTo(map);
 
-		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru">IT_GLu(:k</a>');
+		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 		var legend = L.control({ position: 'bottomright', width: '3em' });
 
 		legend.onAdd = function (map) {
@@ -254,7 +252,7 @@
 	</script>
 	<div class="logo">
 		<a
-			href="mailto:pronin.s@i-labs.ru?subject=Проект: Чистая Страна&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок. Вместе мы сделаем город чище!По вопросам тел. 89673549307">
+			href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
 			<img src="./logo_m.png"></a></div>
 </body>
 
