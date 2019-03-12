@@ -163,7 +163,7 @@ var statesData = {
         {
             "type": "Feature", "id": "32",
             "properties": { 'date':"12.03.2019","street": "Советский пр-т 103а", 'img':"./img/53.jpg","status": 1,'c_date':'','c_img':'' },
-            "geometry": { "type": "Point", "coordinates": [20.479528,54.737210] }
+            "geometry": { "type": "Point", "coordinates": [20.478881,54.737141] }
         },
 
     ]
