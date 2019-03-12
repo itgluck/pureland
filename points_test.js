@@ -132,17 +132,17 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "26",
-            "properties": { 'date':"11.03.2019","street": "ул. Книжная 2", 'img':"./img/img.png","status": 1,'c_date':'','c_img':'' },
+            "properties": { 'date':"11.03.2019","street": "ул. Книжная 2", 'img':"./img/img.png","status": 2,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.473137,54.678608] }
         },
         {
             "type": "Feature", "id": "27",
-            "properties": { 'date':"11.03.2019","street": "ул. Яблоневая аллея 27", 'img':"./img/48.jpg","status": 1,'c_date':'12.03.2019','c_img':'https://or71.ru/upload/iblock/0d9/0d9b844b857dd4a6a31e236c4cb3f83e.jpg' },
+            "properties": { 'date':"11.03.2019","street": "ул. Яблоневая аллея 27", 'img':"./img/48.jpg","status": 5,'c_date':'12.03.2019','c_img':'https://or71.ru/upload/iblock/0d9/0d9b844b857dd4a6a31e236c4cb3f83e.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.458220,54.719711] }
         },
         {
             "type": "Feature", "id": "28",
-            "properties": { 'date':"11.03.2019","street": "ул. Физкультурная", 'img':"./img/49.jpg","status": 1,'c_date':'','c_img':'' },
+            "properties": { 'date':"11.03.2019","street": "ул. Физкультурная", 'img':"./img/49.jpg","status": 3,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.545555,54.714058] }
         },
         {
@@ -154,16 +154,6 @@ var statesData = {
             "type": "Feature", "id": "30",
             "properties": { 'date':"11.03.2019","street": "ул. Грига 8", 'img':"./img/51.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.531922,54.710908] }
-        },
-        {
-            "type": "Feature", "id": "31",
-            "properties": { 'date':"12.03.2019","street": "ул. Юрия Маточкина 8", 'img':"./img/52.jpg","status": 1,'c_date':'','c_img':'' },
-            "geometry": { "type": "Point", "coordinates": [20.490916,54.741607] }
-        },
-        {
-            "type": "Feature", "id": "32",
-            "properties": { 'date':"12.03.2019","street": "Советский пр-т 103а", 'img':"./img/53.jpg","status": 1,'c_date':'','c_img':'' },
-            "geometry": { "type": "Point", "coordinates": [20.479528,54.737210] }
         },
 
     ]
