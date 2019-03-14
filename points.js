@@ -165,5 +165,10 @@ var statesData = {
             "properties": { 'date':"12.03.2019","street": "Советский пр-т 103а", 'img':"./img/53.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.478881,54.737141] }
         },
+        {
+            "type": "Feature", "id": "33",
+            "properties": { 'date':"03.03.2019","street": "ул. Флоренского", 'img':"./img/03.jpg","status": 1},
+            "geometry": { "type": "Point", "coordinates": [20.445117,54.739841] }
+        },
     ]
 };
