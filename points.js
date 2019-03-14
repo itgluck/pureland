@@ -167,7 +167,7 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "33",
-            "properties": { 'date':"03.03.2019","street": "ул. Флоренского", 'img':"./img/03.jpg","status": 3},
+            "properties": { 'date':"03.03.2019","street": "ул. Флоренского", 'img':"./img/03.jpg","status": 1},
             "geometry": { "type": "Point", "coordinates": [20.445117,54.739841] }
         },
     ]
