@@ -106,12 +106,13 @@
 				width: 18em;
 			}
 
-			.logo, .logo img {
-			position: absolute;
-			z-index: 1000;
-			left: .41em;
-			bottom: 1.1em;
-		}
+			.logo,
+			.logo img {
+				position: absolute;
+				z-index: 1000;
+				left: .41em;
+				bottom: 1.1em;
+			}
 		}
 	</style>
 
@@ -236,19 +237,23 @@
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
 			info.update();
-
+			if (L.Browser.android) {
+				map.flyTo([54.742, 20.497], 13);
+			}
 		}
 
-		// function zoomToFeature(e) {
-		// 	map.setView(e.target.feature.geometry.coordinates,17);
+		function zoomToFeature(e) {
+			if (!L.Browser.android) {
+				map.flyTo(e.latlng, 15);
+			}
 
-		// }
+		}
 
 		function onEachFeature(feature, layer) {
 			layer.on({
 				mouseover: highlightFeature,
 				mouseout: resetHighlight,
-				// click: zoomToFeature
+				click: zoomToFeature
 			});
 		}
 
@@ -292,6 +297,30 @@
 		};
 
 		legend.addTo(map);
+
+
+		// Reset
+		// function onMapClick(e) {
+		// 	if (L.Browser.android) {
+		// 		map.flyTo([54.742, 20.497], 13);
+		// 	}
+		// }
+		// map.on('click', onMapClick);
+// var popup = L.popup();
+
+// function onMapClick(e) {
+// 	var latlng = e.latlng;
+
+//     popup
+//         .setLatLng(latlng)
+//         .setContent(latlng.toString())
+// 		.openOn(map);
+
+// 		map.panTo(latlng);
+// }
+
+// map.on('click', onMapClick);
+// end
 
 	</script>
 	<div class="logo">
