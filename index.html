@@ -147,22 +147,12 @@
 
 		info.update = function (props) {
 			// var tmp = props.status;
-			if (status == 3) {
-				this._div.innerHTML = (props ?
-					'<img src="' + props.img + '"><br>' +
-					'Адрес: <b>' + props.street +
-					'</b><br/>Дата: ' + props.date +
-					'<hr>Статус: Ведуться работы'
-					: '<h4>Информация</h4>Наведите на маркер');
-			}
-
-			else {
 				this._div.innerHTML = (props ?
 					'<img src="' + props.img + '"><br>' +
 					'Адрес: <b>' + props.street +
 					'</b><br/>Дата: ' + props.date
 					: '<h4>Информация</h4>Наведите на маркер');
-			};
+			
 		}
 
 		info.addTo(map);
@@ -238,15 +228,18 @@
 			geojson.resetStyle(e.target);
 			info.update();
 			if (L.Browser.android) {
-				map.flyTo([54.6980, 20.5052], 12);
+				map.flyTo(e.latlng, 12);
 			}
 		}
 
 		function zoomToFeature(e) {
+
 			if (L.Browser.android) {
 				map.flyTo(e.latlng, 14);
 			}
-
+			else {
+				map.setView(e.latlng);
+			}
 		}
 
 		function onEachFeature(feature, layer) {
