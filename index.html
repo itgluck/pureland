@@ -238,13 +238,13 @@
 			geojson.resetStyle(e.target);
 			info.update();
 			if (L.Browser.android) {
-				map.flyTo([54.6980, 20.5052], 9);
+				map.flyTo([54.6980, 20.5052], 12);
 			}
 		}
 
 		function zoomToFeature(e) {
 			if (L.Browser.android) {
-				map.flyTo(e.latlng, 15);
+				map.flyTo(e.latlng, 14);
 			}
 
 		}
