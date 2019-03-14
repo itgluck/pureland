@@ -2,17 +2,17 @@ var statesData = {
     "type": "FeatureCollection", "features": [
         {
              "type": "Feature", "id": "01",
-             "properties": { 'date':"10.03.2019","street": "ул. Госпитальная 34", 'img':"./img/01.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/_01.jpg'},
+             "properties": { 'date':"10.03.2019","street": "ул. Госпитальная 34", 'img':"./img/01.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/01.1.jpg'},
              "geometry": { "type": "Point", "coordinates": [20.511613,54.726261] }
          },
         {
             "type": "Feature", "id": "02",
-            "properties": { 'date':"01.03.2019","street": "ул. Госпитальная 34", 'img':"./img/02.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/_02.jpg'},
+            "properties": { 'date':"01.03.2019","street": "ул. Госпитальная 34", 'img':"./img/02.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/02.1.jpg'},
             "geometry": { "type": "Point", "coordinates": [20.511989,54.726281] }
         }, 
         {
             "type": "Feature", "id": "03",
-            "properties": { 'date':"02.03.2019","street": "ул. Теннистая Аллея 100", 'img':"./img/28.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/_28.jpg' },
+            "properties": { 'date':"02.03.2019","street": "ул. Теннистая Аллея 100", 'img':"./img/28.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/28.1.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.413153,54.724170] }
         },
         {
