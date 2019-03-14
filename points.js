@@ -1,13 +1,18 @@
 var statesData = {
     "type": "FeatureCollection", "features": [
         {
-            "type": "Feature", "id": "1",
-            "properties": { 'date':"01.03.2019","street": "ул. Госпитальная 34", 'img':"./img/35.jpg","status": 1 },
-            "geometry": { "type": "Point", "coordinates": [20.511696,54.726137] }
-        },
+             "type": "Feature", "id": "01",
+             "properties": { 'date':"10.03.2019","street": "ул. Госпитальная 34", 'img':"./img/01.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/_01.jpg'},
+             "geometry": { "type": "Point", "coordinates": [20.511613,54.726261] }
+         },
         {
-            "type": "Feature", "id": "2",
-            "properties": { 'date':"02.03.2019","street": "ул. Теннистая Аллея 100", 'img':"./img/28.jpg","status": 1 },
+            "type": "Feature", "id": "02",
+            "properties": { 'date':"01.03.2019","street": "ул. Госпитальная 34", 'img':"./img/02.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/_02.jpg'},
+            "geometry": { "type": "Point", "coordinates": [20.511989,54.726281] }
+        }, 
+        {
+            "type": "Feature", "id": "03",
+            "properties": { 'date':"02.03.2019","street": "ул. Теннистая Аллея 100", 'img':"./img/28.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/_28.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.413153,54.724170] }
         },
         {
@@ -116,11 +121,6 @@ var statesData = {
             "geometry": { "type": "Point", "coordinates": [20.460093,54.712795] }
         },
         {
-            "type": "Feature", "id": "23",
-            "properties": { 'date':"10.03.2019","street": "ул. Госпитальная 34", 'img':"./img/45.jpg","status": 1,'c_date':'','c_img':'' },
-            "geometry": { "type": "Point", "coordinates": [20.511613,54.726261] }
-        },
-        {
             "type": "Feature", "id": "24",
             "properties": { 'date':"11.03.2019","street": "ул. Красная 226", 'img':"./img/46.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.474122,54.743751] }
@@ -165,6 +165,5 @@ var statesData = {
             "properties": { 'date':"12.03.2019","street": "Советский пр-т 103а", 'img':"./img/53.jpg","status": 1,'c_date':'','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.478881,54.737141] }
         },
-
     ]
 };
