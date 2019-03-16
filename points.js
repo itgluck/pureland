@@ -12,7 +12,7 @@ var statesData = {
         }, 
         {
             "type": "Feature", "id": "03",
-            "properties": { 'date':"02.03.2019","street": "ул. Теннистая Аллея 100", 'img':"./img/28.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/28.1.jpg' },
+            "properties": { 'date':"02.03.2019","street": "ул. Теннистая Аллея 100", 'img':"./img/28.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/28.1.png' },
             "geometry": { "type": "Point", "coordinates": [20.413153,54.724170] }
         },
         {
@@ -27,12 +27,12 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "5",
-            "properties": { 'date':"02.03.2019","street": "ул. Комсомольская 112", 'img':"./img/18.jpg","status": 1 },
+            "properties": { 'date':"02.03.2019","street": "ул. Комсомольская 112", 'img':"./img/18.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/18.1.png'},
             "geometry": { "type": "Point", "coordinates": [20.478388,54.735980] }
         },
         {
             "type": "Feature", "id": "6",
-            "properties": { 'date':"03.03.2019","street": "ул. Грибоедова 3", 'img':"./img/17.jpg","status": 1 },
+            "properties": { 'date':"03.03.2019","street": "ул. Грибоедова 3", 'img':"./img/17.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/17.1.png'},
             "geometry": { "type": "Point", "coordinates": [20.526587,54.733437] }
         },
         {
@@ -47,27 +47,27 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "9",
-            "properties": { 'date':"04.03.2019","street": "ул. Мусорского", 'img':"./img/11.jpg","status": 1 },
-            "geometry": { "type": "Point", "coordinates": [20.502303,54.729030] }
+            "properties": { 'date':"04.03.2019","street": "ул. Мусорского 10", 'img':"./img/11.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/11.1.png'},
+            "geometry": { "type": "Point", "coordinates": [20.501724,54.727238]}
         },
         {
             "type": "Feature", "id": "10",
-            "properties": { 'date':"04.03.2019","street": "ул. Захарова", 'img':"./img/10.jpg","status": 1 },
-            "geometry": { "type": "Point", "coordinates": [20.471897,54.734655] }
+            "properties": { 'date':"04.03.2019","street": "ул. Захарова 1", 'img':"./img/10.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/10.1.png'},
+            "geometry": { "type": "Point", "coordinates": [20.471876,54.734712] }
         },
         {
             "type": "Feature", "id": "11",
-            "properties": { 'date':"04.03.2019","street": "ул. Железнодорожная 5", 'img':"./img/09.jpg","status": 1 },
+            "properties": { 'date':"04.03.2019","street": "ул. Железнодорожная 5", 'img':"./img/09.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/09.1.png'},
             "geometry": { "type": "Point", "coordinates": [20.504913,54.691091] }
         },
         {
             "type": "Feature", "id": "12",
-            "properties": { 'date':"04.03.2019","street": "ул. Генерала-лейтенанта Озерова 41", 'img':"./img/08.jpg","status": 1 },
+            "properties": { 'date':"04.03.2019","street": "ул. Озерова 41", 'img':"./img/08.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/08.1.png'},
             "geometry": { "type": "Point", "coordinates": [20.507201,54.724991] }
         },
         {
             "type": "Feature", "id": "13",
-            "properties": { 'date':"06.03.2019","street": "ул. Дубовая аллея", 'img':"./img/06.jpg","status": 1,'c_date':'','c_img':'' },
+            "properties": { 'date':"06.03.2019","street": "ул. Дубовая аллея", 'img':"./img/06.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/06.1.png'},
             "geometry": { "type": "Point", "coordinates": [20.423825,54.718966] }
         },
         {
@@ -97,7 +97,7 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "18",
-            "properties": { 'date':"07.03.2019","street": "ул. Дзержинского 91", 'img':"./img/40.jpg","status": 1,'c_date':'','c_img':'' },
+            "properties": { 'date':"07.03.2019","street": "ул. Дзержинского 85", 'img':"./img/40.jpg","status":5,'c_date':'13.03.2019','c_img':'./img/40.1.png' },
             "geometry": { "type": "Point", "coordinates": [20.535780,54.683431] }
         },
         {
@@ -137,7 +137,7 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "27",
-            "properties": { 'date':"11.03.2019","street": "ул. Яблоневая аллея 27", 'img':"./img/48.jpg","status": 1,'c_date':'12.03.2019','c_img':'https://or71.ru/upload/iblock/0d9/0d9b844b857dd4a6a31e236c4cb3f83e.jpg' },
+            "properties": { 'date':"11.03.2019","street": "ул. Яблоневая аллея 27", 'img':"./img/48.jpg","status": 1,'c_date':'12.03.2019','c_img':'' },
             "geometry": { "type": "Point", "coordinates": [20.458220,54.719711] }
         },
         {
@@ -152,7 +152,7 @@ var statesData = {
         },
         {
             "type": "Feature", "id": "30",
-            "properties": { 'date':"11.03.2019","street": "ул. Грига 8", 'img':"./img/51.jpg","status": 1,'c_date':'','c_img':'' },
+            "properties": { 'date':"11.03.2019","street": "ул. Грига 24", 'img':"./img/51.jpg","status": 5,'c_date':'14.03.2019','c_img':'./img/51.1.png' },
             "geometry": { "type": "Point", "coordinates": [20.531922,54.710908] }
         },
         {
@@ -169,6 +169,36 @@ var statesData = {
             "type": "Feature", "id": "33",
             "properties": { 'date':"03.03.2019","street": "ул. Флоренского", 'img':"./img/03.jpg","status": 1},
             "geometry": { "type": "Point", "coordinates": [20.445117,54.739841] }
+        },
+        {
+            "type": "Feature", "id": "34",
+            "properties": { 'date':"14.03.2019","street": "ул. Челнокова 60", 'img':"./img/04.1.png","status": 4,'c_date':'14.03.2019','c_img':'./img/04.1.png' },
+            "geometry": { "type": "Point", "coordinates": [20.479537,54.749100, ] }
+        },
+        {
+            "type": "Feature", "id": "34",
+            "properties": { 'date':"14.03.2019","street": "ул. Трудовая 5", 'img':"./img/54.1.png","status": 4,'c_date':'14.03.2019','c_img':'./img/54.1.png' },
+            "geometry": { "type": "Point", "coordinates": [20.424123,54.722181] }
+        },
+        {
+            "type": "Feature", "id": "35",
+            "properties": { 'date':"14.03.2019","street": "ул. Пацаева", 'img':"./img/55.1.png","status": 4,'c_date':'14.03.2019','c_img':'./img/55.1.png' },
+            "geometry": { "type": "Point", "coordinates": [20.477875,54.725585] }
+        },
+        {
+            "type": "Feature", "id": "36",
+            "properties": { 'date':"14.03.2019","street": "ул. Ростовская 13", 'img':"./img/56.1.png","status": 4,'c_date':'14.03.2019','c_img':'./img/56.1.png' },
+            "geometry": { "type": "Point", "coordinates": [20.461457,54.726548] }
+        },
+        {
+            "type": "Feature", "id": "37",
+            "properties": { 'date':"14.03.2019","street": "ул. Звездная 25 ", 'img':"./img/57.1.png","status": 4,'c_date':'14.03.2019','c_img':'./img/57.1.png' },
+            "geometry": { "type": "Point", "coordinates": [20.499470,54.714925] }
+        },
+        {
+            "type": "Feature", "id": "38",
+            "properties": { 'date':"14.03.2019","street": "Ленинский пр-т 8а ", 'img':"./img/58.1.png","status": 4,'c_date':'14.03.2019','c_img':'./img/58.1.png' },
+            "geometry": { "type": "Point", "coordinates": [20.502701,54.715373]}
         },
     ]
 };

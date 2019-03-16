@@ -36,6 +36,8 @@
 
 		.leaflet-popup-content-wrapper img {
 			width: 100%;
+			border-radius: 7px;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
 
 		.info {
@@ -49,7 +51,7 @@
 
 		.width {
 			/* width:12em; */
-			max-width: 26em;
+			max-width: 30em;
 			text-align: center;
 		}
 
@@ -187,7 +189,7 @@
 			}
 
 			info.update(layer.feature.properties);
-			if (layer.feature.properties.status > 3) {
+			if (layer.feature.properties.status > 4) {
 				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date + '</h2>');
 
 				layer.setStyle(
