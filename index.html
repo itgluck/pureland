@@ -126,17 +126,12 @@
 	<script type="text/javascript" src="points.js"></script>
 	<script type="text/javascript">
 
-		var map = L.map('map', { minZoom: 10 }).setView([54.6982, 20.505], 11);
+		var map = L.map('map', { minZoom: 12 }).setView([54.6982, 20.505], 12);
 
 		var tile = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a>, &copy; <a href="http://cartodb.com/attributions" target="blank">CartoDB</a>' + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 			id: 'mapbox.streets'
 		}).addTo(map);
-		// var tile = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-		// 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions" target="blank">CartoDB</a>'
-		// }).addTo(map);
-
-
 
 		// control that shows state info on hover
 		var info = L.control();
@@ -190,8 +185,8 @@
 
 			info.update(layer.feature.properties);
 			if (layer.feature.properties.status > 4) {
-				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date + '</h2>');
-
+				layer.bindPopup ('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date + '</h2>');
+				layer.openPopup();
 				layer.setStyle(
 					{
 						weight: 3,
@@ -222,6 +217,7 @@
 						fillOpacity: 0.7
 					})
 			};
+			
 
 		}
 		var geojson;
@@ -229,19 +225,20 @@
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
 			info.update();
+			map.closePopup();
 			if (L.Browser.android) {
 				map.flyTo(e.latlng, 12);
 			}
 		}
 
 		function zoomToFeature(e) {
-
-			if (L.Browser.android) {
-				map.flyTo(e.latlng, 14);
-			}
-			else {
-				map.setView(e.latlng);
-			}
+			map.panTo(e.latlng);
+			// if (L.Browser.android) {
+			// 	map.panTo(e.latlng);
+			// }
+			// else {
+			// 	map.setView(e.latlng);
+			// }
 		}
 
 		function onEachFeature(feature, layer) {
