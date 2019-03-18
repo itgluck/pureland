@@ -471,5 +471,41 @@ var statesData = {
                 'c_img': './img/59.1.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.503729, 54.698482] }
         },
+        {
+            "type": "Feature", "id": "60",
+            "properties": {
+                "status": 1,
+                'date': "18.03.2019",
+                "street": "ул. Волоколамская 4",
+                'img': "./img/60.jpg",
+                'c_img': './img/60.1.jpg',
+                'c_date': '14.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.542890, 54.679962]}
+        },
+        {
+            "type": "Feature", "id": "61",
+            "properties": {
+                "status": 1,
+                'date': "18.03.2019",
+                "street": "ул. Лесопарковая 48",
+                'img': "./img/61.jpg",
+                'c_img': './img/61.jpg',
+                'c_date': '18.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.457837,54.719300]}
+        },
+        {
+            "type": "Feature", "id": "62",
+            "properties": {
+                "status": 1,
+                'date': "18.03.2019",
+                "street": "Московский проспект 116",
+                'img': "./img/62.jpg",
+                'c_img': './img/62.1.jpg',
+                'c_date': '18.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.531976,54.709222] }
+        },
     ]
 };
