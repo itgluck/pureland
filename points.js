@@ -62,10 +62,10 @@ var statesData = {
         {
             "type": "Feature", "id": "18",
             "properties": {
-                'date': "02.03.2019",
+                'date': "18.03.2019",
                 "street": "ул. Комсомольская 112",
                 'img': "./img/18.jpg",
-                "status": 5,
+                "status": 1,
                 'c_date': '14.03.2019',
                 'c_img': './img/18.1.png'
             },
@@ -236,11 +236,11 @@ var statesData = {
             "geometry": { "type": "Point", "coordinates": [20.535780, 54.683431] }
         },
         {
-            "type": "Feature", "id": "42",
+            "type": "Feature", "id": "41",
             "properties": {
-                'date': "07.03.2019",
+                'date': "18.03.2019",
                 "street": "ул. 1-я Большая Окружная 12",
-                'img': "./img/42.jpg",
+                'img': "./img/41.jpg",
                 "status": 1,
                 'c_date': '',
                 'c_img': ''
@@ -248,11 +248,11 @@ var statesData = {
             "geometry": { "type": "Point", "coordinates": [20.418927, 54.720922] }
         },
         {
-            "type": "Feature", "id": "41",
+            "type": "Feature", "id": "42",
             "properties": {
                 'date': "07.03.2019",
                 "street": "ул. 1-я Большая Окружная 12",
-                'img': "./img/41.jpg",
+                'img': "./img/42.jpg",
                 "status": 1,
                 'c_date': '',
                 'c_img': ''
@@ -506,6 +506,30 @@ var statesData = {
                 'c_date': '18.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.531976,54.709222] }
+        },
+        {
+            "type": "Feature", "id": "63",
+            "properties": {
+                "status": 1,
+                'date': "18.03.2019",
+                "street": "Московский проспект 116",
+                'img': "./img/63.jpg",
+                'c_img': './img/63.1.jpg',
+                'c_date': '18.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.476417,54.723604]}
+        },
+        {
+            "type": "Feature", "id": "64",
+            "properties": {
+                "status": 1,
+                'date': "18.03.2019",
+                "street": "Московский проспект 116",
+                'img': "./img/63.jpg",
+                'c_img': './img/63.1.jpg',
+                'c_date': '18.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.476417,54.723604]}
         },
     ]
 };
