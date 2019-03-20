@@ -42,7 +42,7 @@ var statesData = {
                 'date': "02.03.2019",
                 "street": "ул. Аллея Каштановая 1а",
                 'img': "./img/24.jpg",
-                "status": 1
+                "status": 2
             },
             "geometry": {
                 "type": "Point",
@@ -55,7 +55,7 @@ var statesData = {
                 'date': "02.03.2019",
                 "street": "ул. Аллея Каштановая 1а",
                 'img': "./img/23.jpg",
-                "status": 1
+                "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.466322, 54.712468] }
         },
@@ -65,7 +65,7 @@ var statesData = {
                 'date': "18.03.2019",
                 "street": "ул. Комсомольская 112",
                 'img': "./img/18.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '14.03.2019',
                 'c_img': './img/18.1.png'
             },
@@ -89,7 +89,7 @@ var statesData = {
                 'date': "03.03.2019",
                 "street": "ул. Флоренского",
                 'img': "./img/14.jpg",
-                "status": 1
+                "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.441620, 54.739954] }
         },
@@ -99,7 +99,7 @@ var statesData = {
                 'date': "03.03.2019",
                 "street": "ул. Флоренского",
                 'img': "./img/13.jpg",
-                "status": 1
+                "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.441158, 54.739811] }
         },
@@ -157,7 +157,7 @@ var statesData = {
                 'date': "06.03.2019",
                 "street": "ул. Дубовая аллея",
                 'img': "./img/06.jpg",
-                "status": 5,
+                "status": 1,
                 'c_date': '14.03.2019',
                 'c_img': './img/06.1.png'
             },
@@ -169,7 +169,7 @@ var statesData = {
                 'date': "07.03.2019",
                 "street": "пер. Первый Ржевский, 19А",
                 'img': "./img/36.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -181,7 +181,7 @@ var statesData = {
                 'date': "06.03.2019",
                 "street": "ул. Ломоносова",
                 'img': "./img/37.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -193,7 +193,7 @@ var statesData = {
                 'date': "07.03.2019",
                 "street": "ул. Ломоносова",
                 'img': "./img/38.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -205,7 +205,7 @@ var statesData = {
                 'date': "07.03.2019",
                 "street": "ул. Ломоносова",
                 'img': "./img/34.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -217,7 +217,7 @@ var statesData = {
                 'date': "07.03.2019",
                 "street": "ул. Подполковника Емельянова 64",
                 'img': "./img/39.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -241,7 +241,7 @@ var statesData = {
                 'date': "18.03.2019",
                 "street": "ул. 1-я Большая Окружная 12",
                 'img': "./img/41.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -253,7 +253,7 @@ var statesData = {
                 'date': "07.03.2019",
                 "street": "ул. 1-я Большая Окружная 12",
                 'img': "./img/42.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -265,7 +265,7 @@ var statesData = {
                 'date': "09.03.2019",
                 "street": "ул. Яблочная 49",
                 'img': "./img/43.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -277,7 +277,7 @@ var statesData = {
                 'date': "09.03.2019",
                 "street": "ул. Радищева 72",
                 'img': "./img/44.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -289,7 +289,7 @@ var statesData = {
                 'date': "11.03.2019",
                 "street": "ул. Красная 226",
                 'img': "./img/46.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -301,7 +301,7 @@ var statesData = {
                 'date': "11.03.2019",
                 "street": "ул. Павлика Морозова 5",
                 'img': "./img/47.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -313,7 +313,7 @@ var statesData = {
                 'date': "11.03.2019",
                 "street": "ул. Книжная 2",
                 'img': "./img/img.png",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
@@ -325,7 +325,7 @@ var statesData = {
                 'date': "11.03.2019",
                 "street": "ул. Яблоневая аллея 27",
                 'img': "./img/48.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '12.03.2019',
                 'c_img': '' },
             "geometry": { "type": "Point", "coordinates": [20.458220, 54.719711] }
@@ -336,7 +336,7 @@ var statesData = {
                 'date': "11.03.2019",
                 "street": "ул. Физкультурная",
                 'img': "./img/49.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': '' },
             "geometry": { "type": "Point", "coordinates": [20.545555, 54.714058] }
@@ -347,7 +347,7 @@ var statesData = {
                 'date': "11.03.2019",
                 "street": "ул. Стрелецкая",
                 'img': "./img/50.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': '' },
             "geometry": { "type": "Point", "coordinates": [20.544471, 54.716489] }
@@ -369,7 +369,7 @@ var statesData = {
                 'date': "12.03.2019",
                 "street": "ул. Юрия Маточкина 8",
                 'img': "./img/52.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': '' },
             "geometry": { "type": "Point", "coordinates": [20.490916, 54.741607] }
@@ -380,7 +380,7 @@ var statesData = {
                 'date': "12.03.2019",
                 "street": "Советский пр-т 103а",
                 'img': "./img/53.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '',
                 'c_img': '' },
             "geometry": { "type": "Point", "coordinates": [20.478881, 54.737141] }
@@ -391,7 +391,7 @@ var statesData = {
                 'date': "03.03.2019",
                 "street": "ул. Флоренского",
                 'img': "./img/03.jpg",
-                "status": 1 },
+                "status": 2 },
             "geometry": { "type": "Point", "coordinates": [20.445117, 54.739841] }
         },
         {
@@ -466,7 +466,7 @@ var statesData = {
                 'date': "14.03.2019",
                 "street": "Ленинский пр-т 133",
                 'img': "./img/59.jpg",
-                "status": 1,
+                "status": 2,
                 'c_date': '14.03.2019',
                 'c_img': './img/59.1.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.503729, 54.698482] }
@@ -474,7 +474,7 @@ var statesData = {
         {
             "type": "Feature", "id": "60",
             "properties": {
-                "status": 1,
+                "status": 2,
                 'date': "18.03.2019",
                 "street": "ул. Волоколамская 4",
                 'img': "./img/60.jpg",
@@ -486,7 +486,7 @@ var statesData = {
         {
             "type": "Feature", "id": "61",
             "properties": {
-                "status": 1,
+                "status": 2,
                 'date': "18.03.2019",
                 "street": "ул. Лесопарковая 48",
                 'img': "./img/61.jpg",
@@ -498,7 +498,7 @@ var statesData = {
         {
             "type": "Feature", "id": "62",
             "properties": {
-                "status": 1,
+                "status": 2,
                 'date': "18.03.2019",
                 "street": "Московский проспект 116",
                 'img': "./img/62.jpg",
@@ -510,7 +510,7 @@ var statesData = {
         {
             "type": "Feature", "id": "63",
             "properties": {
-                "status": 1,
+                "status": 2,
                 'date': "18.03.2019",
                 "street": "Московский проспект 116",
                 'img': "./img/63.jpg",
@@ -522,14 +522,38 @@ var statesData = {
         {
             "type": "Feature", "id": "64",
             "properties": {
-                "status": 1,
-                'date': "18.03.2019",
-                "street": "Московский проспект 116",
-                'img': "./img/63.jpg",
-                'c_img': './img/63.1.jpg',
+                "status": 2,
+                'date': "20.03.2019",
+                "street": "ул. Артиллерийская 53",
+                'img': "./img/64.jpg",
+                'c_img': './img/64.1.jpg',
                 'c_date': '18.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.476417,54.723604]}
+            "geometry": { "type": "Point", "coordinates": [20.548505,54.735359]}
         },
+        {
+            "type": "Feature", "id": "65",
+            "properties": {
+                "status": 2,
+                'date': "20.03.2019",
+                "street": "ул. Артиллерийская 41",
+                'img': "./img/65.jpg",
+                'c_img': './img/65.1.jpg',
+                'c_date': '18.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.547105,54.735167]}
+        },
+        {
+            "type": "Feature", "id": "66",
+            "properties": {
+                "status": 2,
+                'date': "20.03.2019",
+                "street": "ул. Серпуховская 32-42",
+                'img': "./img/66.jpg",
+                'c_img': './img/66.1.jpg',
+                'c_date': '18.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.499662,54.698973]}
+        },        
     ]
 };

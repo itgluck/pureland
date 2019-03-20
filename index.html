@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
 		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
 		crossorigin="" />
-		<link rel="stylesheet" href="src/leaflet-search.css" />
+	<link rel="stylesheet" href="src/leaflet-search.css" />
 
 
 	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
@@ -35,6 +35,7 @@
 			text-align: center;
 			width: 24em;
 			border-radius: 12px;
+			
 		}
 
 		.leaflet-popup-content-wrapper img {
@@ -47,7 +48,7 @@
 			padding: .7em;
 			font: 14px/16px Arial, Helvetica, sans-serif;
 			background: white;
-			background: rgba(255, 255, 255, 0.7);
+			background: rgba(255, 255, 255, 0.3);
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 			border-radius: 5px;
 		}
@@ -76,11 +77,12 @@
 		}
 
 		.legend i {
-			width: 18px;
-			height: 18px;
+			width: 16px;
+			height: 16px;
 			float: left;
 			margin-right: 8px;
-			opacity: 0.9;
+			opacity: 1;
+			border-radius: 50%;
 		}
 
 		.logo {
@@ -125,7 +127,7 @@
 
 <body>
 	<div id="map"></div>
-<script src="src/leaflet-search.js"></script>
+	<script src="src/leaflet-search.js"></script>
 	<script type="text/javascript" src="points.js"></script>
 	<script type="text/javascript">
 
@@ -137,16 +139,16 @@
 		}).addTo(map);
 
 		// Поиск 
-		map.addControl( new L.Control.Search({
+		map.addControl(new L.Control.Search({
 			url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} ,городской округ Калининград ',
 			jsonpParam: 'json_callback',
 			propertyName: 'display_name',
-			propertyLoc: ['lat','lon'],
-			marker: L.circleMarker([0,0],{radius:10}),
+			propertyLoc: ['lat', 'lon'],
+			marker: L.circleMarker([0, 0], { radius: 10 }),
 			autoCollapse: true,
 			autoType: false,
 			minLength: 2
-		}) );
+		}));
 
 		// control that shows state info on hover
 		var info = L.control();
@@ -159,12 +161,12 @@
 
 		info.update = function (props) {
 			// var tmp = props.status;
-				this._div.innerHTML = (props ?
-					'<img src="' + props.img + '"><br>' +
-					'Адрес: <b>' + props.street +
-					'</b><br/>Дата: ' + props.date
-					: '<h4>Информация</h4>Наведите на маркер');
-			
+			this._div.innerHTML = (props ?
+				'<img src="' + props.img + '"><br>' +
+				'Адрес: <b>' + props.street +
+				'</b><br/>Дата: ' + props.date
+				: '<h4>Информация</h4>Наведите на маркер');
+
 		}
 
 		info.addTo(map);
@@ -176,17 +178,17 @@
 				d > 4 ? '#08AE1E' :
 					d > 3 ? '#3CFC14' :
 						d > 2 ? '#035CE7' :
-							d > 1 ? '#F1AE49' :
-								'#F40B0B';
+							d > 1 ? '#FF7700' :
+								'#FC0000';
 		}
 
 		function style(feature) {
 			return {
 				weight: 1,
 				opacity: 1,
-				color: '#555',
+				color: '#333',
 				dashArray: '',
-				fillOpacity: 0.8,
+				fillOpacity: 1,
 				fillColor: getColor(feature.properties.status)
 			};
 		}
@@ -200,7 +202,8 @@
 
 			info.update(layer.feature.properties);
 			if (layer.feature.properties.status > 4) {
-				layer.bindPopup ('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date + '</h2>');
+				
+				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date );
 				layer.openPopup();
 				layer.setStyle(
 					{
@@ -221,6 +224,18 @@
 						fillOpacity: 0.7
 					});
 			}
+			else if (layer.feature.properties.status == 1) {
+				layer.bindPopup('<h3>Систематические загрязнения</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date);
+				layer.openPopup();
+				layer.setStyle(
+					{
+						weight: 4,
+						color: '#B903E7',
+						fillColor: '#D27CE8',
+						dashArray: '',
+						fillOpacity: 0.9
+					});
+			}
 
 			else {
 				layer.setStyle(
@@ -232,7 +247,7 @@
 						fillOpacity: 0.7
 					})
 			};
-			
+
 
 		}
 		var geojson;
@@ -269,14 +284,16 @@
 			onEachFeature: onEachFeature,
 
 			pointToLayer: function (feature, latlng) {
-				return L.circleMarker(latlng, {
-					radius: 12,
-					fillColor: "#ff7800",
-					color: "#000",
-					weight: 1,
-					opacity: 1,
-					fillOpacity: 0.8
-				});
+				
+					return L.circleMarker(latlng, {
+						radius: 10,
+						fillColor: "#ff7800",
+						color: "#000",
+						weight: 1,
+						opacity: 1,
+						fillOpacity: 0.8
+					});
+				
 			}
 		}).addTo(map);
 
@@ -287,18 +304,18 @@
 
 			var div = L.DomUtil.create('div', 'info legend'),
 				// title="Состояние площадки",
-				grades = [1, 2, 3, 4, 5],
 				labels = [],
+				grades = [1, 2, 3, 4, 5],
 				from;
 
 			for (var i = 0; i < grades.length; i++) {
 				from = grades[i];
+				
 
 				labels.push(
-					'<i style="background:' + getColor(from) + '"></i> ' +
-					from);
+					'<i title="Сообщить о свалке" style="background:' + getColor(from) + '"></i> ' +
+					from );
 			}
-
 			div.innerHTML = labels.join('<br>');
 			return div;
 		};
@@ -306,28 +323,21 @@
 		legend.addTo(map);
 
 
-		// Reset
-		// function onMapClick(e) {
-		// 	if (L.Browser.android) {
-		// 		map.flyTo([54.742, 20.497], 13);
-		// 	}
-		// }
-		// map.on('click', onMapClick);
-// var popup = L.popup();
+		// PointCoord
+			// var popup = L.popup();
 
-// function onMapClick(e) {
-// 	var latlng = e.latlng;
+			// function onMapClick(e) {
+			// 	var latlng = e.latlng;
+			// 	popup
+			// 	.setLatLng(latlng)
+			// 	.setContent(latlng.toString())
+			// 	.openOn(map);
+				
+			// 	map.panTo(latlng);
+			// }
 
-//     popup
-//         .setLatLng(latlng)
-//         .setContent(latlng.toString())
-// 		.openOn(map);
-
-// 		map.panTo(latlng);
-// }
-
-// map.on('click', onMapClick);
-// end
+			// map.on('click', onMapClick);
+		// end
 
 	</script>
 	<div class="logo">
