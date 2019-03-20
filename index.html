@@ -293,6 +293,16 @@
 						opacity: 1,
 						fillOpacity: 0.8
 					});
+					if (L.Browser.android) {
+						return L.circleMarker(latlng, {
+						radius: 17,
+						fillColor: "#ff7800",
+						color: "#000",
+						weight: 1,
+						opacity: 1,
+						fillOpacity: 0.8
+					});
+					}
 				
 			}
 		}).addTo(map);
