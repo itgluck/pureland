@@ -16,8 +16,8 @@ var sendIcon = L.icon({
 
 receiveIcon = L.icon({
   iconUrl: "images/trash.png",
-  iconSize:     [70, 70], // size of the icon
-  iconAnchor:   [35, 70], // point of the icon which will correspond to marker's location
+  iconSize:     [90, 90], // size of the icon
+  iconAnchor:   [45, 120], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 })
 
@@ -102,12 +102,12 @@ function getJsonFromUrl () {
 
 function copyPrompt() {
   
-  let res = 'https://itgluck.github.io/pureland/' + '?' + 
+  let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '=' +  LS.Send.Message;
-  window.prompt("Скопируйте строку ниже и отправте на email", '' + res);
-  window.open( 'mailto:"it.gluck@ya.ru?subject=Чистая Страна - Калининград&body="'+ res);
+  window.prompt("Скопируйте строку ниже и отправте в чат", '' + res);
+  window.open( res);
 }
 function placeMarker( selectedMap ){
 //  var test = LS.Send.Marker._latlng
