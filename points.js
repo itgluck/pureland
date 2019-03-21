@@ -65,7 +65,7 @@ var statesData = {
                 'date': "18.03.2019",
                 "street": "ул. Комсомольская 112",
                 'img': "./img/18.jpg",
-                "status": 2,
+                "status": 1,
                 'c_date': '14.03.2019',
                 'c_img': './img/18.1.png'
             },
@@ -157,7 +157,7 @@ var statesData = {
                 'date': "06.03.2019",
                 "street": "ул. Дубовая аллея",
                 'img': "./img/06.jpg",
-                "status": 1,
+                "status": 5,
                 'c_date': '14.03.2019',
                 'c_img': './img/06.1.png'
             },
@@ -215,13 +215,13 @@ var statesData = {
             "type": "Feature", "id": "39",
             "properties": {
                 'date': "07.03.2019",
-                "street": "ул. Подполковника Емельянова 64",
+                "street": "ул. Емельянова 64",
                 'img': "./img/39.jpg",
                 "status": 2,
                 'c_date': '',
                 'c_img': ''
             },
-            "geometry": { "type": "Point", "coordinates": [20.542944, 54.681944] }
+            "geometry": { "type": "Point", "coordinates": [20.542696, 54.682202] }
         },
         {
             "type": "Feature", "id": "40",
@@ -411,9 +411,9 @@ var statesData = {
                 'date': "14.03.2019",
                 "street": "ул. Трудовая 5",
                 'img': "./img/54.jpg",
-                "status": 5,
+                "status": 1,
                 'c_date': '14.03.2019',
-                'c_img': './img/54.1.png' },
+                'c_img': './img/54.1.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.424123, 54.722181] }
         },
         {
@@ -544,16 +544,16 @@ var statesData = {
             "geometry": { "type": "Point", "coordinates": [20.547105,54.735167]}
         },
         {
-            "type": "Feature", "id": "66",
+            "type": "Feature", "id": "67",
             "properties": {
                 "status": 2,
-                'date': "20.03.2019",
-                "street": "ул. Серпуховская 32-42",
-                'img': "./img/66.jpg",
-                'c_img': './img/66.1.jpg',
-                'c_date': '18.03.2019'
+                'date': "21.03.2019",
+                "street": "ул. Емельянова 80",
+                'img': "./img/67.jpg",
+                'c_img': './img/67.1.jpg',
+                'c_date': '21.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.499662,54.698973]}
+            "geometry": { "type": "Point", "coordinates": [20.544514,54.682224]}
         },        
     ]
 };
