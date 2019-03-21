@@ -3,7 +3,7 @@ L.LocShare = {}
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
-LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#a7a7a7;border:solid;border-width:2px;border-radius:5px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="enter your message"/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3d94f6;float:right;color:white;background-color:#3d94f6;height:35px;font-size:15px;line-height:3px;margin:5px;" onclick="copyPrompt()">get url</button></div></div>')
+LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#80AFF9;border:solid;border-width:2px;border-radius:3px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3DB5F3;float:right;color:white;background-color:#3DB5F3;height:32px;font-size:16px;line-height:3px;margin:5px;" onclick="copyPrompt()">Отправить</button></div></div>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
@@ -16,8 +16,8 @@ var sendIcon = L.icon({
 
 receiveIcon = L.icon({
   iconUrl: "images/trash.png",
-  iconSize:     [50, 50], // size of the icon
-  iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
+  iconSize:     [70, 70], // size of the icon
+  iconAnchor:   [35, 70], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
 })
 
@@ -92,14 +92,23 @@ function getJsonFromUrl () {
 }
 
 
-function copyPrompt() {
-  window.prompt("Send this location with: Ctrl+C, Enter", '' + 
-                location.origin + location.pathname + '?' + 
-                'lat' + '=' + LS.Send.lat + '&' +
-                'lng' + '=' + LS.Send.lng + '&' +
-                 'M' + '=' +  LS.Send.Message);
-}
+// function copyPrompt() {
+//   window.prompt("Скопируйте строку: Ctrl+C, Enter", '' + 
+//                 location.origin + location.pathname + '?' + 
+//                 'lat' + '=' + LS.Send.lat + '&' +
+//                 'lng' + '=' + LS.Send.lng + '&' +
+//                  'M' + '=' +  LS.Send.Message);
+// }
 
+function copyPrompt() {
+  
+  let res = 'https://itgluck.github.io/pureland/' + '?' + 
+  'lat' + '=' + LS.Send.lat + '&' +
+  'lng' + '=' + LS.Send.lng + '&' +
+   'M' + '=' +  LS.Send.Message;
+  window.prompt("Скопируйте строку ниже и отправте на email", '' + res);
+  window.open( 'mailto:"it.gluck@ya.ru?subject=Чистая Страна - Калининград&body="'+ res);
+}
 function placeMarker( selectedMap ){
 //  var test = LS.Send.Marker._latlng
 //  if ( isFinite(test.lat) && isFinite(test.lng) ){
