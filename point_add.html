@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta charset=utf-8 />
+  <title>Leaflet.ShareLocation</title>
+<!--  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+<!--  <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+		crossorigin="" />
+  <!-- <script src="//cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script> -->
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    
+  <script src='Leaflet.LocationShare.js'></script>
+  <style>
+  body {
+			padding: 0;
+			margin: 0;
+		}
+
+		html,
+		body,
+		#map {
+			height: 100%;
+			width: 100vw;
+		}
+  </style>
+</head>
+  
+<body>
+  <div id="map"></div>
+<script type="text/javascript">
+  var map = L.map('map').setView([54.6982, 20.505], 12);
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+</script>
+</body>
+  
+</html>
