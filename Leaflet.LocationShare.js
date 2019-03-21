@@ -106,7 +106,7 @@ function copyPrompt() {
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '=' +  LS.Send.Message;
-  window.prompt("Скопируйте строку ниже и отправте в чат", '' + res);
+  window.prompt("Скопируйте строку ниже и отправьте в чат", '' + res);
   window.open( res);
 }
 function placeMarker( selectedMap ){
