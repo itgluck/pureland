@@ -11,11 +11,13 @@
 		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
 		crossorigin="" />
 	<link rel="stylesheet" href="src/leaflet-search.css" />
+	<!-- <link rel="stylesheet" href="mobile.css" /> -->
 
 
 	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
 		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
 		crossorigin=""></script>
+		<script src='src/Leaflet.LocationShare.js'></script>
 
 	<style>
 		body {
@@ -48,7 +50,7 @@
 			padding: .7em;
 			font: 14px/16px Arial, Helvetica, sans-serif;
 			background: white;
-			background: rgba(255, 255, 255, 0.3);
+			background: rgba(255, 255, 255, 0.7);
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 			border-radius: 5px;
 		}
@@ -93,7 +95,7 @@
 		}
 
 		.logo img {
-			width: 3.6em;
+			width: 2.4em;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 			padding: 3px;
 			border-radius: 5px;
@@ -165,7 +167,7 @@
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
-				: '<h4>Информация</h4>Наведите на маркер ');
+				: '<h4>Информация</h4> <br>Наведите на маркер ');
 				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
 		}

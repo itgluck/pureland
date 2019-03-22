@@ -3,22 +3,23 @@ L.LocShare = {}
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
-LS.Send.Popup = L.popup().setContent('<div><input id="sendText" type="text" style="border-color:#80AFF9;border:solid;border-width:2px;border-radius:3px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3DB5F3;float:right;color:white;background-color:#3DB5F3;height:32px;font-size:16px;line-height:3px;margin:5px;" onclick="copyPrompt()">Отправить</button></div></div>')
+LS.Send.Popup = L.popup().setContent('<div><h4>Перемещайте маркер</h4><input id="sendText" type="text" style="max-width:95%;border-color:#80AFF9;border:solid;border-width:2px;border-radius:3px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3DB5F3;float:right;color:white;background-color:#3DB5F3;height:32px;font-size:16px;line-height:3px;margin:5px;" onclick="copyPrompt()">Отправить</button></div></div>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
 var sendIcon = L.icon({
-  iconUrl: "https://raw.githubusercontent.com/CliffCloud/Leaflet.LocationShare/master/dist/images/IconMapSend.png",
-  iconSize:     [50, 50], // size of the icon
-  iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
-  popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
+  // iconUrl: "https://raw.githubusercontent.com/CliffCloud/Leaflet.LocationShare/master/dist/images/IconMapSend.png",
+  iconUrl: "images/locations.png",
+  iconSize:     [54, 70], // size of the icon
+  iconAnchor:   [27, 70], // point of the icon which will correspond to marker's location
+  popupAnchor:  [0, -60] // point from which the popup should open relative to the iconAnchor
 })
 
 receiveIcon = L.icon({
-  iconUrl: "images/trash.png",
-  iconSize:     [90, 90], // size of the icon
-  iconAnchor:   [45, 120], // point of the icon which will correspond to marker's location
-  popupAnchor:  [0, -30] // point from which the popup should open relative to the iconAnchor
+  iconUrl: "images/location.png",
+  iconSize:     [54, 70], // size of the icon
+  iconAnchor:   [27, 70], // point of the icon which will correspond to marker's location
+  popupAnchor:  [0, -60] // point from which the popup should open relative to the iconAnchor
 })
 
 L.Map.addInitHook(function () {
@@ -32,7 +33,7 @@ L.Map.addInitHook(function () {
 L.Control.ShareLocation = L.Control.extend({
     options: {
         position: 'topleft',
-        title: 'share location'
+        title: 'Сообщить о загрязнении'
     },
 
     onAdd: function () {
@@ -102,11 +103,12 @@ function getJsonFromUrl () {
 
 function copyPrompt() {
   
-  let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
+  // let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
+  let res = location.origin + location.pathname  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '=' +  LS.Send.Message;
-  window.prompt("Скопируйте строку ниже и отправьте в чат", '' + res);
+  window.prompt("Скопируйте строку ниже и отправьте её в чат или на email", '' + res);
   window.open( res);
 }
 function placeMarker( selectedMap ){
