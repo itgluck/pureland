@@ -411,8 +411,8 @@ var statesData = {
                 'date': "14.03.2019",
                 "street": "ул. Трудовая 5",
                 'img': "./img/54.jpg",
-                "status": 1,
-                'c_date': '14.03.2019',
+                "status": 5,
+                'c_date': '21.03.2019',
                 'c_img': './img/54.1.jpg' },
             "geometry": { "type": "Point", "coordinates": [20.424123, 54.722181] }
         },
@@ -441,13 +441,13 @@ var statesData = {
         {
             "type": "Feature", "id": "57",
             "properties": {
-                'date': "14.03.2019",
-                "street": "ул. Звездная 25 ",
+                'date': "22.03.2019",
+                "street": "ул. Галицкого 17",
                 'img': "./img/57.jpg",
-                "status": 5,
-                'c_date': '14.03.2019',
+                "status": 2,
+                'c_date': '22.03.2019',
                 'c_img': './img/57.1.png' },
-            "geometry": { "type": "Point", "coordinates": [20.499470, 54.714925] }
+            "geometry": { "type": "Point", "coordinates": [20.498868, 54.714448] }
         },
         {
             "type": "Feature", "id": "58",
@@ -554,6 +554,30 @@ var statesData = {
                 'c_date': '21.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.544514,54.682224]}
+        },        
+        {
+            "type": "Feature", "id": "68",
+            "properties": {
+                "status": 2,
+                'date': "22.03.2019",
+                "street": "ул. Октябрьская 8",
+                'img': "./img/68.jpg",
+                'c_img': './img/68.1.jpg',
+                'c_date': '21.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.515444,54.701896]}
+        },        
+        {
+            "type": "Feature", "id": "69",
+            "properties": {
+                "status": 2,
+                'date': "22.03.2019",
+                "street": "ул. Октябрьская 8",
+                'img': "./img/69.jpg",
+                'c_img': './img/69.1.jpg',
+                'c_date': '21.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.516056,54.701701]}
         },        
     ]
 };

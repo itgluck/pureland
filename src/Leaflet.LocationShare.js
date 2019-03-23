@@ -3,7 +3,8 @@ L.LocShare = {}
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
-LS.Send.Popup = L.popup().setContent('<div><h4>Перемещайте маркер</h4><input id="sendText" type="text" style="max-width:95%;border-color:#80AFF9;border:solid;border-width:2px;border-radius:3px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button style="border-style:solid;border-radius:5px;border-color:#3DB5F3;float:right;color:white;background-color:#3DB5F3;height:32px;font-size:16px;line-height:3px;margin:5px;" onclick="copyPrompt()">Отправить</button></div></div>')
+LS.Send.Popup = L.popup().setContent('<div><h4>Перемещайте маркер</h4><input id="sendText" type="text" style="max-width:95%;border-radius:5px;border: #ccc solid 1px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button style="border-radius:5px;border:#2BB94D solid 2px;float:right;color:white;background-color:#31D758;height:32px;font-size:16px;line-height:2px;margin:5px;" onclick="copyPrompt()">Ок</button><button style="border-radius:5px;border:#C92323 solid 2px;float:left;color:white;background-color:#EA4E4E;height:32px;font-size:16px;line-height:2px;margin:5px;" onclick="reset()">Отмена</button></div></div>')
+// LS.Send.Popup = L.popup().setContent('<form action="mailto:it.gluck@ya.ru" method="post">Name:<br><input type="text" name="name"><br>E-mail:<br><input type="text" name="mail"><br>Comment:<br><input type="text" name="comment" size="50"><br><br><input type="submit" value="Send"><input type="reset" value="Reset"></form>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
@@ -42,7 +43,7 @@ L.Control.ShareLocation = L.Control.extend({
         this.link = L.DomUtil.create('a', 'leaflet-bar-part', container);
         this.link.title = this.options.title;
         var userIcon = L.DomUtil.create('img' , 'img-responsive' , this.link);
-        userIcon.src = 'https://raw.githubusercontent.com/CliffCloud/Leaflet.LocationShare/master/dist/images/IconLocShare.png'
+        userIcon.src = 'images/IconLocShare.png'
         this.link.href = '#';
 
         L.DomEvent.on(this.link, 'click', this._click, this);
@@ -104,12 +105,28 @@ function getJsonFromUrl () {
 function copyPrompt() {
   
   // let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
-  let res = location.origin + location.pathname  + '?' + 
+  var res = location.origin + location.pathname  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '=' +  LS.Send.Message;
   window.prompt("Скопируйте строку ниже и отправьте её в чат или на email", '' + res);
-  window.open( res);
+  // window.location( res);
+  var r = confirm("Отправьте данные координатору проекта\nДля просмотра результата? в новом окне нажмите [Ок].\nДля возврата к кате нажмите [Отмена]");
+
+  if (r == true) {
+
+    window.open( res);
+
+
+  } else {
+   return
+  }
+}
+
+function reset() {
+  // window.location.href='https://goo.gl/xzob6y'
+// this.res = location.origin + location.pathname;
+window.open(location.origin + location.pathname,'_self');
 }
 function placeMarker( selectedMap ){
 //  var test = LS.Send.Marker._latlng
