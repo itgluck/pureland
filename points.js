@@ -65,7 +65,7 @@ var statesData = {
                 'date': "18.03.2019",
                 "street": "ул. Комсомольская 112",
                 'img': "./img/18.jpg",
-                "status": 1,
+                "status": 5,
                 'c_date': '14.03.2019',
                 'c_img': './img/18.1.png'
             },
@@ -367,12 +367,12 @@ var statesData = {
             "type": "Feature", "id": "52",
             "properties": {
                 'date': "12.03.2019",
-                "street": "ул. Юрия Маточкина 8",
+                "street": "ул. Фермора 4",
                 'img': "./img/52.jpg",
-                "status": 2,
-                'c_date': '',
-                'c_img': '' },
-            "geometry": { "type": "Point", "coordinates": [20.490916, 54.741607] }
+                "status": 5,
+                'c_date': '23.03.2019',
+                'c_img': './img/52.1.jpg' },
+            "geometry": { "type": "Point", "coordinates": [20.48852, 54.744492] }
         },
         {
             "type": "Feature", "id": "53",
@@ -498,21 +498,21 @@ var statesData = {
         {
             "type": "Feature", "id": "62",
             "properties": {
-                "status": 2,
+                "status": 5,
                 'date': "18.03.2019",
-                "street": "Московский проспект 116",
+                "street": "Московский пр-т 116",
                 'img': "./img/62.jpg",
                 'c_img': './img/62.1.jpg',
-                'c_date': '18.03.2019'
+                'c_date': '23.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.531976,54.709222] }
+            "geometry": { "type": "Point", "coordinates": [20.53216,54.709044] }
         },
         {
             "type": "Feature", "id": "63",
             "properties": {
                 "status": 2,
                 'date': "18.03.2019",
-                "street": "Московский проспект 116",
+                "street": "ул. Шиллера 11",
                 'img': "./img/63.jpg",
                 'c_img': './img/63.1.jpg',
                 'c_date': '18.03.2019'
@@ -579,5 +579,89 @@ var statesData = {
             },
             "geometry": { "type": "Point", "coordinates": [20.516056,54.701701]}
         },        
+        {
+            "type": "Feature", "id": "70",
+            "properties": {
+                "status": 4,
+                'date': "23.03.2019",
+                "street": "ул. Осенняя 3",
+                'img': "./img/70.1.jpg",
+                'c_img': './img/70.1.jpg',
+                'c_date': '21.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.466569,54.736961]}
+        },        
+        {
+            "type": "Feature", "id": "71",
+            "properties": {
+                "status": 4,
+                'date': "23.03.2019",
+                "street": "ул. Осенняя 3",
+                'img': "./img/71.1.jpg",
+                'c_img': './img/71.1.jpg',
+                'c_date': '21.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.46437,54.727049]}
+        },        
+        {
+            "type": "Feature", "id": "72",
+            "properties": {
+                "status": 5,
+                'date': "19.03.2019",
+                "street": "пер. Ладушкина",
+                'img': "./img/72.jpg",
+                'c_img': './img/72.1.jpg',
+                'c_date': '23.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.452777,54.679597]}
+        },        
+        {
+            "type": "Feature", "id": "73",
+            "properties": {
+                "status": 2,
+                'date': "23.03.2019",
+                "street": "ул. Чапаева",
+                'img': "./img/73.jpg",
+                'c_img': './img/73.1.jpg',
+                'c_date': '23.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.465019,54.719706]}
+        },        
+        {
+            "type": "Feature", "id": "74",
+            "properties": {
+                "status": 2,
+                'date': "23.03.2019",
+                "street": "ул. Чапаева",
+                'img': "./img/74.jpg",
+                'c_img': './img/74.1.jpg',
+                'c_date': '23.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.465405,54.719645]}
+        },        
+        {
+            "type": "Feature", "id": "75",
+            "properties": {
+                "status": 2,
+                'date': "23.03.2019",
+                "street": "ул. Чапаева",
+                'img': "./img/75.jpg",
+                'c_img': './img/75.1.jpg',
+                'c_date': '23.03.2019'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.500461,54.743235]}
+        },   
+        {
+            "type": "Feature", "id": "76",
+            "properties": {
+                'date': "23.03.2019",
+                "street": "ул. Флоренского",
+                'img': "./img/76.jpg", 
+                'c_img': './img/76.1.jpg',
+                'c_date': '23.03.2019',
+                "status": 1
+            },
+            "geometry": { "type": "Point", "coordinates": [20.440841, 54.740058] }
+        },     
     ]
 };
