@@ -1,10 +1,13 @@
 
 L.LocShare = {}
+
+
+
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
 LS.Send.Popup = L.popup().setContent('<div><h4>Перемещайте маркер</h4><input id="sendText" type="text" style="max-width:95%;border-radius:5px;border: #ccc solid 1px;height:30px;" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button style="border-radius:5px;border:#2BB94D solid 2px;float:right;color:white;background-color:#31D758;height:32px;font-size:16px;line-height:2px;margin:5px;" onclick="copyPrompt()">Ок</button><button style="border-radius:5px;border:#C92323 solid 2px;float:left;color:white;background-color:#EA4E4E;height:32px;font-size:16px;line-height:2px;margin:5px;" onclick="reset()">Отмена</button></div></div>')
-// LS.Send.Popup = L.popup().setContent('<form action="mailto:it.gluck@ya.ru" method="post">Name:<br><input type="text" name="name"><br>E-mail:<br><input type="text" name="mail"><br>Comment:<br><input type="text" name="comment" size="50"><br><br><input type="submit" value="Send"><input type="reset" value="Reset"></form>')
+// LS.Send.Popup = L.popup().setContent('<form action="mailto:it.gluck@ya.ru" method="post">Name:<br><input type="text" name="Ссылка: " value="'+ this.res +'"><br>E-mail:<br><input type="text" name="mail"><br>Comment:<br><input type="text" name="comment" size="50"><br><br><input type="submit" value="Send"><input type="reset" value="Reset"></form>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
@@ -30,6 +33,7 @@ L.Map.addInitHook(function () {
     populateMarker(this);
   })
 });
+
 
 L.Control.ShareLocation = L.Control.extend({
     options: {
@@ -111,17 +115,20 @@ function copyPrompt() {
    'M' + '=' +  LS.Send.Message;
   window.prompt("Скопируйте строку ниже и отправьте её в чат или на email", '' + res);
   // window.location( res);
+  console.log( res);
   var r = confirm("Отправьте данные координатору проекта.\nДля просмотра результата, в новом окне нажмите [Ок]\nДля возврата к кате нажмите [Отмена]");
-
+  
   if (r == true) {
-
-    window.open( res);
-
-
+    window.open( res); 
   } else {
    return
   }
 }
+// function sendEmail() {
+//   var message = "mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату)." + this.res;
+//   console.log( message);
+//   return
+// }
 
 function reset() {
   // window.location.href='https://goo.gl/xzob6y'

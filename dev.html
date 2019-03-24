@@ -19,9 +19,7 @@
 		crossorigin=""></script>
 		<script src='src/Leaflet.LocationShare.js'></script>
 
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="https://cdn.rawgit.com/tarampampam/jquery.textmistake/master/src/jquery.textmistake.js"></script>
-	
+
 
 	<style>
 		body {
@@ -40,15 +38,14 @@
 			text-align: center;
 			width: 24em;
 			border-radius: 12px;
-			
-		}
+			}
 
 		.leaflet-popup-content-wrapper img {
 			width: 100%;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
-
+	
 		.info {
 			padding: .7em;
 			font: 14px/16px Arial, Helvetica, sans-serif;
@@ -99,10 +96,18 @@
 
 		.logo img {
 			width: 2.4em;
+			height: 2.4em;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 			padding: 3px;
 			border-radius: 5px;
 		}
+		.qr {
+			margin-left: 1.8em;
+		}
+		.qr:hover{
+			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+		} 
 
 		@media (max-width: 440px),
 		(max-height : 600px) {
@@ -170,7 +175,7 @@
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
-				: '<h4>Информация</h4> <br>Наведите на маркер ');
+				: '<h4>Информация</h4>Наведите на маркер');
 				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
 		}
@@ -355,11 +360,17 @@
 			map.on('click', onMapClick);
 		// end
 
+
+
 	</script>
 	<div class="logo">
 		<a
 			href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
-			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a></div>
+			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a>
+		</div>
+	<div class="logo qr">
+		<img class="qr" src="images/qrm.png" title="Делитесь картой: https://goo.gl/xzob6y">
+		</div>
 </body>
 
 </html>

@@ -19,9 +19,6 @@
 		crossorigin=""></script>
 		<script src='src/Leaflet.LocationShare.js'></script>
 
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script type="text/javascript" src="https://cdn.rawgit.com/tarampampam/jquery.textmistake/master/src/jquery.textmistake.js"></script>
-	
 
 	<style>
 		body {
@@ -103,6 +100,13 @@
 			padding: 3px;
 			border-radius: 5px;
 		}
+		.qr {
+			margin-left: 1.8em;
+		}
+		.qr:hover{
+			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+		} 
 
 		@media (max-width: 440px),
 		(max-height : 600px) {
@@ -359,7 +363,11 @@
 	<div class="logo">
 		<a
 			href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
-			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a></div>
+			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a>
+		</div>
+		<div class="logo qr">
+			<img class="qr" src="images/qrm.png" title="Делитесь картой: https://goo.gl/xzob6y">
+			</div>
 </body>
 
 </html>
