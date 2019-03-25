@@ -596,7 +596,7 @@ var statesData = {
             "properties": {
                 "status": 4,
                 'date': "23.03.2019",
-                "street": "ул. Осенняя 3",
+                "street": "ул. Каштановая аллея 88",
                 'img': "./img/71.1.jpg",
                 'c_img': './img/71.1.jpg',
                 'c_date': '21.03.2019'
