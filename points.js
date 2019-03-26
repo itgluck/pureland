@@ -587,8 +587,8 @@ var statesData = {
                 "status": 4,
                 'date': "23.03.2019",
                 "street": "ул. Осенняя 3",
-                'img': "./img/70.1.jpg",
-                'c_img': './img/70.1.jpg',
+                'img': "./img/70.1.JPG",
+                'c_img': './img/70.1.JPG',
                 'c_date': '21.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.466569,54.736961]}
@@ -598,9 +598,9 @@ var statesData = {
             "properties": {
                 "status": 4,
                 'date': "23.03.2019",
-                "street": "ул. Осенняя 3",
-                'img': "./img/71.1.jpg",
-                'c_img': './img/71.1.jpg',
+                "street": "ул. Каштановая аллея 88",
+                'img': "./img/71.1.JPG",
+                'c_img': './img/71.1.JPG',
                 'c_date': '21.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.46437,54.727049]}
