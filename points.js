@@ -1,5 +1,7 @@
 var statesData = {
-    "type": "FeatureCollection", "features": [
+    "type": "FeatureCollection",
+    "update": "26.03.19 | 19:14",
+     "features": [
         {
             "type": "Feature", "id": "01",
             "properties": {
@@ -662,6 +664,78 @@ var statesData = {
                 "status": 1
             },
             "geometry": { "type": "Point", "coordinates": [20.440841, 54.740058] }
+        },     
+        {
+            "type": "Feature", "id": "77",
+            "properties": {
+                'date': "25.03.2019",
+                "street": "ул. Менделеева 12",
+                'img': "./img/77.jpg", 
+                'c_img': './img/77.1.jpg',
+                'c_date': '25.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.440879, 54.712685] }
+        },     
+        {
+            "type": "Feature", "id": "78",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Дзержинского 36",
+                'img': "./img/78.jpg", 
+                'c_img': './img/78.1.jpg',
+                'c_date': '26.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.525562, 54.692993] }
+        },     
+        {
+            "type": "Feature", "id": "79",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. К. Заслонова",
+                'img': "./img/79.jpg", 
+                'c_img': './img/79.1.jpg',
+                'c_date': '26.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.441388, 54.671024] }
+        },     
+        {
+            "type": "Feature", "id": "80",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Петра Панина 9",
+                'img': "./img/80.jpg", 
+                'c_img': './img/80.1.jpg',
+                'c_date': '26.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.494641, 54.746046] }
+        },     
+        {
+            "type": "Feature", "id": "81",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Горького 178 Б",
+                'img': "./img/81.jpg", 
+                'c_img': './img/81.1.jpg',
+                'c_date': '26.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.500531, 54.755873] }
+        },     
+        {
+            "type": "Feature", "id": "82",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Горького 180",
+                'img': "./img/82.jpg", 
+                'c_img': './img/82.1.jpg',
+                'c_date': '26.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.500268, 54.756969] }
         },     
     ]
 };

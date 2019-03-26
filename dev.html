@@ -168,14 +168,14 @@
 			this.update();
 			return this._div;
 		};
-
+		var actual= 
 		info.update = function (props) {
 			// var tmp = props.status;
 			this._div.innerHTML = (props ?
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
-				: '<h4>Информация</h4>Наведите на маркер');
+				: '<h4>Информация</h4><i>Обновлено: ' + props.update + '</i>Наведите на маркер 123');
 				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
 		}
