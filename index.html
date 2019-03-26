@@ -172,7 +172,7 @@
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
-				: '<i>Обновлено: 26.03.19 | 19:20</i>');
+				: '<i>Обновлено: 26.03.19 | 20:00</i>');
 				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
 		}
@@ -186,8 +186,8 @@
 				d > 4 ? '#08AE1E' :
 					d > 3 ? '#3CFC14' :
 						d > 2 ? '#035CE7' :
-							d > 1 ? '#FF7700' :
-								'#FC0000';
+							d > 1 ? '#FD5E4D' :
+								'#DC0000';
 		}
 
 		function style(feature) {
@@ -221,7 +221,7 @@
 					});
 			}
 			else if (layer.feature.properties.status == 3) {
-				layer.bindPopup('<h3>Идут работы по уборке территории</h3>');
+				layer.bindPopup('<h3>Запланированы работы по уборке территории</h3>');
 
 				layer.setStyle(
 					{
@@ -238,8 +238,8 @@
 				layer.setStyle(
 					{
 						weight: 4,
-						color: '#B903E7',
-						fillColor: '#D27CE8',
+						color: '#FB7474',
+						fillColor: '#FE0000',
 						dashArray: '',
 						fillOpacity: 0.9
 					});
