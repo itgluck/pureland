@@ -754,7 +754,7 @@ var trashData = {
             "type": "Feature", "id": "83",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. Горького 180",
+                "street": "ул. Рябиновая",
                 'img': "./img/83.jpg",
                 'c_img': './img/83.1.jpg',
                 'c_date': '26.03.2019',
