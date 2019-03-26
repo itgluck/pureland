@@ -750,6 +750,18 @@ var trashData = {
             },
             "geometry": { "type": "Point", "coordinates": [20.500268, 54.756969] }
         },
+        {
+            "type": "Feature", "id": "83",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Горького 180",
+                'img': "./img/83.jpg",
+                'c_img': './img/83.1.jpg',
+                'c_date': '26.03.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.414046, 54.733768] }
+        },
     ]
 };
 
