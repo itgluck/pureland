@@ -356,7 +356,7 @@
 			popup
 				.setLatLng(latlng)
 				.setContent(latlng.toString())
-				.openOn(map);
+				// .openOn(map);
 			map.panTo(latlng);
 		}
 
@@ -365,22 +365,19 @@
 
 
 		// tabs
+	
 		function onTabsFeature(feature, layer) {
-			var popupContent = "<p>I started out as a GeoJSON " +
-				feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+			var popupContent = "<h3>Установлена табличка </h3>";
 
 		if (feature.properties && feature.properties.popupContent) {
-			popupContent += feature.properties.popupContent;
+			popupContent += "С текстом: <i>'" + feature.properties.popupContent + "'</i>";
+			
 		}
 
 		layer.bindPopup(popupContent);
-		// 	// layer.on({
-		// 	// 	// mouseover: highlightFeature,
-		// 	// 	// mouseout: resetHighlight,
-		// 	// 	click: zoomToFeature
-		// 	// });
-		// 	// layer.bindPopup('<h3>Установлены таблички</h3><br> Убрать?');
-		}
+		
+	}
+	
 
 		var tabsicon = L.icon({
 		iconUrl: 'images/tb.png',

@@ -1,6 +1,6 @@
 var trashData = {
     "type": "FeatureCollection",
-     "features": [
+    "features": [
         {
             "type": "Feature", "id": "01",
             "properties": {
@@ -31,7 +31,7 @@ var trashData = {
                 'date': "02.03.2019",
                 "street": "ул. Теннистая Аллея 100",
                 'img': "./img/28.jpg",
-                "status": 5,
+                "status": 1,
                 'c_date': '14.03.2019',
                 'c_img': './img/28.1.png'
             },
@@ -328,7 +328,8 @@ var trashData = {
                 'img': "./img/48.jpg",
                 "status": 2,
                 'c_date': '12.03.2019',
-                'c_img': '' },
+                'c_img': ''
+            },
             "geometry": { "type": "Point", "coordinates": [20.458220, 54.719711] }
         },
         {
@@ -339,7 +340,8 @@ var trashData = {
                 'img': "./img/49.jpg",
                 "status": 2,
                 'c_date': '',
-                'c_img': '' },
+                'c_img': ''
+            },
             "geometry": { "type": "Point", "coordinates": [20.545555, 54.714058] }
         },
         {
@@ -350,7 +352,8 @@ var trashData = {
                 'img': "./img/50.jpg",
                 "status": 2,
                 'c_date': '',
-                'c_img': '' },
+                'c_img': ''
+            },
             "geometry": { "type": "Point", "coordinates": [20.544471, 54.716489] }
         },
         {
@@ -361,7 +364,8 @@ var trashData = {
                 'img': "./img/51.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/51.1.png' },
+                'c_img': './img/51.1.png'
+            },
             "geometry": { "type": "Point", "coordinates": [20.531922, 54.710908] }
         },
         {
@@ -372,7 +376,8 @@ var trashData = {
                 'img': "./img/52.jpg",
                 "status": 5,
                 'c_date': '23.03.2019',
-                'c_img': './img/52.1.jpg' },
+                'c_img': './img/52.1.jpg'
+            },
             "geometry": { "type": "Point", "coordinates": [20.48852, 54.744492] }
         },
         {
@@ -383,7 +388,8 @@ var trashData = {
                 'img': "./img/53.jpg",
                 "status": 2,
                 'c_date': '',
-                'c_img': '' },
+                'c_img': ''
+            },
             "geometry": { "type": "Point", "coordinates": [20.478881, 54.737141] }
         },
         {
@@ -392,7 +398,8 @@ var trashData = {
                 'date': "03.03.2019",
                 "street": "ул. Флоренского",
                 'img': "./img/03.jpg",
-                "status": 2 },
+                "status": 2
+            },
             "geometry": { "type": "Point", "coordinates": [20.445117, 54.739841] }
         },
         {
@@ -403,7 +410,8 @@ var trashData = {
                 'img': "./img/04.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/04.1.png' },
+                'c_img': './img/04.1.png'
+            },
             "geometry": { "type": "Point", "coordinates": [20.479537, 54.749100,] }
         },
         {
@@ -412,9 +420,10 @@ var trashData = {
                 'date': "14.03.2019",
                 "street": "ул. Трудовая 5",
                 'img': "./img/54.jpg",
-                "status": 5,
+                "status": 1,
                 'c_date': '21.03.2019',
-                'c_img': './img/54.1.jpg' },
+                'c_img': './img/54.1.jpg'
+            },
             "geometry": { "type": "Point", "coordinates": [20.424123, 54.722181] }
         },
         {
@@ -425,7 +434,8 @@ var trashData = {
                 'img': "./img/55.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/55.1.png' },
+                'c_img': './img/55.1.png'
+            },
             "geometry": { "type": "Point", "coordinates": [20.477875, 54.725585] }
         },
         {
@@ -436,7 +446,8 @@ var trashData = {
                 'img': "./img/56.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/56.1.png' },
+                'c_img': './img/56.1.png'
+            },
             "geometry": { "type": "Point", "coordinates": [20.461457, 54.726548] }
         },
         {
@@ -447,7 +458,8 @@ var trashData = {
                 'img': "./img/57.jpg",
                 "status": 2,
                 'c_date': '22.03.2019',
-                'c_img': './img/57.1.png' },
+                'c_img': './img/57.1.png'
+            },
             "geometry": { "type": "Point", "coordinates": [20.498868, 54.714448] }
         },
         {
@@ -458,7 +470,8 @@ var trashData = {
                 'img': "./img/58.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/58.1.png' },
+                'c_img': './img/58.1.png'
+            },
             "geometry": { "type": "Point", "coordinates": [20.502701, 54.715373] }
         },
         {
@@ -469,7 +482,8 @@ var trashData = {
                 'img': "./img/59.jpg",
                 "status": 2,
                 'c_date': '14.03.2019',
-                'c_img': './img/59.1.jpg' },
+                'c_img': './img/59.1.jpg'
+            },
             "geometry": { "type": "Point", "coordinates": [20.503729, 54.698482] }
         },
         {
@@ -482,7 +496,7 @@ var trashData = {
                 'c_img': './img/60.1.jpg',
                 'c_date': '14.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.542890, 54.679962]}
+            "geometry": { "type": "Point", "coordinates": [20.542890, 54.679962] }
         },
         {
             "type": "Feature", "id": "61",
@@ -494,7 +508,7 @@ var trashData = {
                 'c_img': './img/61.jpg',
                 'c_date': '18.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.457837,54.719300]}
+            "geometry": { "type": "Point", "coordinates": [20.457837, 54.719300] }
         },
         {
             "type": "Feature", "id": "62",
@@ -506,7 +520,7 @@ var trashData = {
                 'c_img': './img/62.1.jpg',
                 'c_date': '23.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.53216,54.709044] }
+            "geometry": { "type": "Point", "coordinates": [20.53216, 54.709044] }
         },
         {
             "type": "Feature", "id": "63",
@@ -518,7 +532,7 @@ var trashData = {
                 'c_img': './img/63.1.jpg',
                 'c_date': '18.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.476417,54.723604]}
+            "geometry": { "type": "Point", "coordinates": [20.476417, 54.723604] }
         },
         {
             "type": "Feature", "id": "64",
@@ -530,7 +544,7 @@ var trashData = {
                 'c_img': './img/64.1.jpg',
                 'c_date': '18.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.548505,54.735359]}
+            "geometry": { "type": "Point", "coordinates": [20.548505, 54.735359] }
         },
         {
             "type": "Feature", "id": "65",
@@ -542,7 +556,7 @@ var trashData = {
                 'c_img': './img/65.1.jpg',
                 'c_date': '18.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.547105,54.735167]}
+            "geometry": { "type": "Point", "coordinates": [20.547105, 54.735167] }
         },
         {
             "type": "Feature", "id": "67",
@@ -554,8 +568,8 @@ var trashData = {
                 'c_img': './img/67.1.jpg',
                 'c_date': '21.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.544514,54.682224]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.544514, 54.682224] }
+        },
         {
             "type": "Feature", "id": "68",
             "properties": {
@@ -566,8 +580,8 @@ var trashData = {
                 'c_img': './img/68.1.jpg',
                 'c_date': '21.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.515444,54.701896]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.515444, 54.701896] }
+        },
         {
             "type": "Feature", "id": "69",
             "properties": {
@@ -578,8 +592,8 @@ var trashData = {
                 'c_img': './img/69.1.jpg',
                 'c_date': '21.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.516056,54.701701]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.516056, 54.701701] }
+        },
         {
             "type": "Feature", "id": "70",
             "properties": {
@@ -590,8 +604,8 @@ var trashData = {
                 'c_img': './img/70.1.JPG',
                 'c_date': '21.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.466569,54.736961]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.466569, 54.736961] }
+        },
         {
             "type": "Feature", "id": "71",
             "properties": {
@@ -602,8 +616,8 @@ var trashData = {
                 'c_img': './img/71.1.JPG',
                 'c_date': '21.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.46437,54.727049]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.46437, 54.727049] }
+        },
         {
             "type": "Feature", "id": "72",
             "properties": {
@@ -614,8 +628,8 @@ var trashData = {
                 'c_img': './img/72.1.jpg',
                 'c_date': '23.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.452777,54.679597]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.452777, 54.679597] }
+        },
         {
             "type": "Feature", "id": "73",
             "properties": {
@@ -626,8 +640,8 @@ var trashData = {
                 'c_img': './img/73.1.jpg',
                 'c_date': '23.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.465019,54.719706]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.465019, 54.719706] }
+        },
         {
             "type": "Feature", "id": "74",
             "properties": {
@@ -638,8 +652,8 @@ var trashData = {
                 'c_img': './img/74.1.jpg',
                 'c_date': '23.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.465405,54.719645]}
-        },        
+            "geometry": { "type": "Point", "coordinates": [20.465405, 54.719645] }
+        },
         {
             "type": "Feature", "id": "75",
             "properties": {
@@ -650,108 +664,118 @@ var trashData = {
                 'c_img': './img/75.1.jpg',
                 'c_date': '23.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.500461,54.743235]}
-        },   
+            "geometry": { "type": "Point", "coordinates": [20.500461, 54.743235] }
+        },
         {
             "type": "Feature", "id": "76",
             "properties": {
                 'date': "23.03.2019",
                 "street": "ул. Флоренского",
-                'img': "./img/76.jpg", 
+                'img': "./img/76.jpg",
                 'c_img': './img/76.1.jpg',
                 'c_date': '23.03.2019',
                 "status": 1
             },
             "geometry": { "type": "Point", "coordinates": [20.440841, 54.740058] }
-        },     
+        },
         {
             "type": "Feature", "id": "77",
             "properties": {
                 'date': "25.03.2019",
                 "street": "ул. Менделеева 12",
-                'img': "./img/77.jpg", 
+                'img': "./img/77.jpg",
                 'c_img': './img/77.1.jpg',
                 'c_date': '25.03.2019',
                 "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.440879, 54.712685] }
-        },     
+        },
         {
             "type": "Feature", "id": "78",
             "properties": {
                 'date': "26.03.2019",
                 "street": "ул. Дзержинского 36",
-                'img': "./img/78.jpg", 
+                'img': "./img/78.jpg",
                 'c_img': './img/78.1.jpg',
                 'c_date': '26.03.2019',
                 "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.525562, 54.692993] }
-        },     
+        },
         {
             "type": "Feature", "id": "79",
             "properties": {
                 'date': "26.03.2019",
                 "street": "ул. К. Заслонова",
-                'img': "./img/79.jpg", 
+                'img': "./img/79.jpg",
                 'c_img': './img/79.1.jpg',
                 'c_date': '26.03.2019',
                 "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.441388, 54.671024] }
-        },     
+        },
         {
             "type": "Feature", "id": "80",
             "properties": {
                 'date': "26.03.2019",
                 "street": "ул. Петра Панина 9",
-                'img': "./img/80.jpg", 
+                'img': "./img/80.jpg",
                 'c_img': './img/80.1.jpg',
                 'c_date': '26.03.2019',
                 "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.494641, 54.746046] }
-        },     
+        },
         {
             "type": "Feature", "id": "81",
             "properties": {
                 'date': "26.03.2019",
                 "street": "ул. Горького 178 Б",
-                'img': "./img/81.jpg", 
+                'img': "./img/81.jpg",
                 'c_img': './img/81.1.jpg',
                 'c_date': '26.03.2019',
                 "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.500531, 54.755873] }
-        },     
+        },
         {
             "type": "Feature", "id": "82",
             "properties": {
                 'date': "26.03.2019",
                 "street": "ул. Горького 180",
-                'img': "./img/82.jpg", 
+                'img': "./img/82.jpg",
                 'c_img': './img/82.1.jpg',
                 'c_date': '26.03.2019',
                 "status": 2
             },
             "geometry": { "type": "Point", "coordinates": [20.500268, 54.756969] }
-        },     
+        },
     ]
 };
 
 // Tabs
 var dataTabs = {
     "type": "FeatureCollection",
-     "features": [
-         {
-        "type": "Feature", "id": "1",
-        "properties": {
-            'date': "26.03.2019",
-            "street": "ул. Горького 180",
-            "popupContent": "This is a free bus line that will take you across downtown.",
-            "status": 2
+    "features": [
+        {
+            "type": "Feature", "id": "1",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Горького 180",
+                "popupContent": "Вывоз мусора",
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.487099, 54.715895] }
         },
-        "geometry": { "type": "Point", "coordinates": [20.504071, 54.707069] }
-    },     
-]
+        {
+            "type": "Feature", "id": "1",
+            "properties": {
+                'date': "26.03.2019",
+                "street": "ул. Горького 180",
+                "popupContent": "",
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.504051, 54.703069] }
+        },
+    ]
 };
