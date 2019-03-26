@@ -17,7 +17,7 @@
 	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
 		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
 		crossorigin=""></script>
-		<script src='src/Leaflet.LocationShare.js'></script>
+	<script src='src/Leaflet.LocationShare.js'></script>
 
 
 
@@ -33,19 +33,20 @@
 			height: 100%;
 			width: 100vw;
 		}
+
 		.leaflet-popup-content-wrapper {
 			padding: 1px;
 			text-align: center;
 			width: 24em;
 			border-radius: 12px;
-			}
+		}
 
 		.leaflet-popup-content-wrapper img {
 			width: 100%;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
-	
+
 		.info {
 			padding: .7em;
 			font: 14px/16px Arial, Helvetica, sans-serif;
@@ -71,6 +72,7 @@
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
+
 		.info i {
 			color: #666;
 			font-size: 9px;
@@ -105,13 +107,16 @@
 			padding: 3px;
 			border-radius: 5px;
 		}
+
 		.qr {
 			margin-left: 1.8em;
 		}
-		.qr:hover{
-			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
-		} 
+		.qr:hover {
+			transform: scale(1.5);
+			/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+		}
 
 		@media (max-width: 440px),
 		(max-height : 600px) {
@@ -172,17 +177,17 @@
 			this.update();
 			return this._div;
 		};
-		var actual= 
-		info.update = function (props) {
-			// var tmp = props.status;
-			this._div.innerHTML = (props ?
-				'<img src="' + props.img + '"><br>' +
-				'Адрес: <b>' + props.street +
-				'</b><br/>Дата: ' + props.date
-				: '<h4>Информация</h4><hr><i>Обновлено: 26.03.19 | 19:20</i>');
+		var actual =
+			info.update = function (props) {
+				// var tmp = props.status;
+				this._div.innerHTML = (props ?
+					'<img src="' + props.img + '"><br>' +
+					'Адрес: <b>' + props.street +
+					'</b><br/>Дата: ' + props.date
+					: '<i>Обновлено: 26.03.19 | 19:20</i>');
 				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
-		}
+			}
 
 		info.addTo(map);
 
@@ -217,8 +222,8 @@
 
 			info.update(layer.feature.properties);
 			if (layer.feature.properties.status > 4) {
-				
-				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date );
+
+				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date);
 				layer.openPopup();
 				layer.setStyle(
 					{
@@ -278,12 +283,6 @@
 
 		function zoomToFeature(e) {
 			map.panTo(e.latlng);
-			// if (L.Browser.android) {
-			// 	map.panTo(e.latlng);
-			// }
-			// else {
-			// 	map.setView(e.latlng);
-			// }
 		}
 
 		function onEachFeature(feature, layer) {
@@ -293,23 +292,24 @@
 				click: zoomToFeature
 			});
 		}
+		
 
-		geojson = L.geoJson(statesData, {
+		geojson = L.geoJson(trashData, {
 			style: style,
 			onEachFeature: onEachFeature,
 
 			pointToLayer: function (feature, latlng) {
-				
+
+				return L.circleMarker(latlng, {
+					radius: 10,
+					fillColor: "#ff7800",
+					color: "#000",
+					weight: 1,
+					opacity: 1,
+					fillOpacity: 0.8
+				});
+				if (L.Browser.android) {
 					return L.circleMarker(latlng, {
-						radius: 10,
-						fillColor: "#ff7800",
-						color: "#000",
-						weight: 1,
-						opacity: 1,
-						fillOpacity: 0.8
-					});
-					if (L.Browser.android) {
-						return L.circleMarker(latlng, {
 						radius: 17,
 						fillColor: "#ff7800",
 						color: "#000",
@@ -317,8 +317,8 @@
 						opacity: 1,
 						fillOpacity: 0.8
 					});
-					}
-				
+				}
+
 			}
 		}).addTo(map);
 
@@ -335,11 +335,11 @@
 
 			for (var i = 0; i < grades.length; i++) {
 				from = grades[i];
-				
+
 
 				labels.push(
 					'<i title="Сообщить о свалке" style="background:' + getColor(from) + '"></i> ' +
-					from );
+					from);
 			}
 			div.innerHTML = labels.join('<br>');
 			return div;
@@ -349,21 +349,55 @@
 
 
 		// PointCoord
-			var popup = L.popup();
+		var popup = L.popup();
 
-			function onMapClick(e) {
-				var latlng = e.latlng;
-				popup
+		function onMapClick(e) {
+			var latlng = e.latlng;
+			popup
 				.setLatLng(latlng)
 				.setContent(latlng.toString())
 				.openOn(map);
-				
-				map.panTo(latlng);
-			}
+			map.panTo(latlng);
+		}
 
-			map.on('click', onMapClick);
-		// end
+		map.on('click', onMapClick);
+		// Coord end
 
+
+		// tabs
+		function onTabsFeature(feature, layer) {
+			var popupContent = "<p>I started out as a GeoJSON " +
+				feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+
+		if (feature.properties && feature.properties.popupContent) {
+			popupContent += feature.properties.popupContent;
+		}
+
+		layer.bindPopup(popupContent);
+		// 	// layer.on({
+		// 	// 	// mouseover: highlightFeature,
+		// 	// 	// mouseout: resetHighlight,
+		// 	// 	click: zoomToFeature
+		// 	// });
+		// 	// layer.bindPopup('<h3>Установлены таблички</h3><br> Убрать?');
+		}
+
+		var tabsicon = L.icon({
+		iconUrl: 'images/tb.png',
+		iconSize: [32, 37],
+		iconAnchor: [16, 37],
+		popupAnchor: [0, -28]
+	});
+
+	var coorsLayer = L.geoJSON(dataTabs, {
+
+pointToLayer: function (feature, latlng) {
+	return L.marker(latlng, {icon: tabsicon});
+},
+
+onEachFeature: onTabsFeature
+}).addTo(map);
+		// Tabs end
 
 
 	</script>
@@ -371,10 +405,10 @@
 		<a
 			href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
 			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a>
-		</div>
+	</div>
 	<div class="logo qr">
 		<img class="qr" src="images/qrm.png" title="Делитесь картой: https://goo.gl/xzob6y">
-		</div>
+	</div>
 </body>
 
 </html>

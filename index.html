@@ -172,7 +172,7 @@
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
-				: '<i>Обновлено: 26.03.19 | 20:00</i>');
+				: '<i>Обновлено: 26.03.19 | 21:30</i>');
 				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
 		}
@@ -271,12 +271,6 @@
 
 		function zoomToFeature(e) {
 			map.panTo(e.latlng);
-			// if (L.Browser.android) {
-			// 	map.panTo(e.latlng);
-			// }
-			// else {
-			// 	map.setView(e.latlng);
-			// }
 		}
 
 		function onEachFeature(feature, layer) {
@@ -287,7 +281,7 @@
 			});
 		}
 
-		geojson = L.geoJson(statesData, {
+		geojson = L.geoJson(trashData, {
 			style: style,
 			onEachFeature: onEachFeature,
 

@@ -1,6 +1,5 @@
-var statesData = {
+var trashData = {
     "type": "FeatureCollection",
-    "update": "26.03.19 | 19:14",
      "features": [
         {
             "type": "Feature", "id": "01",
@@ -584,10 +583,10 @@ var statesData = {
         {
             "type": "Feature", "id": "70",
             "properties": {
-                "status": 4,
+                "status": 5,
                 'date': "23.03.2019",
                 "street": "ул. Осенняя 3",
-                'img': "./img/70.1.JPG",
+                'img': "./img/70.JPG",
                 'c_img': './img/70.1.JPG',
                 'c_date': '21.03.2019'
             },
@@ -596,10 +595,10 @@ var statesData = {
         {
             "type": "Feature", "id": "71",
             "properties": {
-                "status": 4,
-                'date': "23.03.2019",
+                "status": 5,
+                'date': "02.03.2019",
                 "street": "ул. Каштановая аллея 88",
-                'img': "./img/71.1.JPG",
+                'img': "./img/71.JPG",
                 'c_img': './img/71.1.JPG',
                 'c_date': '21.03.2019'
             },
@@ -738,4 +737,21 @@ var statesData = {
             "geometry": { "type": "Point", "coordinates": [20.500268, 54.756969] }
         },     
     ]
+};
+
+// Tabs
+var dataTabs = {
+    "type": "FeatureCollection",
+     "features": [
+         {
+        "type": "Feature", "id": "1",
+        "properties": {
+            'date': "26.03.2019",
+            "street": "ул. Горького 180",
+            "popupContent": "This is a free bus line that will take you across downtown.",
+            "status": 2
+        },
+        "geometry": { "type": "Point", "coordinates": [20.504071, 54.707069] }
+    },     
+]
 };
