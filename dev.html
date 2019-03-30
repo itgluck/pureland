@@ -177,17 +177,17 @@
 			this.update();
 			return this._div;
 		};
-		var actual =
-			info.update = function (props) {
-				// var tmp = props.status;
-				this._div.innerHTML = (props ?
-					'<img src="' + props.img + '"><br>' +
-					'Адрес: <b>' + props.street +
-					'</b><br/>Дата: ' + props.date
-					: '<i>Обновлено: 26.03.19 | 19:20</i>');
-				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
-			}
+		info.update = function (props) {
+			// var tmp = props.status;
+			this._div.innerHTML = (props ?
+				'<img src="' + props.img + '"><br>' +
+				'Адрес: <b>' + props.street +
+				'</b><br/>Дата: ' + props.date
+				: '<i>Обновлено: 26.03.19 | 19:20</i>');
+			// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
+
+		}
 
 		info.addTo(map);
 
@@ -292,33 +292,21 @@
 				click: zoomToFeature
 			});
 		}
-		
+
 
 		geojson = L.geoJson(trashData, {
 			style: style,
 			onEachFeature: onEachFeature,
 
-			pointToLayer: function (feature, latlng) {
-
-				return L.circleMarker(latlng, {
-					radius: 10,
-					fillColor: "#ff7800",
-					color: "#000",
-					weight: 1,
-					opacity: 1,
-					fillOpacity: 0.8
-				});
-				if (L.Browser.android) {
+			pointToLayer: function (feature, latlng) {				
 					return L.circleMarker(latlng, {
-						radius: 17,
+						radius: 10,
 						fillColor: "#ff7800",
 						color: "#000",
 						weight: 1,
 						opacity: 1,
 						fillOpacity: 0.8
 					});
-				}
-
 			}
 		}).addTo(map);
 
@@ -353,10 +341,10 @@
 
 		function onMapClick(e) {
 			var latlng = e.latlng;
-			popup
+			popup			  
 				.setLatLng(latlng)
 				.setContent(latlng.toString())
-				// .openOn(map);
+			.openOn(map);
 			map.panTo(latlng);
 		}
 
@@ -365,35 +353,35 @@
 
 
 		// tabs
-	
+
 		function onTabsFeature(feature, layer) {
 			var popupContent = "<h3>Установлена табличка </h3>";
 
-		if (feature.properties && feature.properties.popupContent) {
-			popupContent += "С текстом: <i>'" + feature.properties.popupContent + "'</i>";
-			
+			if (feature.properties && feature.properties.popupContent) {
+				popupContent += "С текстом: <i>'" + feature.properties.popupContent + "'</i>";
+
+			}
+
+			layer.bindPopup(popupContent);
+
 		}
 
-		layer.bindPopup(popupContent);
-		
-	}
-	
 
 		var tabsicon = L.icon({
-		iconUrl: 'images/tb.png',
-		iconSize: [32, 37],
-		iconAnchor: [16, 37],
-		popupAnchor: [0, -28]
-	});
+			iconUrl: 'images/tb.png',
+			iconSize: [32, 37],
+			iconAnchor: [16, 37],
+			popupAnchor: [0, -28]
+		});
 
-	var coorsLayer = L.geoJSON(dataTabs, {
+		var coorsLayer = L.geoJSON(dataTabs, {
 
-pointToLayer: function (feature, latlng) {
-	return L.marker(latlng, {icon: tabsicon});
-},
+			pointToLayer: function (feature, latlng) {
+				return L.marker(latlng, { icon: tabsicon });
+			},
 
-onEachFeature: onTabsFeature
-}).addTo(map);
+			onEachFeature: onTabsFeature
+		}).addTo(map);
 		// Tabs end
 
 

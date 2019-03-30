@@ -309,6 +309,18 @@ var trashData = {
             "geometry": { "type": "Point", "coordinates": [20.473877, 54.679792] }
         },
         {
+            "type": "Feature", "id": "48",
+            "properties": {
+                'date': "11.03.2019",
+                "street": "ул. Харьковская 21",
+                'img': "./img/48.jpg",
+                "status": 2,
+                'c_date': '',
+                'c_img': ''
+            },
+            "geometry": { "type": "Point", "coordinates": [20.454268, 54.710664] }
+        },
+        {
             "type": "Feature", "id": "00",
             "properties": {
                 'date': "11.03.2019",
@@ -319,18 +331,6 @@ var trashData = {
                 'c_img': ''
             },
             "geometry": { "type": "Point", "coordinates": [20.473137, 54.678608] }
-        },
-        {
-            "type": "Feature", "id": "48",
-            "properties": {
-                'date': "11.03.2019",
-                "street": "ул. Яблоневая аллея 27",
-                'img': "./img/48.jpg",
-                "status": 2,
-                'c_date': '12.03.2019',
-                'c_img': ''
-            },
-            "geometry": { "type": "Point", "coordinates": [20.458220, 54.719711] }
         },
         {
             "type": "Feature", "id": "49",
@@ -508,7 +508,7 @@ var trashData = {
                 'c_img': './img/61.jpg',
                 'c_date': '18.03.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.457837, 54.719300] }
+            "geometry": { "type": "Point", "coordinates": [20.45746, 54.720475] }
         },
         {
             "type": "Feature", "id": "62",
@@ -762,32 +762,53 @@ var trashData = {
             },
             "geometry": { "type": "Point", "coordinates": [20.414046, 54.733768] }
         },
-    ]
-};
-
-// Tabs
-var dataTabs = {
-    "type": "FeatureCollection",
-    "features": [
         {
-            "type": "Feature", "id": "1",
+            "type": "Feature", "id": "84",
             "properties": {
-                'date': "26.03.2019",
-                "street": "ул. Горького 180",
-                "popupContent": "Вывоз мусора",
+                'date': "28.03.2019",
+                "street": "пр-т Гвардейский 22",
+                'img': "./img/84.jpg",
+                'c_img': './img/84.1.jpg',
+                'c_date': '01.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point", "coordinates": [20.487099, 54.715895] }
+            "geometry": { "type": "Point", "coordinates": [20.490001, 54.713091] }
         },
         {
-            "type": "Feature", "id": "1",
+            "type": "Feature", "id": "85",
             "properties": {
-                'date': "26.03.2019",
-                "street": "ул. Горького 180",
-                "popupContent": "",
+                'date': "28.03.2019",
+                "street": "ул. Красная 119",
+                'img': "./img/85.jpg",
+                'c_img': './img/85.1.jpg',
+                'c_date': '01.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point", "coordinates": [20.504051, 54.703069] }
+            "geometry": { "type": "Point", "coordinates": [20.472293, 54.737097] }
+        },
+        {
+            "type": "Feature", "id": "86",
+            "properties": {
+                'date': "28.03.2019",
+                "street": "ул. Целлюлозная",
+                'img': "./img/86.jpg",
+                'c_img': './img/86.1.jpg',
+                'c_date': '01.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.430021, 54.730636] }
+        },
+        {
+            "type": "Feature", "id": "87",
+            "properties": {
+                'date': "28.03.2019",
+                "street": "ул. Бусловского 2",
+                'img': "./img/87.jpg",
+                'c_img': './img/87.1.jpg',
+                'c_date': '01.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point", "coordinates": [20.529376, 54.746192] }
         },
     ]
 };
