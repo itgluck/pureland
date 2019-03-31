@@ -853,7 +853,7 @@ var trashData = {
             "type": "Feature", "id": "91",
             "properties": {
                 'date': "31.03.2019",
-                "street": "ул. Аральская",
+                "street": "пос. Прегольский",
                 'img': "./img/91.jpg",
                 'c_img': './img/91.1.jpg',
                 'c_date': '01.04.2019',
