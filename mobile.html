@@ -17,7 +17,7 @@
 	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
 		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
 		crossorigin=""></script>
-		<script src='src/Leaflet.LocationShare.js'></script>
+		<script src='src/Leaflet.LocationShare_m.js'></script>
 
 
 	<style>
@@ -310,29 +310,7 @@
 		}).addTo(map);
 
 		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
-		var legend = L.control({ position: 'bottomright', width: '3em' });
 
-		legend.onAdd = function (map) {
-
-			var div = L.DomUtil.create('div', 'info legend'),
-				// title="Состояние площадки",
-				labels = [],
-				grades = [1, 2, 3, 4, 5],
-				from;
-
-			for (var i = 0; i < grades.length; i++) {
-				from = grades[i];
-				
-
-				labels.push(
-					'<i title="Сообщить о свалке" style="background:' + getColor(from) + '"></i> ' +
-					from );
-			}
-			div.innerHTML = labels.join('<br>');
-			return div;
-		};
-
-		// legend.addTo(map);
 
 	</script>
 </body>
