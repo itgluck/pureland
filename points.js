@@ -849,5 +849,18 @@ var trashData = {
             "geometry": { "type": "Point",
             "coordinates": [20.355016, 54.725835] }
         },
+        {
+            "type": "Feature", "id": "91",
+            "properties": {
+                'date': "31.03.2019",
+                "street": "ул. Аральская",
+                'img': "./img/91.jpg",
+                'c_img': './img/91.1.jpg',
+                'c_date': '01.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.392631, 54.699513] }
+        },
     ]
 };
