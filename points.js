@@ -810,5 +810,44 @@ var trashData = {
             },
             "geometry": { "type": "Point", "coordinates": [20.529376, 54.746192] }
         },
+        {
+            "type": "Feature", "id": "88",
+            "properties": {
+                'date': "30.03.2019",
+                "street": "ул. Калязинская 6",
+                'img': "./img/88.jpg",
+                'c_img': './img/88.1.jpg',
+                'c_date': '01.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.507022, 54.726767] }
+        },
+        {
+            "type": "Feature", "id": "89",
+            "properties": {
+                'date': "30.03.2019",
+                "street": "ул. Элблонгская 9",
+                'img': "./img/89.jpg",
+                'c_img': './img/89.1.jpg',
+                'c_date': '01.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.498284, 54.700278] }
+        },
+        {
+            "type": "Feature", "id": "90",
+            "properties": {
+                'date': "30.03.2019",
+                "street": "ул. Аральская",
+                'img': "./img/90.jpg",
+                'c_img': './img/90.1.jpg',
+                'c_date': '01.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.355016, 54.725835] }
+        },
     ]
 };
