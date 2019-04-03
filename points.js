@@ -85,16 +85,6 @@ var trashData = {
             "geometry": { "type": "Point", "coordinates": [20.526587, 54.733437] }
         },
         {
-            "type": "Feature", "id": "14",
-            "properties": {
-                'date': "03.03.2019",
-                "street": "ул. Флоренского",
-                'img': "./img/14.jpg",
-                "status": 2
-            },
-            "geometry": { "type": "Point", "coordinates": [20.441620, 54.739954] }
-        },
-        {
             "type": "Feature", "id": "13",
             "properties": {
                 'date': "03.03.2019",
@@ -561,7 +551,7 @@ var trashData = {
         {
             "type": "Feature", "id": "67",
             "properties": {
-                "status": 2,
+                "status": 1,
                 'date': "21.03.2019",
                 "street": "ул. Емельянова 80",
                 'img': "./img/67.jpg",
@@ -861,6 +851,70 @@ var trashData = {
             },
             "geometry": { "type": "Point",
             "coordinates": [20.392631, 54.699513] }
+        },
+        {
+            "type": "Feature", "id": "92",
+            "properties": {
+                'date': "01.04.2019",
+                "street": "ул. Беговая 41",
+                'img': "./img/92.jpg",
+                'c_img': './img/92.1.jpg',
+                'c_date': '02.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.478183, 54.676418] }
+        },
+        {
+            "type": "Feature", "id": "93",
+            "properties": {
+                'date': "012.04.2019",
+                "street": "ул. Вагоностроительная 41",
+                'img': "./img/93.jpg",
+                'c_img': './img/93.1.jpg',
+                'c_date': '02.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.459896, 54.711117] }
+        },
+        {
+            "type": "Feature", "id": "94",
+            "properties": {
+                'date': "01.04.2019",
+                "street": "ул. Харьковская 83",
+                'img': "./img/94.jpg",
+                'c_img': './img/94.1.jpg',
+                'c_date': '02.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.447311, 54.710001] }
+        },
+        {
+            "type": "Feature", "id": "14",
+            "properties": {
+                'date': "03.03.2019",
+                "street": "ул. Флоренского",
+                'img': "./img/14.jpg",
+                "status": 5,
+                'c_date': '03.04.2019',
+                'c_img': './img/14.1.jpg'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.441620, 54.739954] }
+        },
+        {
+            "type": "Feature", "id": "95",
+            "properties": {
+                'date': "01.04.2019",
+                "street": "ул. Лесопарковая 1-7",
+                'img': "./img/95.jpg",
+                'c_img': './img/95.1.jpg',
+                'c_date': '02.04.2019',
+                "status": 2
+            },
+            "geometry": { "type": "Point",
+            "coordinates": [20.456473, 54.715381] }
         },
     ]
 };
