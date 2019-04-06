@@ -150,7 +150,7 @@
 	<script type="text/javascript" src="points.js"></script>
 	<script type="text/javascript">
 
-		var map = L.map('map', { minZoom: 12 }).setView([54.6982, 20.505], 12);
+		var map = L.map('map', { minZoom: 3 }).setView([54.6982, 20.505], 12);
 
 		var tile = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a>, &copy; <a href="http://cartodb.com/attributions" target="blank">CartoDB</a>' + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -163,7 +163,7 @@
 			jsonpParam: 'json_callback',
 			propertyName: 'display_name',
 			propertyLoc: ['lat', 'lon'],
-			marker: L.circleMarker([0, 0], { radius: 10 }),
+			marker: L.circleMarker([0, 0], { radius: 14 }),
 			autoCollapse: true,
 			autoType: false,
 			minLength: 2
@@ -211,6 +211,29 @@
 				fillOpacity: 1,
 				fillColor: getColor(feature.properties.status)
 			};
+		}
+
+		function styleDist(feature) {
+			return {
+				weight: 1,
+				opacity: .4,
+				color: feature.properties.locale,
+				dashArray: '',
+				fillOpacity: .3,
+				fillColor: feature.properties.locale
+			};
+		}
+
+		function districtInfo(e) {
+			var layerD = e.target;
+			layerD.bindPopup('<h3>Информация о районе</h3><br>Дата: ');
+			layerD.openPopup();
+			layerD.setStyle(
+					{
+						weight: 3,
+						color: '#5DBEA8',
+						fillColor: '#2CAA8E'
+					});
 		}
 
 		function highlightFeature(e) {
@@ -271,6 +294,7 @@
 
 		}
 		var geojson;
+		var geoDistjson;
 
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
@@ -292,8 +316,19 @@
 				click: zoomToFeature
 			});
 		}
-
-
+		function onEachFeatureDistrict(feature, layer) {
+			layer.on({
+				// mouseover: highlightFeature,
+				// mouseout: resetHighlight,
+				click: districtInfo
+			});
+		}
+		// Районы
+		geoDistjson = L.geoJson(district, {
+			style: styleDist,
+			onEachFeature: onEachFeatureDistrict
+		}).addTo(map);
+		//Точки
 		geojson = L.geoJson(trashData, {
 			style: style,
 			onEachFeature: onEachFeature,
@@ -309,6 +344,8 @@
 					});
 			}
 		}).addTo(map);
+
+	
 
 		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 		var legend = L.control({ position: 'bottomright', width: '3em' });

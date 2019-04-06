@@ -1,4 +1,30 @@
-var trashData = {
+var 
+district = {
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": "01",
+            "properties": {
+                'status':'5',
+                'date': "30-34-03",
+                "street": "Октябрьский район",
+                "locale": "#8AFDE4"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [20.496497,54.718272], [ 20.404444, 54.72695], [20.445063, 54.757904], [ 20.506668, 54.771583], [20.553875,54.768117], [20.561514,54.764156], [20.567801, 54.751192]
+                    ]
+                ]
+            }
+        },
+    ]
+},
+
+
+trashData = {
     "type": "FeatureCollection",
     "features": [
         {
@@ -28,12 +54,12 @@ var trashData = {
         {
             "type": "Feature", "id": "03",
             "properties": {
-                'date': "02.03.2019",
+                'date': "01.04.2019",
                 "street": "ул. Теннистая Аллея 100",
                 'img': "./img/28.jpg",
                 "status": 1,
-                'c_date': '14.03.2019',
-                'c_img': './img/28.1.png'
+                'c_date': '05.04.2019',
+                'c_img': './img/28.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.413153, 54.724170] }
         },
@@ -810,8 +836,10 @@ var trashData = {
                 'c_date': '01.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.507022, 54.726767] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.507022, 54.726767]
+            }
         },
         {
             "type": "Feature", "id": "89",
@@ -823,8 +851,10 @@ var trashData = {
                 'c_date': '01.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.498284, 54.700278] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.498284, 54.700278]
+            }
         },
         {
             "type": "Feature", "id": "90",
@@ -836,8 +866,10 @@ var trashData = {
                 'c_date': '01.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.355016, 54.725835] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.355016, 54.725835]
+            }
         },
         {
             "type": "Feature", "id": "91",
@@ -849,8 +881,10 @@ var trashData = {
                 'c_date': '01.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.392631, 54.699513] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.392631, 54.699513]
+            }
         },
         {
             "type": "Feature", "id": "92",
@@ -862,8 +896,10 @@ var trashData = {
                 'c_date': '02.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.478183, 54.676418] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.478183, 54.676418]
+            }
         },
         {
             "type": "Feature", "id": "93",
@@ -875,8 +911,10 @@ var trashData = {
                 'c_date': '02.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.459896, 54.711117] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.459896, 54.711117]
+            }
         },
         {
             "type": "Feature", "id": "94",
@@ -888,8 +926,10 @@ var trashData = {
                 'c_date': '02.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.447311, 54.710001] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.447311, 54.710001]
+            }
         },
         {
             "type": "Feature", "id": "14",
@@ -913,8 +953,73 @@ var trashData = {
                 'c_date': '02.04.2019',
                 "status": 2
             },
-            "geometry": { "type": "Point",
-            "coordinates": [20.456473, 54.715381] }
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.456473, 54.715381]
+            }
+        },
+        {
+            "type": "Feature", "id": "96",
+            "properties": {
+                'date': "06.04.2019",
+                "street": "ул. А.Невского 1Б",
+                'img': "./img/96.jpg",
+                'c_img': './img/96.1.jpg',
+                'c_date': '07.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.525111, 54.722718]
+            }
+        },
+        {
+            "type": "Feature", "id": "97",
+            "properties": {
+                'date': "06.04.2019",
+                "street": "ул. Пионерская 34",
+                'img': "./img/97.jpg",
+                'c_img': './img/97.1.jpg',
+                'c_date': '07.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.527895, 54.717432]
+            }
+        },
+        {
+            "type": "Feature", "id": "98",
+            "properties": {
+                'date': "06.04.2019",
+                "street": "ул. Сержанта Мишина 32",
+                'img': "./img/98.jpg",
+                'c_img': './img/98.1.jpg',
+                'c_date': '07.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.432612, 54.717296]
+            }
+        },
+        {
+            "type": "Feature", "id": "99",
+            "properties": {
+                'date': "06.04.2019",
+                "street": "ул. Тенистая Аллея 64",
+                'img': "./img/99.jpg",
+                'c_img': './img/99.1.jpg',
+                'c_date': '07.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.421835, 54.72032]
+            }
         },
     ]
 };
+
+
+  
