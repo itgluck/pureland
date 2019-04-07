@@ -179,14 +179,13 @@
 		};
 
 		info.update = function (props) {
-			// var tmp = props.status;
+			
 			this._div.innerHTML = (props ?
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
 				: '<i>Информация</i>');
-			// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
-
+			
 		}
 
 		info.addTo(map);
@@ -216,25 +215,30 @@
 		function styleDist(feature) {
 			return {
 				weight: 1,
-				opacity: .4,
+				opacity: .5,
 				color: feature.properties.locale,
 				dashArray: '',
-				fillOpacity: .3,
+				fillOpacity: .2,
 				fillColor: feature.properties.locale
 			};
+			
 		}
 
 		function districtInfo(e) {
 			var layerD = e.target;
-			layerD.bindPopup('<h3>Информация о районе</h3><br>Дата: ');
+			layerD.bindPopup('<h3>'+layerD.feature.properties.title +'</h3><img style=" width:80px;"src="' + layerD.feature.properties.img + '"><br>Обслуживающая организация: <strong>"'+layerD.feature.properties.name +'"</strong><br>Адрес: '
+			+layerD.feature.properties.addres + '<br> Контакты: '+layerD.feature.properties.contact + '<br>Сайт организации: <a href="'+ layerD.feature.properties.site+'">'+layerD.feature.properties.site + '</a>' );
 			layerD.openPopup();
+			info.update();
 			layerD.setStyle(
 					{
 						weight: 3,
 						color: '#5DBEA8',
 						fillColor: '#2CAA8E'
 					});
-		}
+					info.update(layerD.feature.properties);
+				}
+				setTimeout(info.update(), 3000);	
 
 		function highlightFeature(e) {
 			var layer = e.target;
@@ -298,6 +302,7 @@
 
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
+			layerD.resetStyle();
 			info.update();
 			map.closePopup();
 			if (L.Browser.android) {
@@ -319,7 +324,7 @@
 		function onEachFeatureDistrict(feature, layer) {
 			layer.on({
 				// mouseover: highlightFeature,
-				// mouseout: resetHighlight,
+				// mouseout: styleDist(feature),
 				click: districtInfo
 			});
 		}

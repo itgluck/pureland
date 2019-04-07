@@ -38,8 +38,8 @@
 
 		//Определяем начальные параметры карты
             myMap = new ymaps.Map('YMapsID', {
-                    center: [54.706573, 20.509415], 
-                    zoom: 10, 
+                    center: [54.7066,20.5094], 
+                    zoom: 15, 
 					behaviors: ['default', 'scrollZoom']
                 });	
 			
@@ -93,7 +93,7 @@
 	
 	//Функция для передачи полученных значений в форму
 	function savecoordinats (){	
-	var new_coords = [coords[1].toFixed(4), coords[0].toFixed(4)];	
+	var new_coords = "["+ [coords[1].toFixed(5), coords[0].toFixed(5)] +"], ";	
 	new_coords_rev = [coords[0].toFixed(4), coords[1].toFixed(4)];	
 	myPlacemark.getOverlay().getData().geometry.setCoordinates(new_coords);
 	document.getElementById("latlongmet").value = new_coords;
