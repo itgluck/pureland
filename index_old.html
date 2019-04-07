@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Чистая Страна | Параметры </title>
+	<title>Чистая Страна Калининград </title>
 	<meta http-equiv=«Content-Type» content=«text/html; charset=utf-8»>
 	<link rel="shortcut icon" type="image/png" href="./logo.png" />
 	<!-- <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/> -->
@@ -17,8 +17,7 @@
 	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
 		integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
 		crossorigin=""></script>
-	<script src='src/Leaflet.LocationShare.js'></script>
-
+		<script src='src/Leaflet.LocationShare.js'></script>
 
 
 	<style>
@@ -33,17 +32,16 @@
 			height: 100%;
 			width: 100vw;
 		}
-
 		.leaflet-popup-content-wrapper {
 			padding: 1px;
 			text-align: center;
 			width: 24em;
 			border-radius: 12px;
+			
 		}
 
 		.leaflet-popup-content-wrapper img {
 			width: 100%;
-			padding: 8px;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
@@ -62,20 +60,13 @@
 			max-width: 30em;
 			text-align: center;
 		}
-
-		.info h4 {
-			margin: 0 0 12px;
-			color: #777;
-		}
-
 		.info img {
 			max-width: 22em;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
-
 		.info i {
-			color: #666;
+			color: #555;
 			font-size: 9px;
 		}
 
@@ -91,7 +82,6 @@
 			float: left;
 			margin-right: 8px;
 			opacity: 1;
-			/* border-radius: 50%; */
 		}
 
 		.logo {
@@ -103,21 +93,17 @@
 
 		.logo img {
 			width: 2.4em;
-			height: 2.4em;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 			padding: 3px;
 			border-radius: 5px;
 		}
-
 		.qr {
 			margin-left: 1.8em;
 		}
+		.qr:hover{
+			transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
-		.qr:hover {
-			transform: scale(1.5);
-			/* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-
-		}
+		} 
 
 		@media (max-width: 440px),
 		(max-height : 600px) {
@@ -164,7 +150,7 @@
 			jsonpParam: 'json_callback',
 			propertyName: 'display_name',
 			propertyLoc: ['lat', 'lon'],
-			marker: L.circleMarker([0, 0], { radius: 14 }),
+			marker: L.circleMarker([0, 0], { radius: 10 }),
 			autoCollapse: true,
 			autoType: false,
 			minLength: 2
@@ -180,12 +166,13 @@
 		};
 
 		info.update = function (props) {
-
+			// var tmp = props.status;
 			this._div.innerHTML = (props ?
 				'<img src="' + props.img + '"><br>' +
 				'Адрес: <b>' + props.street +
 				'</b><br/>Дата: ' + props.date
-				: '<i>Обновлено: 07.04.19 | 15:00</i>');
+				: '<i>Обновлено: 03.04.19 | 22:20</i>');
+				// <br><a href="#" target="_blank"><img src="http://qrcoder.ru/code/?https%3A%2F%2Fgoo.gl%2Fxzob6y&6&0" width="90" height="90" border="0" title="QR код"></a>');
 
 		}
 
@@ -213,48 +200,6 @@
 			};
 		}
 
-		function styleDist(feature) {
-			return {
-				weight: 1,
-				opacity: .5,
-				color: feature.properties.color,
-				dashArray: '',
-				fillOpacity: .2,
-				fillColor: feature.properties.color
-			};
-
-		}
-
-		function districtInfo(e) {
-			var layer = e.target;
-			layer.bindPopup('<h3>' + layer.feature.properties.title + '</h3><img style=" width:80px;"src="' + layer.feature.properties.img + '"><br>Обслуживающая организация: <strong>"' + layer.feature.properties.name + '"</strong><br>Адрес: '
-				+ layer.feature.properties.addres + '<br> Контакты: ' + layer.feature.properties.contact + '<br>Сайт организации: <a href="' + layer.feature.properties.site + '">' + layer.feature.properties.site + '</a>');
-			layer.openPopup();
-			info.update();
-			layer.setStyle(
-					{
-						weight: 3,
-						color: '#5DBEA8',
-						fillColor: '#2CAA8E'
-					});
-			info.update();
-			layer.unbindPopup();
-		}
-
-		function districtClear(e){
-			// closePopup();
-			var layer = e.target;
-			layer.setStyle(
-					{
-						weight: 3,
-						color:  layer.feature.properties.color,
-						fillColor: layer.feature.properties.color,
-						fillOpacity: .2,
-					});
-			info.update();
-			// map.setView([54.6982, 20.505], 10);
-		}
-
 		function highlightFeature(e) {
 			var layer = e.target;
 
@@ -264,8 +209,8 @@
 
 			info.update(layer.feature.properties);
 			if (layer.feature.properties.status > 4) {
-
-				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date);
+				
+				layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date );
 				layer.openPopup();
 				layer.setStyle(
 					{
@@ -275,7 +220,7 @@
 					});
 			}
 			else if (layer.feature.properties.status == 3) {
-				layer.bindPopup('<h3>Идут работы по уборке территории</h3>');
+				layer.bindPopup('<h3>Запланированы работы по уборке территории</h3>');
 
 				layer.setStyle(
 					{
@@ -292,8 +237,8 @@
 				layer.setStyle(
 					{
 						weight: 4,
-						color: '#B903E7',
-						fillColor: '#D27CE8',
+						color: '#FB7474',
+						fillColor: '#FE0000',
 						dashArray: '',
 						fillOpacity: 0.9
 					});
@@ -313,7 +258,6 @@
 
 		}
 		var geojson;
-		var geoDistjson;
 
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
@@ -335,39 +279,34 @@
 				click: zoomToFeature
 			});
 		}
-		function onEachFeatureDistrict(feature, layer) {
-			map.panTo([54.6982, 20.505], 12);
-			layer.on({
-				// mouseover: highlightFeature,
-				mouseout: districtClear,
-				dblclick : districtInfo
-			});
-			
-		}
-		// Районы
-		geoDistjson = L.geoJson(district, {
-			style: styleDist,
-			minZoom: 10,
-			onEachFeature: onEachFeatureDistrict
-		}).addTo(map);
-		//Точки
+
 		geojson = L.geoJson(trashData, {
 			style: style,
 			onEachFeature: onEachFeature,
 
 			pointToLayer: function (feature, latlng) {
-				return L.circleMarker(latlng, {
-					radius: 10,
-					fillColor: "#ff7800",
-					color: "#000",
-					weight: 1,
-					opacity: 1,
-					fillOpacity: 0.8
-				});
+				
+					return L.circleMarker(latlng, {
+						radius: 10,
+						fillColor: "#ff7800",
+						color: "#000",
+						weight: 1,
+						opacity: 1,
+						fillOpacity: 0.8
+					});
+					if (L.Browser.android) {
+						return L.circleMarker(latlng, {
+						radius: 17,
+						fillColor: "#ff7800",
+						color: "#000",
+						weight: 1,
+						opacity: 1,
+						fillOpacity: 0.8
+					});
+					}
+				
 			}
 		}).addTo(map);
-
-
 
 		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 		var legend = L.control({ position: 'bottomright', width: '3em' });
@@ -382,11 +321,11 @@
 
 			for (var i = 0; i < grades.length; i++) {
 				from = grades[i];
-
+				
 
 				labels.push(
 					'<i title="Сообщить о свалке" style="background:' + getColor(from) + '"></i> ' +
-					from);
+					from );
 			}
 			div.innerHTML = labels.join('<br>');
 			return div;
@@ -394,19 +333,15 @@
 
 		legend.addTo(map);
 
-	
-
-
 	</script>
-
-<div class="logo">
-    <a
-        href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
-        <img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a>
-    </div>
-    <div class="logo qr">
-        <img class="qr" src="images/qrm.png" title="Делитесь картой: https://goo.gl/xzob6y">
-        </div>
+	<div class="logo">
+		<a
+			href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
+			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a>
+		</div>
+		<div class="logo qr">
+			<img class="qr" src="images/qrm.png" title="Делитесь картой: https://goo.gl/xzob6y">
+			</div>
 </body>
 
 </html>

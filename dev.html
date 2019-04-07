@@ -43,6 +43,7 @@
 
 		.leaflet-popup-content-wrapper img {
 			width: 100%;
+			padding: 8px;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
@@ -150,7 +151,7 @@
 	<script type="text/javascript" src="points.js"></script>
 	<script type="text/javascript">
 
-		var map = L.map('map', { minZoom: 3 }).setView([54.6982, 20.505], 12);
+		var map = L.map('map', { minZoom: 12 }).setView([54.6982, 20.505], 12);
 
 		var tile = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a>, &copy; <a href="http://cartodb.com/attributions" target="blank">CartoDB</a>' + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -230,17 +231,27 @@
 				+ layer.feature.properties.addres + '<br> Контакты: ' + layer.feature.properties.contact + '<br>Сайт организации: <a href="' + layer.feature.properties.site + '">' + layer.feature.properties.site + '</a>');
 			layer.openPopup();
 			info.update();
-			// layer.setStyle(
-			// 		{
-			// 			weight: 3,
-			// 			color: '#5DBEA8',
-			// 			fillColor: '#2CAA8E'
-			// 		});
+			layer.setStyle(
+					{
+						weight: 3,
+						color: '#5DBEA8',
+						fillColor: '#2CAA8E'
+					});
 			info.update();
+			layer.unbindPopup();
 		}
 
 		function districtClear(e){
-			layer.closePopup();
+			// closePopup();
+			var layer = e.target;
+			layer.setStyle(
+					{
+						weight: 3,
+						color:  layer.feature.properties.color,
+						fillColor: layer.feature.properties.color,
+						fillOpacity: .2,
+					});
+			info.update();
 		}
 
 		function highlightFeature(e) {
@@ -333,6 +344,7 @@
 		// Районы
 		geoDistjson = L.geoJson(district, {
 			style: styleDist,
+			minZoom: 10,
 			onEachFeature: onEachFeatureDistrict
 		}).addTo(map);
 		//Точки
