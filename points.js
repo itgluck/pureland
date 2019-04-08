@@ -238,9 +238,9 @@ trashData = {
                 'date': "07.03.2019",
                 "street": "пер. Первый Ржевский, 19А",
                 'img': "./img/36.jpg",
-                "status": 2,
-                'c_date': '',
-                'c_img': ''
+                "status": 5,
+                'c_date': '01.04.19',
+                'c_img': './img/36.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.537812, 54.685333] }
         },
@@ -629,12 +629,12 @@ trashData = {
         {
             "type": "Feature", "id": "67",
             "properties": {
-                "status": 1,
+                "status": 5,
                 'date': "21.03.2019",
                 "street": "ул. Емельянова 80",
                 'img': "./img/67.jpg",
                 'c_img': './img/67.1.jpg',
-                'c_date': '21.03.2019'
+                'c_date': '01.04.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.544514, 54.682224] }
         },
@@ -813,8 +813,8 @@ trashData = {
                 "street": "ул. Горького 180",
                 'img': "./img/82.jpg",
                 'c_img': './img/82.1.jpg',
-                'c_date': '26.03.2019',
-                "status": 2
+                'c_date': '01.04.2019',
+                "status": 5
             },
             "geometry": { "type": "Point", "coordinates": [20.500268, 54.756969] }
         },
@@ -1068,6 +1068,51 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.421835, 54.72032]
+            }
+        },
+        {
+            "type": "Feature", "id": "100",
+            "properties": {
+                'date': "01.04.2019",
+                "street": "ул. Сержантская 3-5",
+                'img': "./img/100.jpg",
+                'c_img': './img/100.1.jpg',
+                'c_date': '03.04.2019',
+                "status": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.52765,54.72855]
+            }
+        },
+        {
+            "type": "Feature", "id": "101",
+            "properties": {
+                'date': "07.04.2019",
+                "street": "ул. Емельянова 80",
+                'img': "./img/101.jpg",
+                'c_img': './img/101.1.jpg',
+                'c_date': '03.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.54368,54.68230]
+            }
+        },
+        {
+            "type": "Feature", "id": "102",
+            "properties": {
+                'date': "03.04.2019",
+                "street": "ул. Карамзина 46",
+                'img': "./img/102.jpg",
+                'c_img': './img/102.1.jpg',
+                'c_date': '03.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.50924,54.66754]
             }
         },
     ]
