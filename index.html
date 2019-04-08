@@ -82,7 +82,7 @@
 			border-radius: 6px;
 			background: white;
 			background: rgba(255, 255, 255, 0.85);
-			padding: 8px;
+			padding: 2px;
 		}
 
 		.legend img {
@@ -95,8 +95,7 @@
 		.logo {
 			position: absolute;
 			z-index: 1000;
-			
-			bottom: .5em;
+			bottom: .8em;
 		}
 		.left {
 			left: 1em;
@@ -109,32 +108,21 @@
 			padding: 3px;
 			border-radius: 5px;
 		}
-		.qr img {
-			width: 2.4em;
-			height: 2.4em;
-			/* box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); */
-			border-radius: 5px;
-		}
 
 		.qr {
-			/* padding: 5px;
-			 */
-			 z-index: 1000;
-			 bottom: .5em;
+			 bottom: .8em;
 			right: 1em;
 		}
 
 		.qr:hover {
 			 bottom: 2em;
 			right: 2em;
-			transform: scale(1.5);
+			transform: scale(1.4);
 		}
 
 		@media (max-width: 440px),
 		(max-height : 600px) {
-			.legend {
-				/* display: none; */
-			}
+	
 
 			.info img {
 				max-width: 14em;
@@ -202,7 +190,7 @@
 
 
 
-		var legend = L.control({ position: 'bottomright' });
+		var legend = L.control({ position: 'topright' });
 
 		legend.onAdd = function (map) {
 
