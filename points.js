@@ -1092,7 +1092,7 @@ trashData = {
                 "street": "ул. Емельянова 80",
                 'img': "./img/101.jpg",
                 'c_img': './img/101.1.jpg',
-                'c_date': '03.04.2019',
+                'c_date': '09.04.2019',
                 "status": 2
             },
             "geometry": {
@@ -1103,11 +1103,11 @@ trashData = {
         {
             "type": "Feature", "id": "102",
             "properties": {
-                'date': "03.04.2019",
+                'date': "08.04.2019",
                 "street": "ул. Карамзина 46",
                 'img': "./img/102.jpg",
                 'c_img': './img/102.1.jpg',
-                'c_date': '03.04.2019',
+                'c_date': '08.04.2019',
                 "status": 2
             },
             "geometry": {
