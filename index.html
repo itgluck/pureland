@@ -77,17 +77,17 @@
 		.legend {
 			line-height: 18px;
 			color: #555;
-			padding: 8px;
-			text-align: center;
-			/* width: 24em; */
-			border-radius: 12px;
+			text-align: center; 
+			z-index: 30000;
+			border-radius: 6px;
 			background: white;
 			background: rgba(255, 255, 255, 0.85);
+			padding: 8px;
 		}
 
 		.legend img {
 			width: 100%;
-			padding: 8px;
+			padding: 0px;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
@@ -95,8 +95,11 @@
 		.logo {
 			position: absolute;
 			z-index: 1000;
+			
+			bottom: .5em;
+		}
+		.left {
 			left: 1em;
-			bottom: 1.5em;
 		}
 
 		.logo img {
@@ -106,19 +109,31 @@
 			padding: 3px;
 			border-radius: 5px;
 		}
+		.qr img {
+			width: 2.4em;
+			height: 2.4em;
+			/* box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); */
+			border-radius: 5px;
+		}
 
 		.qr {
-			margin-left: 1.8em;
+			/* padding: 5px;
+			 */
+			 z-index: 1000;
+			 bottom: .5em;
+			right: 1em;
 		}
 
 		.qr:hover {
+			 bottom: 2em;
+			right: 2em;
 			transform: scale(1.5);
 		}
 
 		@media (max-width: 440px),
 		(max-height : 600px) {
 			.legend {
-				display: none;
+				/* display: none; */
 			}
 
 			.info img {
@@ -129,13 +144,13 @@
 				width: 18em;
 			}
 
-			.logo,
+			/* .logo,
 			.logo img {
 				position: absolute;
 				z-index: 1000;
-				left: .41em;
-				bottom: 1.1em;
-			}
+				right: .41em;
+				bottom: 1.3em;
+			} */
 		}
 	</style>
 
@@ -159,7 +174,7 @@
 			jsonpParam: 'json_callback',
 			propertyName: 'display_name',
 			propertyLoc: ['lat', 'lon'],
-			marker: L.circleMarker([0, 0], { radius: 14 }),
+			marker: L.circleMarker([0, 0], { radius: 10 }),
 			autoCollapse: true,
 			autoType: false,
 			minLength: 2
@@ -184,6 +199,9 @@
 		}
 
 		info.addTo(map);
+
+
+
 		var legend = L.control({ position: 'bottomright' });
 
 		legend.onAdd = function (map) {
@@ -238,14 +256,24 @@
 		function districtInfo(e) {
 			var layer = e.target;
 			legend.update(layer.feature.properties);
-
+			info.update();
+			layer.setStyle(
+				{
+					weight: 4,
+					color: '#FF301F',
+					fillColor: '#2CAA30'
+				});
+				setTimeout(function () {legend.update()}, 8000);
+		}
+		function districtSelect() {
+			
 			layer.setStyle(
 				{
 					weight: 4,
 					color: '#FF301F',
 					fillColor: '#2CAA8E'
 				});
-
+				
 		}
 
 		function highlightFeature(e) {
@@ -254,7 +282,7 @@
 			if (!L.Browser.ie) {
 				layer.bringToFront();
 			}
-
+			legend.update()
 			info.update(layer.feature.properties);
 			if (layer.feature.properties.status > 4) {
 
@@ -308,15 +336,22 @@
 
 		function resetHighlight(e) {
 			geojson.resetStyle(e.target);
-			info.update();
+
 			map.closePopup();
 			if (L.Browser.android) {
 				map.flyTo(e.latlng, 12);
 			}
+			// info.update();
+			
+			// setTimeout(function () {info.update()}, 20);
 		}
 
 		function zoomToFeature(e) {
 			map.panTo(e.latlng);
+		}
+		function closeInfo() {
+			info.update();
+			
 		}
 
 		function onEachFeature(feature, layer) {
@@ -335,27 +370,28 @@
 					fillColor: layer.feature.properties.color,
 					fillOpacity: .2,
 				});
-			setTimeout(function () { legend.update(); }, 7000);
+			// setTimeout(function () { legend.update() }, 10000);
 
 		}
 		function onEachFeatureDistrict(feature, layer) {
 			layer.on({
-				mouseover: districtInfo,
-				mouseout: districtClear
+				// mouseover: closeInfo,
+				mouseout: districtClear,
+				click: districtInfo
 			});
 		}
 		geoDistjson = L.geoJson(district, {
 			style: styleDist,
-			minZoom: 10,
 			onEachFeature: onEachFeatureDistrict
 		}).addTo(map);
+
 		geojson = L.geoJson(trashData, {
 			style: style,
 			onEachFeature: onEachFeature,
 
 			pointToLayer: function (feature, latlng) {
 				return L.circleMarker(latlng, {
-					radius: 10,
+					radius: 11,
 					fillColor: "#ff7800",
 					color: "#000",
 					weight: 1,
@@ -368,10 +404,10 @@
 
 
 	</script>
-	<div class="logo">
+	<div class="logo left">
 		<a
 			href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич">
-			<img src="./logo_m.png" title='Сообщить о "стихийной" свалке'></a>
+			<img src="images/logo_m.png" title='Сообщить о "стихийной" свалке'></a>
 	</div>
 	<div class="logo qr">
 		<img class="qr" src="images/qrm.png" title="Делитесь картой">
