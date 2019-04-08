@@ -11,7 +11,7 @@ district = {
                 "name": "Блеск",
                 "img": "./images/blesk.png",
                 "addres": "г.Калининград, ул. Озерова 17Б",
-                'contact': "тел. 8(4012) 303-403, 8(4012) 750-454",
+                'contact': "8(4012) 303-403, 8(4012) 750-454",
                 'site': "http://gkblesk.ru",
                 "color": "#FCAD69"
             },
@@ -34,7 +34,7 @@ district = {
                 "name": "Кристалл",
                 "img": "./images/kristall.png",
                 "addres": "г.Калининград, ул. Камская 49Б",
-                'contact': "тел. 8(4012) 275-60-55",
+                'contact': "8(4012) 275-60-55",
                 'site': "http://kristall-musor39.ru",
                 "color": "#C0A0F3"
             },
@@ -59,7 +59,7 @@ district = {
                 "name": "Стрела",
                 "img": "./images/strela.png",
                 "addres": "г.Калининград, ул. А.Невского 142",
-                'contact': "тел. 8(4012) 31-15-32, 8(4012) 31-15-32",
+                'contact': "8(4012) 31-15-32, 8(4012) 31-15-32",
                 'site': "http://strela39.ru",
                 "color": "#69E9FC"
             },

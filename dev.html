@@ -43,7 +43,7 @@
 
 		.leaflet-popup-content-wrapper img {
 			width: 100%;
-			padding: 8px;
+			padding: 8px auto;
 			border-radius: 7px;
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
@@ -54,7 +54,7 @@
 			background: white;
 			background: rgba(255, 255, 255, 0.7);
 			box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-			border-radius: 5px;
+			border-radius: 12px;
 		}
 
 		.width {
@@ -80,18 +80,21 @@
 		}
 
 		.legend {
-			text-align: left;
 			line-height: 18px;
 			color: #555;
+			padding: 8px;
+			text-align: center;
+			/* width: 24em; */
+			border-radius: 12px;
+			background: white;
+			background: rgba(255, 255, 255, 0.85);
 		}
 
-		.legend i {
-			width: 16px;
-			height: 16px;
-			float: left;
-			margin-right: 8px;
-			opacity: 1;
-			border-radius: 50%;
+		.legend img {
+			width: 100%;
+			padding: 8px;
+			border-radius: 7px;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 		}
 
 		.logo {
@@ -190,6 +193,29 @@
 		}
 
 		info.addTo(map);
+		// END info
+
+		var legend = L.control({ position: 'bottomright'});
+
+		legend.onAdd = function (map) {
+
+			this.div = L.DomUtil.create('div', 'legend'),
+			this.update();
+			return this.div;
+		};
+
+		legend.update = function (props) {
+
+			this.div.innerHTML = ( props ?
+			'<h3>' + props.title + '</h3><img style=" width:80px;"src="' + props.img + '"><br><strong>ООО"' + props.name + '"</strong><br>Адрес: '
+				+ props.addres + '<br>тел.: ' + props.contact + '<br>Сайт организации: <a href="' + props.site + '">' + props.site + '</a>'
+				: '');		
+
+		};
+
+		legend.addTo(map);
+
+		// End Legend
 
 
 		// get color depending on population status value
@@ -227,32 +253,20 @@
 
 		function districtInfo(e) {
 			var layer = e.target;
-			layer.bindPopup('<h3>' + layer.feature.properties.title + '</h3><img style=" width:80px;"src="' + layer.feature.properties.img + '"><br>Обслуживающая организация: <strong>"' + layer.feature.properties.name + '"</strong><br>Адрес: '
-				+ layer.feature.properties.addres + '<br> Контакты: ' + layer.feature.properties.contact + '<br>Сайт организации: <a href="' + layer.feature.properties.site + '">' + layer.feature.properties.site + '</a>');
-			layer.openPopup();
-			info.update();
+			legend.update(layer.feature.properties);
+			
 			layer.setStyle(
-					{
-						weight: 3,
-						color: '#5DBEA8',
-						fillColor: '#2CAA8E'
-					});
-			info.update();
-			layer.unbindPopup();
+				{
+					weight: 4,
+					color: '#FF301F',
+					fillColor: '#2CAA8E'
+				});
+				
+			// layer.unbindPopup();
+			// setTimeout(function(){legend.update();}, 6000);
 		}
 
-		function districtClear(e){
-			// closePopup();
-			var layer = e.target;
-			layer.setStyle(
-					{
-						weight: 3,
-						color:  layer.feature.properties.color,
-						fillColor: layer.feature.properties.color,
-						fillOpacity: .2,
-					});
-			info.update();
-		}
+		
 
 		function highlightFeature(e) {
 			var layer = e.target;
@@ -311,6 +325,9 @@
 
 
 		}
+
+
+
 		var geojson;
 		var geoDistjson;
 
@@ -334,13 +351,31 @@
 				click: zoomToFeature
 			});
 		}
+
+		function districtClear(e) {
+			// closePopup();
+			var layer = e.target;
+			layer.setStyle(
+				{
+					weight: 3,
+					color: layer.feature.properties.color,
+					fillColor: layer.feature.properties.color,
+					fillOpacity: .2,
+				});
+				setTimeout(function(){legend.update();}, 7000);
+			
+		}
+
+		
 		function onEachFeatureDistrict(feature, layer) {
 			layer.on({
-				// mouseover: highlightFeature,
-				mouseout: districtClear,
-				dblclick : districtInfo
+				mouseover: districtInfo,
+				mouseout: districtClear
 			});
 		}
+
+
+		
 		// Районы
 		geoDistjson = L.geoJson(district, {
 			style: styleDist,
@@ -363,51 +398,7 @@
 				});
 			}
 		}).addTo(map);
-
-
-
 		map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
-		var legend = L.control({ position: 'bottomright', width: '3em' });
-
-		legend.onAdd = function (map) {
-
-			var div = L.DomUtil.create('div', 'info legend'),
-				// title="Состояние площадки",
-				labels = [],
-				grades = [1, 2, 3, 4, 5],
-				from;
-
-			for (var i = 0; i < grades.length; i++) {
-				from = grades[i];
-
-
-				labels.push(
-					'<i title="Сообщить о свалке" style="background:' + getColor(from) + '"></i> ' +
-					from);
-			}
-			div.innerHTML = labels.join('<br>');
-			return div;
-		};
-
-		// legend.addTo(map);
-
-
-		// PointCoord
-		// var popup = L.popup();
-
-		// function onMapClick(e) {
-		// 	var latlng = e.latlng;
-		// 	popup
-		// 		.setLatLng(latlng)
-		// 		.setContent(latlng.toString())
-		// 		.openOn(map);
-		// 	map.panTo(latlng);
-		// }
-
-		// map.on('click', onMapClick);
-		// Coord end
-
-	
 
 
 	</script>
