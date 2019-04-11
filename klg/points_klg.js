@@ -1093,7 +1093,7 @@ trashData = {
                 'img': "./img/101.jpg",
                 'c_img': './img/101.1.jpg',
                 'c_date': '09.04.2019',
-                "status": 5
+                "status": 2
             },
             "geometry": {
                 "type": "Point",
@@ -1113,6 +1113,36 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.50924,54.66754]
+            }
+        },
+        {
+            "type": "Feature", "id": "103",
+            "properties": {
+                'date': "10.04.2019",
+                "street": "ул. Орудийная 32а",
+                'img': "./img/103.jpg",
+                'c_img': './img/103.1.jpg',
+                'c_date': '10.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.55980,54.73184]
+            }
+        },
+        {
+            "type": "Feature", "id": "104",
+            "properties": {
+                'date': "10.04.2019",
+                "street": "ул. Лесопарковая 1-7",
+                'img': "./img/104.jpg",
+                'c_img': './img/104.1.jpg',
+                'c_date': '10.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45569,54.71488]
             }
         },
     ]

@@ -23,8 +23,8 @@
 		list-style: none outside none;
 		padding: 10px;
 		margin: 0px;
-		right: 170px;
-		top: 5px;
+		right: 130px;
+		top: 15px;
 	  }
     </style>
 
@@ -38,13 +38,13 @@
 
 		//Определяем начальные параметры карты
             myMap = new ymaps.Map('YMapsID', {
-                    center: [54.7066,20.5094], 
-                    zoom: 15, 
+                    center: [54.7064,20.5101], 
+                    zoom: 14, 
 					behaviors: ['default', 'scrollZoom']
                 });	
 			
 			//Определяем элемент управления поиск по карте	
-			var SearchControl = new ymaps.control.SearchControl({noPlacemark:true});	
+			var SearchControl = new ymaps.control.SearchControl({noPlacemark:false});	
 
 			//Добавляем элементы управления на карту
 			 myMap.controls
@@ -95,7 +95,7 @@
 	function savecoordinats (){	
 	var new_coords = [coords[1].toFixed(5), coords[0].toFixed(5)];	
 	new_coords_rev = [coords[0].toFixed(4), coords[1].toFixed(4)];	
-	myPlacemark.getOverlay().getData().geometry.setCoordinates(new_coords);
+	myPlacemark.getOverlay().getData().geometry.setCoordinates(new_coords_rev);
 	document.getElementById("latlongmet").value = new_coords;
 	document.getElementById("latlonreverse").value = new_coords_rev;
 	document.getElementById("mapzoom").value = myMap.getZoom();
