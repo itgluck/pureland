@@ -1093,7 +1093,7 @@ trashData = {
                 'img': "./img/101.jpg",
                 'c_img': './img/101.1.jpg',
                 'c_date': '09.04.2019',
-                "status": 2
+                "status": 5
             },
             "geometry": {
                 "type": "Point",

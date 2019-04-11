@@ -68,29 +68,29 @@ L.Control.Search = L.Control.extend({
 		moveToLocation: null,			//callback run on location found, params: latlng, title, map
 		buildTip: null,					//function to return row tip html node(or html string), receive text tooltip in first param
 		container: '',					//container id to insert Search Control		
-		zoom: null,						//default zoom level for move to location
-		minLength: 1,					//minimal text length for autocomplete
+		zoom: 17,						//default zoom level for move to location
+		minLength: 3,					//minimal text length for autocomplete
 		initial: true,					//search elements only by initial text
 		casesensitive: false,			//search elements in case sensitive text
 		autoType: true,					//complete input with first suggested result and select this filled-in text.
-		delayType: 400,					//delay while typing for show tooltip
+		delayType: 300,					//delay while typing for show tooltip
 		tooltipLimit: -1,				//limit max results to show in tooltip. -1 for no limit, 0 for no results
 		tipAutoSubmit: true,			//auto map panTo when click on tooltip
-		firstTipSubmit: false,			//auto select first result con enter click
+		firstTipSubmit: true,			//auto select first result con enter click
 		autoResize: true,				//autoresize on input change
 		collapsed: true,				//collapse search control at startup
 		autoCollapse: false,			//collapse search control after submit(on button or on tips if enabled tipAutoSubmit)
 		autoCollapseTime: 1200,			//delay for autoclosing alert and collapse after blur
 		textErr: 'Адрес не найден',	//error message
 		textCancel: 'Отмена',		    //title in cancel button		
-		textPlaceholder: 'Поиск...',   //placeholder value			
+		textPlaceholder: 'Поиск..',   //placeholder value			
 		hideMarkerOnCollapse: false,    //remove circle and marker on search control collapsed		
 		position: 'topleft',		
 		marker: {						//custom L.Marker or false for hide
 			icon: false,				//custom L.Icon for maker location or false for hide
 			animate: true,				//animate a circle over location found
 			circle: {					//draw a circle in location found
-				radius: 10,
+				radius: 12,
 				weight: 3,
 				color: '#e03',
 				stroke: true,
