@@ -38,7 +38,7 @@ body,
 }
 .red {
 	/* style="border-radius:5px;;color:white;height:32px;font-size:16px;line-height:2px;margin:5px; */
-	float:right;
+	float:left;
 	border:#C92323 solid 1px;
 	background-color:#EA4E4E;
 }

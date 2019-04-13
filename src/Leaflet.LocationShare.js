@@ -5,8 +5,9 @@ L.LocShare = {}
 var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
-LS.Send.Popup = L.popup().setContent('<div><h4>Перемещайте маркер</h4><input id="sendText" type="text" class="inputShare" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button class="btn green" onclick="copyPrompt()">Ок</button><button class="btn red" onclick="reset()">Отмена</button></div></div>')
-// LS.Send.Popup = L.popup().setContent('<form action="mailto:it.gluck@ya.ru" method="post">Name:<br><input type="text" name="Ссылка: " value="'+ this.res +'"><br>E-mail:<br><input type="text" name="mail"><br>Comment:<br><input type="text" name="comment" size="50"><br><br><input type="submit" value="Send"><input type="reset" value="Reset"></form>')
+LS.Send.Popup = L.popup().setContent('<div><h4>Новое обращение</h4>1. Установите маркер максимально точно.<br>2. Нажмите ОК и скопируйте выделенный текст.<br>3. Отправьте данные на почту:<br>pronin.s@i-labs.ru</div><div style="height:55px;"><button class="btn green" onclick="copyPrompt()">Ок</button><button class="btn red" onclick="reset()">Отмена</button></div></div>')
+// LS.Send.Popup = L.popup().setContent('<div><h4>Новое обращение</h4><input id="sendText" type="text" class="inputShare" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button class="btn green" onclick="copyPrompt()">Ок</button><button class="btn red" onclick="reset()">Отмена</button></div></div>')
+// LS.Send.Popup = L.popup().setContent('<form action="mailto:it.gluck@ya.ru" method="post">Name:<br><input type="text" name="Link: " value="'+ this.res +'"><br>E-mail:<br><input type="text" name="mail"><br>Comment:<br><input type="text" name="comment" size="20"><br><br><input type="submit" value="Send"><input type="reset" value="Reset"></form>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
@@ -111,31 +112,27 @@ function copyPrompt() {
   var res = location.origin + location.pathname  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
-   'M' + '=' +  LS.Send.Message;
+   'M' + '=' ;
+  //  'M' + '=' +  LS.Send.Message;
+  var totalRes = res + '<h3>Обращение</h3> Пожалуйста обратите внимание на этот район!';
 
-
-  window.prompt("Скопируйте строку ниже и отправьте её в чат или на email", '' + res);
+var mailstr= 'pronin.s@i-labs.ru';
+  window.prompt("Скопируйте строку ниже и отправьте её в чат или на email: " + mailstr, '' + res);
   // window.location( res);
   
-  console.log( res);
-  var r = confirm("Отправьте данные координатору проекта.\nДля просмотра результата, в новом окне нажмите [Ок]\nДля возврата к кате нажмите [Отмена]");
+  console.log( totalRes);
+  var r = confirm("Отправьте данные координатору проекта.\nДля просмотра результата, в новом окне нажмите [Ок]\nДля возврата к карте нажмите [Отмена]");
   
   if (r == true) {
    
-    window.open( res); 
+    window.open( totalRes); 
   } else {
    return
   }
 }
-// function sendEmail() {
-//   var message = "mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату)." + this.res;
-//   console.log( message);
-//   return
-// }
+
 
 function reset() {
-  // window.location.href='https://goo.gl/xzob6y'
-// this.res = location.origin + location.pathname;
 window.open(location.origin + location.pathname,'_self');
 }
 function placeMarker( selectedMap ){
@@ -154,7 +151,6 @@ function placeMarker( selectedMap ){
     } else {
       LS.Send.Marker.setLatLng( selectedMap.getCenter() )
     }
-    //selectedMap.setView( location , 16 )
     LS.Send.Marker.openPopup();
 //  }
 };
