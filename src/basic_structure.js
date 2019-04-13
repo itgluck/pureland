@@ -30,7 +30,7 @@ info.update = function (props) {
         '<img src="' + props.img + '"><br>' +
         'Адрес: <b>' + props.street +
         '</b><br>Дата: ' + props.date 
-        : '<i>Обновлено: 09.04.19|00:30</i>');
+        : '<i>Обновлено: 13.04.19|11:30</i>');
 
 }
 
