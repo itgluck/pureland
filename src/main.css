@@ -23,7 +23,30 @@ body,
 	border-radius: 7px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
-
+.inputShare {
+	max-width:95%;border-radius:5px;border: #999 solid 1px;height:30px;
+	padding: 0 7px;
+}
+.btn {
+	border-radius:5px;color:white;height:32px;font-size:16px;line-height:2px;margin:5px;
+}
+.green {
+	/* style="border-radius:5px;;color:white;height:32px;font-size:16px;line-height:2px;margin:5px; */
+	float:right;
+	border:#2BB94D solid 1px;
+	background-color:#31D758;
+}
+.red {
+	/* style="border-radius:5px;;color:white;height:32px;font-size:16px;line-height:2px;margin:5px; */
+	float:right;
+	border:#C92323 solid 1px;
+	background-color:#EA4E4E;
+}
+.blue {
+	/* float:right; */
+	border:rgb(52, 96, 240) solid 1px;
+	background-color:rgb(49, 149, 215);
+}
 .info {
 	
 	font: 14px/16px Arial, Helvetica, sans-serif;
