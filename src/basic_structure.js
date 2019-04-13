@@ -26,10 +26,10 @@ info.onAdd = function (map) {
 
 info.update = function (props) {
 
-    this._div.innerHTML = (props ?
+    this._div.innerHTML = (props ? 
         '<img src="' + props.img + '"><br>' +
         'Адрес: <b>' + props.street +
-        '</b><br/>Дата: ' + props.date
+        '</b><br>Дата: ' + props.date 
         : '<i>Обновлено: 09.04.19|00:30</i>');
 
 }

@@ -1145,6 +1145,36 @@ trashData = {
                 "coordinates": [20.45569,54.71488]
             }
         },
+        {
+            "type": "Feature", "id": "105",
+            "properties": {
+                'date': "12.04.2019",
+                "street": "ул. Книжная 1А",
+                'img': "./img/105.jpg",
+                'c_img': './img/105.1.jpg',
+                'c_date': '15.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47316,54.67797]
+            }
+        },
+        {
+            "type": "Feature", "id": "106",
+            "properties": {
+                'date': "12.04.2019",
+                "street": "ул. Костикова 3",
+                'img': "./img/106.jpg",
+                'c_img': './img/106.1.jpg',
+                'c_date': '15.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.54205,54.72372]
+            }
+        },
     ]
 };
 
