@@ -1017,8 +1017,8 @@ trashData = {
                 "street": "ул. А.Невского 1Б",
                 'img': "./img/96.jpg",
                 'c_img': './img/96.1.jpg',
-                'c_date': '07.04.2019',
-                "status": 2
+                'c_date': '11.04.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
@@ -1029,11 +1029,11 @@ trashData = {
             "type": "Feature", "id": "97",
             "properties": {
                 'date': "06.04.2019",
-                "street": "ул. Пионерская 34",
+                "street": "ул. Рижская 34",
                 'img': "./img/97.jpg",
                 'c_img': './img/97.1.jpg',
-                'c_date': '07.04.2019',
-                "status": 2
+                'c_date': '10.04.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
@@ -1122,8 +1122,8 @@ trashData = {
                 "street": "ул. Орудийная 32а",
                 'img': "./img/103.jpg",
                 'c_img': './img/103.1.jpg',
-                'c_date': '10.04.2019',
-                "status": 2
+                'c_date': '12.04.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",

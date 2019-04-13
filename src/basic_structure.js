@@ -16,6 +16,36 @@ map.addControl(new L.Control.Search({
     minLength: 2
 }));
 
+
+
+// %%%%%%%%%%%%%%
+var points = L.layerGroup();
+var districts = L.layerGroup();
+// L.marker([54.90942,20.51657]).bindPopup('This is Littleton, CO.').addTo(points),
+// L.marker([54.20942,20.60657]).bindPopup('This is Denver, CO.').addTo(points);
+
+var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+
+var satellite = L.tileLayer(mbUrl,  { id: 'mapbox.satellite', attribution: mbAttr }),
+    grayscale = L.tileLayer(mbUrl, { id: 'mapbox.light', attribution: mbAttr }),
+    streets = L.tileLayer(mbUrl, { id: 'mapbox.streets', attribution: mbAttr });
+
+var baseLayers = {
+    "Спутник": satellite,
+    "Grayscale": grayscale,
+    "День": streets
+};
+
+var overlays = {
+    "Проблемные зоны": points,
+    "Городсие районы": districts
+};
+
+L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
+// %%%%%%%%%%%%%%
 var info = L.control();
 
 info.onAdd = function (map) {
@@ -26,10 +56,10 @@ info.onAdd = function (map) {
 
 info.update = function (props) {
 
-    this._div.innerHTML = (props ? 
+    this._div.innerHTML = (props ?
         '<img src="' + props.img + '"><br>' +
         'Адрес: <b>' + props.street +
-        '</b><br>Дата: ' + props.date 
+        '</b><br>Дата: ' + props.date
         : '<i>Обновлено: 13.04.19|11:30</i>');
 
 }
@@ -219,7 +249,7 @@ function onEachFeatureDistrict(feature, layer) {
 geoDistjson = L.geoJson(district, {
     style: styleDist,
     onEachFeature: onEachFeatureDistrict
-}).addTo(map);
+}).addTo(districts).addTo(map);
 
 geojson = L.geoJson(trashData, {
     style: style,
@@ -235,7 +265,7 @@ geojson = L.geoJson(trashData, {
             fillOpacity: 0.8
         });
     }
-}).addTo(map);
+}).addTo(points).addTo(map);
 
 map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 
