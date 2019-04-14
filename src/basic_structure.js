@@ -31,12 +31,12 @@ L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
 
 // map.on('zoomend', function () {
 //     if (map.getZoom() > 14 && map.hasLayer(districts)) {
-//         map.removeLayer(districts);
+//         layerGroup.resetStyle(districts);
 //     }
-//     // if (map.getZoom() < 14 && map.hasLayer(districts) == false)
-//     // {
-//     //     map.addLayer(districts);
-//     // } 
+//     if (map.getZoom() < 14 && map.hasLayer(districts) == false)
+//     {
+//         // map.addLayer(districts);
+//     } 
 // });
 
 map.addControl(new L.Control.Search({
@@ -124,11 +124,10 @@ function style(feature) {
 function styleDist(feature) {
     return {
         weight: 1,
-        opacity: .5,
         color: feature.properties.color,
-        dashArray: '',
-        fillOpacity: .2,
-        fillColor: feature.properties.color
+        opacity: .5, 
+        fillColor: feature.properties.color,
+        fillOpacity: .1
     };
 
 }
@@ -139,21 +138,17 @@ function districtInfo(e) {
     info.update();
     layer.setStyle(
         {
-            weight: 4,
+            weight: 2,
             color: '#FF301F',
-            fillColor: '#2CAA30'
+            dashArray: '9',
+            fillOpacity: .3,
+            fillColor: layer.feature.properties.color
         });
     setTimeout(function () { legend.update() }, 4000);
 }
 function districtSelect() {
     map.closePopup()
-    layer.setStyle(
-        {
-            weight: 4,
-            color: '#FF301F',
-            fillColor: '#2CAA8E'
-        });
-
+    layer.setStyle(styleDist(feature));
 }
 
 function highlightFeature(e) {
