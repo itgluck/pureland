@@ -1,6 +1,6 @@
-// Layers
-var points = L.layerGroup();
-var districts = L.layerGroup();
+// // Layers
+// var points = L.layerGroup();
+// var districts = L.layerGroup();
 // L.marker([54.90942,20.51657]).bindPopup('This is Littleton, CO.').addTo(points),
 // L.marker([54.20942,20.60657]).bindPopup('This is Denver, CO.').addTo(points);
 
@@ -9,7 +9,7 @@ var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 var satellite = L.tileLayer(mbUrl, { id: 'mapbox.satellite'}),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets'});
 
-var map = L.map('map', { minZoom: 12,layers: [streets] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12,layers: [streets]}).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
     "Карта": streets,
@@ -25,19 +25,6 @@ var tile = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acc
     id: 'mapbox.streets'
 }).addTo(map);
 
-map.addControl(new L.Control.Search({
-    url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',
-    jsonpParam: 'json_callback',
-    propertyName: 'display_name',
-    propertyLoc: ['lat', 'lon'],
-    marker: L.circleMarker([0, 0], { radius: 12 }),
-    autoCollapse: true,
-    autoType: false,
-    minLength: 2
-}));
-
-
-
 
 
 var logo = L.control({ position: "topleft" });
@@ -45,8 +32,7 @@ var logo = L.control({ position: "topleft" });
 logo.onAdd = function(map) {
     this.logodiv = L.DomUtil.create('div','logo');
     this.logodiv.innerHTML = '<a href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич"><img src="images/logo_m.png" title="Сообщить о проблемной зоне"> </a>'
-    //  
-    
+
     return this.logodiv;
 }
 logo.addTo(map);
