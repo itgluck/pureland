@@ -29,15 +29,15 @@ var overlays = {
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
 
-map.on('zoomend', function () {
-    if (map.getZoom() > 14 && map.hasLayer(districts)) {
-        map.removeLayer(districts);
-    }
-    // if (map.getZoom() < 14 && map.hasLayer(districts) == false)
-    // {
-    //     map.addLayer(districts);
-    // } 
-});
+// map.on('zoomend', function () {
+//     if (map.getZoom() > 14 && map.hasLayer(districts)) {
+//         map.removeLayer(districts);
+//     }
+//     // if (map.getZoom() < 14 && map.hasLayer(districts) == false)
+//     // {
+//     //     map.addLayer(districts);
+//     // } 
+// });
 
 map.addControl(new L.Control.Search({
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',
