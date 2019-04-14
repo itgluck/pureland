@@ -1205,6 +1205,21 @@ trashData = {
                 "coordinates": [20.38518,54.71568]
             }
         },
+        {
+            "type": "Feature", "id": "109",
+            "properties": {
+                'date': "14.04.2019",
+                "street": "ул. Баграмяна 4",
+                'img': "./img/109.jpg",
+                'c_img': './img/109.1.jpg',
+                'c_date': '15.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.50157,54.70721]
+            }
+        },
     ]
 };
 

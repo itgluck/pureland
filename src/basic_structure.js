@@ -1,6 +1,6 @@
 // Layers
-var points = L.layerGroup();
 var districts = L.layerGroup();
+var points = L.layerGroup();
 
 var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
@@ -12,7 +12,7 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
 		}),
     streets = L.tileLayer(mbUrl, {id: 'mapbox.streets'});
 
-var map = L.map('map', { minZoom: 12, maxZoom: 17, zoomAnimation: false, layers: [hydda, points, districts] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12, maxZoom: 17, zoomAnimation: false, layers: [hydda, districts, points] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
     "OSMap": hydda,
@@ -23,8 +23,8 @@ var baseLayers = {
 };
 
 var overlays = {
-    "Городсие районы": districts,
-    "Проблемные зоны": points
+    "Проблемные зоны": points,
+    "Городсие районы": districts
 };
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
@@ -33,10 +33,10 @@ map.on('zoomend', function () {
     if (map.getZoom() > 14 && map.hasLayer(districts)) {
         map.removeLayer(districts);
     }
-    if (map.getZoom() < 15 && map.hasLayer(districts) == false)
-    {
-        map.addLayer(districts);
-    }   
+    // if (map.getZoom() < 14 && map.hasLayer(districts) == false)
+    // {
+    //     map.addLayer(districts);
+    // } 
 });
 
 map.addControl(new L.Control.Search({
