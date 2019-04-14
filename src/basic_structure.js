@@ -70,7 +70,7 @@ info.update = function (props) {
         ' <input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + props.img + '"></label><br>' +
         'Адрес: <b>' + props.street +
         '</b><br>Дата: ' + props.date
-        : '<i>Обновлено: 14.04.19|08:30</i>');
+        : '<i>Обновлено: 14.04.19|08:30<br>* Точность меток ~ 70м</i>');
 
 }
 
