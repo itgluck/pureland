@@ -29,15 +29,6 @@ var overlays = {
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
 
-// map.on('zoomend', function () {
-//     if (map.getZoom() > 14 && map.hasLayer(districts)) {
-//         layerGroup.resetStyle(districts);
-//     }
-//     if (map.getZoom() < 14 && map.hasLayer(districts) == false)
-//     {
-//         // map.addLayer(districts);
-//     } 
-// });
 
 map.addControl(new L.Control.Search({
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',

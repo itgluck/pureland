@@ -21,9 +21,16 @@ body,
 	width: 100%;
 	padding: 6px auto;
 	border-radius: 7px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 	transition: transform 0.25s ease;
 	cursor: zoom-in;
+}
+.leaflet-popup-content-wrapper img:hover {
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: .8em;
+	right: 1em;
 }
 .inputShare {
 	max-width:95%;border-radius:5px;border: #999 solid 1px;height:30px;
@@ -58,14 +65,14 @@ body,
   input[type=checkbox]:checked ~ label > img {
 	transform: scale(1.42);
 	margin: 2.6em 3.4em 1em;
-	padding: 8px;
+	padding: 4px;
 	cursor: zoom-out;
   }
   .leaflet-popup-content-wrapper input[type=checkbox]:checked ~ label > img {
 	transform: scale(1.6);
 	cursor: zoom-out;
 	margin: 0 auto 1.2em;
-	padding: 8px;
+	padding: 4px;
   }
 
 
@@ -85,11 +92,15 @@ body,
     background-clip: padding-box;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
-    border-radius: 6px;
+    border-radius: 7px;
 	background-color: rgba(255, 255, 255, 0.8);
 	transition: transform 0.25s ease;
 	cursor: zoom-in;
 }
+.info img:hover {
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
 .width {
 	max-width: 30em;
 	padding:  .5em;
@@ -100,8 +111,6 @@ body,
 	margin: 0 0 12px;
 	color: #777;
 }
-
-
 
 .info i {
 	color: #666;
