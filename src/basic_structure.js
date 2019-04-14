@@ -212,14 +212,10 @@ var geoDistjson;
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
-
     map.closePopup();
-    if (L.Browser.android) {
-        map.flyTo(e.latlng, 12);
-    }
-    // info.update();
-
-    // setTimeout(function () {info.update()}, 20);
+    // if (L.Browser.android) {
+    //     map.flyTo(e.latlng, 12);
+    // }
 }
 
 function zoomToFeature(e) {
