@@ -15,14 +15,14 @@ var sendIcon = L.icon({
   // iconUrl: "https://raw.githubusercontent.com/CliffCloud/Leaflet.LocationShare/master/dist/images/IconMapSend.png",
   iconUrl: "images/locations.png",
   iconSize:     [54, 70], // size of the icon
-  iconAnchor:   [27, 70], // point of the icon which will correspond to marker's location
+  iconAnchor:   [27, 60], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -60] // point from which the popup should open relative to the iconAnchor
 })
 
 receiveIcon = L.icon({
   iconUrl: "images/location.png",
   iconSize:     [54, 70], // size of the icon
-  iconAnchor:   [27, 70], // point of the icon which will correspond to marker's location
+  iconAnchor:   [27, 60], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -60] // point from which the popup should open relative to the iconAnchor
 })
 
@@ -112,20 +112,20 @@ function copyPrompt() {
   var res = location.origin + location.pathname  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
-   'M' + '=' ;
+   'M' + '= Обратите внимание на этот район!' ;
   //  'M' + '=' +  LS.Send.Message;
-  var totalRes = res + 'Обратите внимание на этот район!';
+  // var totalRes = res + 'Обратите внимание на этот район!';
 
 var mailstr= 'pronin.s@i-labs.ru';
   window.prompt("Скопируйте строку ниже и отправьте её в чат или на email: " + mailstr, '' + res);
   // window.location( res);
   
-  console.log( totalRes);
+  console.log( res);
   var r = confirm("Отправьте данные координатору проекта.\nДля просмотра результата, в новом окне нажмите [Ок]\nДля возврата к карте нажмите [Отмена]");
   
   if (r == true) {
    
-    window.open( totalRes); 
+    window.open( res); 
   } else {
    return
   }
