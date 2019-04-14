@@ -114,7 +114,7 @@ function copyPrompt() {
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '=' ;
   //  'M' + '=' +  LS.Send.Message;
-  var totalRes = res + '<h3>Обращение</h3> Пожалуйста обратите внимание на этот район!';
+  var totalRes = res + 'Обратите внимание на этот район!';
 
 var mailstr= 'pronin.s@i-labs.ru';
   window.prompt("Скопируйте строку ниже и отправьте её в чат или на email: " + mailstr, '' + res);
@@ -161,7 +161,7 @@ LS.Send.UpdateMessage = function( text ){
 }
 
 function setSendValues( result ){
-  LS.Send.lat = result.lat;
-  LS.Send.lng = result.lng; 
+  LS.Send.lat = result.lat.toFixed(5);
+  LS.Send.lng = result.lng.toFixed(4); 
 }
   
