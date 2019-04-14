@@ -180,7 +180,7 @@ trashData = {
                 'img': "./img/11.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/11.1.png'
+                'c_img': './img/11.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.501724, 54.727238] }
         },
@@ -1173,6 +1173,36 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.54205,54.72372]
+            }
+        },
+        {
+            "type": "Feature", "id": "107",
+            "properties": {
+                'date': "14.04.2019",
+                "street": "Район оз. Пелавское",
+                'img': "./img/107.jpg",
+                'c_img': './img/107.1.jpg',
+                'c_date': '15.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.38232,54.71503]
+            }
+        },
+        {
+            "type": "Feature", "id": "108",
+            "properties": {
+                'date': "14.04.2019",
+                "street": "Район оз. Пелавское",
+                'img': "./img/108.jpg",
+                'c_img': './img/108.1.jpg',
+                'c_date': '15.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.38518,54.71568]
             }
         },
     ]
