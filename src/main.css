@@ -47,15 +47,40 @@ body,
 	border:rgb(52, 96, 240) solid 1px;
 	background-color:rgb(49, 149, 215);
 }
+
+.info input[type=checkbox] {
+	display: none;
+  }
+  
+  input[type=checkbox]:checked ~ label > img {
+	transform: scale(1.42);
+	margin: 2.6em auto;
+	cursor: zoom-out;
+  }
+
+
 .info {
 	
 	font: 14px/16px Arial, Helvetica, sans-serif;
-	background: white;
-	background: rgba(255, 255, 255, 0.7);
+	border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-	border-radius: 10px;
 }
-
+.info img {
+	max-width: 22em;
+    background-clip: padding-box;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+	background-color: rgba(255, 255, 255, 0.8);
+	
+	transition: transform 0.25s ease;
+	cursor: zoom-in;
+}
 .width {
 	max-width: 30em;
 	padding:  .5em;
@@ -67,11 +92,7 @@ body,
 	color: #777;
 }
 
-.info img {
-	max-width: 22em;
-	border-radius: 7px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-}
+
 
 .info i {
 	color: #666;
@@ -83,35 +104,51 @@ body,
 	color: #555;
 	text-align: center; 
 	z-index: 30000;
-	border-radius: 6px;
-	background: white;
-	background: rgba(255, 255, 255, 0.85);
-	padding: 2px;
+	/* border: 2px solid rgba(0,0,0,0.2); */
+    background-clip: padding-box;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+	padding: 2px;
 }
+/* .info img:hover{
+	transform: scale(1.6);
+	position: absolute;
+	right: 6em;
+	top:4em;
+} */
 
 .legend img {
 	width: 100%;
 	padding: 0px;
-	border-radius: 7px;
+	border-radius: 4px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 .logo {
-	position: absolute;
 	z-index: 1000;
-	bottom: .8em;
+	width: 2.5em;
+	height: 2.5em;
+	border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 .left {
 	left: 1em;
 }
 
 .logo img {
-	width: 2.4em;
-	height: 2.4em;
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+	width: 2em;
+	/* box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); */
 	padding: 3px;
-	border-radius: 5px;
 }
 
 .qr {
