@@ -300,7 +300,7 @@ trashData = {
                 'img': "./img/40.jpg",
                 "status": 5,
                 'c_date': '13.03.2019',
-                'c_img': './img/40.1.png'
+                'c_img': './img/40.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.535780, 54.683431] }
         },
