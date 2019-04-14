@@ -19,7 +19,7 @@ body,
 
 .leaflet-popup-content-wrapper img {
 	width: 100%;
-	padding: 8px auto;
+	padding: 6px auto;
 	border-radius: 7px;
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
@@ -54,7 +54,7 @@ body,
   
   input[type=checkbox]:checked ~ label > img {
 	transform: scale(1.42);
-	margin: 2.6em auto;
+	margin: 2.6em 3.4em;
 	cursor: zoom-out;
   }
 
@@ -150,18 +150,6 @@ body,
 	/* box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); */
 	padding: 3px;
 }
-
-.qr {
-	 bottom: .8em;
-	right: 1em;
-}
-
-.qr:hover {
-	 bottom: 2em;
-	right: 2em;
-	transform: scale(1.4);
-}
-
 @media (max-width: 440px),
 (max-height : 600px) {
 
@@ -174,11 +162,4 @@ body,
 		width: 18em;
 	}
 
-	/* .logo,
-	.logo img {
-		position: absolute;
-		z-index: 1000;
-		right: .41em;
-		bottom: 1.3em;
-	} */
 }

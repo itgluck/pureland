@@ -12,8 +12,8 @@ var satellite = L.tileLayer(mbUrl, { id: 'mapbox.satellite'}),
 var map = L.map('map', { minZoom: 12, layers: [streets, points, districts] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
-    "Спутник": satellite,
-    "Карта": streets
+    "Карта": streets,
+    "Спутник": satellite
 };
 
 var overlays = {
@@ -142,7 +142,7 @@ function districtInfo(e) {
     setTimeout(function () { legend.update() }, 8000);
 }
 function districtSelect() {
-
+    map.closePopup()
     layer.setStyle(
         {
             weight: 4,
@@ -212,7 +212,8 @@ var geoDistjson;
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
-    map.closePopup();
+    // map.closePopup();
+    
     // if (L.Browser.android) {
     //     map.flyTo(e.latlng, 12);
     // }
