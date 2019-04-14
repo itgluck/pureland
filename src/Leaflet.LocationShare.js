@@ -6,13 +6,10 @@ var LS = L.LocShare
 LS.Send = {}
 LS.Send.Marker = {}
 LS.Send.Popup = L.popup().setContent('<div><h4>Новое обращение</h4>1. Установите маркер максимально точно.<br>2. Нажмите ОК и скопируйте выделенный текст.<br>3. Отправьте данные на почту:<br>pronin.s@i-labs.ru</div><div style="height:55px;"><button class="btn green" onclick="copyPrompt()">Ок</button><button class="btn red" onclick="reset()">Отмена</button></div></div>')
-// LS.Send.Popup = L.popup().setContent('<div><h4>Новое обращение</h4><input id="sendText" type="text" class="inputShare" size="30" onkeyup="L.LocShare.Send.UpdateMessage( this )" placeholder="Ваше сообщение..."/></div><div style="height:35px;"><button class="btn green" onclick="copyPrompt()">Ок</button><button class="btn red" onclick="reset()">Отмена</button></div></div>')
-// LS.Send.Popup = L.popup().setContent('<form action="mailto:it.gluck@ya.ru" method="post">Name:<br><input type="text" name="Link: " value="'+ this.res +'"><br>E-mail:<br><input type="text" name="mail"><br>Comment:<br><input type="text" name="comment" size="20"><br><br><input type="submit" value="Send"><input type="reset" value="Reset"></form>')
 LS.Receive = {}
 LS.Receive.Marker = {}
 LS.Receive.Popup = L.popup()
 var sendIcon = L.icon({
-  // iconUrl: "https://raw.githubusercontent.com/CliffCloud/Leaflet.LocationShare/master/dist/images/IconMapSend.png",
   iconUrl: "images/locations.png",
   iconSize:     [54, 70], // size of the icon
   iconAnchor:   [27, 60], // point of the icon which will correspond to marker's location
@@ -91,9 +88,6 @@ function getJsonFromUrl () {
     var item = params.data[i].split("=");
     params.result[item[0]] = item[1];
   }
-  // This will return all of the data in the query parameters in object form
-  // getJsonFromUrl() only splits on ampersand and equals -- jquery can do better
-  // But so could you!! submit a pull request if you've got one!
   return params.result;
 }
 
@@ -109,7 +103,8 @@ function getJsonFromUrl () {
 function copyPrompt() {
   
   // let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
-  var res = location.origin + location.pathname  + '?' + 
+  // var res = location.origin + location.pathname  + '?' + 
+  var res = 'https://itgluck.github.io/pureland/app.html'  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '= Обратите внимание на этот район!' ;
