@@ -139,7 +139,7 @@ function districtInfo(e) {
             color: '#FF301F',
             fillColor: '#2CAA30'
         });
-    setTimeout(function () { legend.update() }, 8000);
+    setTimeout(function () { legend.update() }, 4000);
 }
 function districtSelect() {
     map.closePopup()
@@ -162,7 +162,7 @@ function highlightFeature(e) {
     info.update(layer.feature.properties);
     if (layer.feature.properties.status > 4) {
 
-        layer.bindPopup('<h3>Проведена уборка</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date);
+        layer.bindPopup('<h3>Проведена уборка</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
         layer.openPopup();
         layer.setStyle(
             {
@@ -184,7 +184,7 @@ function highlightFeature(e) {
             });
     }
     else if (layer.feature.properties.status == 1) {
-        layer.bindPopup('<h3>Систематические загрязнения</h3><img src="' + layer.feature.properties.c_img + '"><br>Дата: ' + layer.feature.properties.c_date);
+        layer.bindPopup('<h3>Систематические загрязнения</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
         layer.openPopup();
         layer.setStyle(
             {

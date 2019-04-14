@@ -51,11 +51,21 @@ body,
 .info input[type=checkbox] {
 	display: none;
   }
+.leaflet-popup-content-wrapper input[type=checkbox] {
+	display: none;
+  }
   
   input[type=checkbox]:checked ~ label > img {
 	transform: scale(1.42);
-	margin: 2.6em 3.4em;
+	margin: 2.6em 3.4em 1em;
+	padding: 8px;
 	cursor: zoom-out;
+  }
+  .leaflet-popup-content-wrapper input[type=checkbox]:checked ~ label > img {
+	transform: scale(1.6);
+	cursor: zoom-out;
+	margin: 0 auto 1.2em;
+	padding: 8px;
   }
 
 
