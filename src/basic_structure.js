@@ -1,19 +1,25 @@
 // Layers
 var points = L.layerGroup();
 var districts = L.layerGroup();
-// L.marker([54.90942,20.51657]).bindPopup('This is Littleton, CO.').addTo(points),
-// L.marker([54.20942,20.60657]).bindPopup('This is Denver, CO.').addTo(points);
 
 var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
-var satellite = L.tileLayer(mbUrl, { id: 'mapbox.satellite'}),
-    streets = L.tileLayer(mbUrl, { id: 'mapbox.streets'});
+var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+    yndx = new L.Yandex(),
+    yndxSat = new L.Yandex("satellite"),
+    hydda = L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+			attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+		}),
+    streets = L.tileLayer(mbUrl, {id: 'mapbox.streets'});
 
-var map = L.map('map', { minZoom: 12, layers: [streets, points, districts] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12, maxZoom: 17, zoomAnimation: false, layers: [hydda, points, districts] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
+    "OSMap": hydda,
+    "OSM": osm,
     "Карта": streets,
-    "Спутник": satellite
+    "Яндекс": yndx,
+    "Спутник": yndxSat
 };
 
 var overlays = {
@@ -23,12 +29,15 @@ var overlays = {
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
 
-
-
-var tile = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a>, &copy; <a href="http://cartodb.com/attributions" target="blank">CartoDB</a>' + 'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    id: 'mapbox.streets'
-}).addTo(map);
+map.on('zoomend', function () {
+    if (map.getZoom() > 14 && map.hasLayer(districts)) {
+        map.removeLayer(districts);
+    }
+    if (map.getZoom() < 15 && map.hasLayer(districts) == false)
+    {
+        map.addLayer(districts);
+    }   
+});
 
 map.addControl(new L.Control.Search({
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',
@@ -41,19 +50,14 @@ map.addControl(new L.Control.Search({
     minLength: 2
 }));
 
-
-
-
-
-// %%%%%%%%%%%%%%
 var info = L.control();
 var logo = L.control({ position: "topleft" });
 
-logo.onAdd = function(map) {
-    this.logodiv = L.DomUtil.create('div','logo');
+logo.onAdd = function (map) {
+    this.logodiv = L.DomUtil.create('div', 'logo');
     this.logodiv.innerHTML = '<a href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич"><img src="images/logo_m.png" title="Сообщить о проблемной зоне"> </a>'
     //  
-    
+
     return this.logodiv;
 }
 logo.addTo(map);
@@ -213,7 +217,7 @@ var geoDistjson;
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
     // map.closePopup();
-    
+
     // if (L.Browser.android) {
     //     map.flyTo(e.latlng, 12);
     // }
@@ -253,7 +257,7 @@ function onEachFeatureDistrict(feature, layer) {
         click: districtInfo
     });
 }
-geoDistjson = L.geoJson(district, {
+geoDistjson = L.geoJson(district, { maxZoom:14,minZoom:14,
     style: styleDist,
     onEachFeature: onEachFeatureDistrict
 }).addTo(districts).addTo(map);

@@ -668,8 +668,8 @@ trashData = {
                 "status": 5,
                 'date': "23.03.2019",
                 "street": "ул. Осенняя 3",
-                'img': "./img/70.JPG",
-                'c_img': './img/70.1.JPG',
+                'img': "./img/70.jpg",
+                'c_img': './img/70.1.jpg',
                 'c_date': '21.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.466569, 54.736961] }
