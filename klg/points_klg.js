@@ -168,7 +168,9 @@ trashData = {
                 'date': "03.03.2019",
                 "street": "ул. Флоренского",
                 'img': "./img/13.jpg",
-                "status": 2
+                "status": 5,
+                'c_date': '13.04.2019',
+                'c_img': './img/13.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.441158, 54.739811] }
         },
@@ -334,11 +336,23 @@ trashData = {
                 'date': "09.03.2019",
                 "street": "ул. Яблочная 49",
                 'img': "./img/43.jpg",
-                "status": 2,
-                'c_date': '',
-                'c_img': ''
+                "status": 5,
+                'c_date': '13.04.2019',
+                'c_img': './img/43.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.539771, 54.690187] }
+        },
+        {
+            "type": "Feature", "id": "43",
+            "properties": {
+                'date': "09.03.2019",
+                "street": "ул. Яблочная 49",
+                'img': "./img/43.jpg",
+                "status": 5,
+                'c_date': '13.04.2019',
+                'c_img': './img/43.2.jpg'
+            },
+            "geometry": { "type": "Point", "coordinates": [20.539611, 54.690327] }
         },
         {
             "type": "Feature", "id": "44",
@@ -825,8 +839,8 @@ trashData = {
                 "street": "ул. Рябиновая",
                 'img': "./img/83.jpg",
                 'c_img': './img/83.1.jpg',
-                'c_date': '26.03.2019',
-                "status": 3
+                'c_date': '18.04.2019',
+                "status": 5
             },
             "geometry": { "type": "Point", "coordinates": [20.414046, 54.733768] }
         },

@@ -33,9 +33,11 @@ var overlays = {
     "Проблемные зоны": points,
     "Городсие районы": districts
 };
+var test = '<img src="img/er1.jpg">';
+{/* <div class="w3-content w3-section" style="max-width:500px"><img class="mySlides" src="img_la.jpg" style="width:100%"><img class="mySlides" src="img_ny.jpg" style="width:100%"><img class="mySlides" src="img_chicago.jpg" style="width:100%"></div>'; */}
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
-L.marker([54.7344, 20.4137], { icon: erIcon }).bindPopup('Проведена уборка активистами проекта Чистая Страна - Калининград').addTo(map);
+L.marker([54.7344, 20.4137], { icon: erIcon }).bindPopup('Проведена уборка активистами проекта Чистая Страна - Калининград' + test ).addTo(map);
 
 
 map.addControl(new L.Control.Search({
@@ -78,8 +80,6 @@ info.update = function (props) {
 }
 
 info.addTo(map);
-
-
 
 var legend = L.control({ position: 'topright' });
 
@@ -161,7 +161,7 @@ function highlightFeature(e) {
     if (layer.feature.properties.status > 4) {
 
         layer.bindPopup('<h3>Проведена уборка</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
-        layer.openPopup();
+        // layer.openPopup();
         layer.setStyle(
             {
                 weight: 3,
@@ -172,18 +172,18 @@ function highlightFeature(e) {
     else if (layer.feature.properties.status == 3) {
 
         layer.bindPopup('<h3>Идут работы по уборке территории</h3>');
-        // layer.setStyle(
-        //     {
-        //         weight: 3,
-        //         color: '#035CE7',
-        //         fillColor: '#6C95D7',
-        //         dashArray: '',
-        //         fillOpacity: 0.7
-        //     });
+        layer.setStyle(
+            {
+                weight: 3,
+                color: '#035CE7',
+                fillColor: '#6C95D7',
+                dashArray: '',
+                fillOpacity: 0.7
+            });
     }
     else if (layer.feature.properties.status == 1) {
         layer.bindPopup('<h3>Систематические загрязнения</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
-        layer.openPopup();
+        // layer.openPopup();
         layer.setStyle(
             {
                 weight: 4,
@@ -261,6 +261,7 @@ geoDistjson = L.geoJson(district, {
 
 geojson = L.geoJson(trashData, {
     style: style,
+    icon: erIcon,
     onEachFeature: onEachFeature,
 
     pointToLayer: function (feature, latlng) {

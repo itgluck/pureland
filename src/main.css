@@ -11,15 +11,16 @@ body,
 }
 
 .leaflet-popup-content-wrapper {
-	padding: 1px;
+	padding: 3px;
 	text-align: center;
-	width: 24em;
 	border-radius: 12px;
+	min-width: 21em;
 }
 
 .leaflet-popup-content-wrapper img {
 	width: 100%;
-	padding: 6px auto;
+	min-width: 18em;
+	margin: 6px auto;
 	border-radius: 7px;
 	transition: transform 0.25s ease;
 	cursor: zoom-in;
@@ -169,7 +170,7 @@ body,
 	}
 
 	.leaflet-popup-content-wrapper {
-		width: 18em;
+		max-width: 18em;
 	}
 
 }
