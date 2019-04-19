@@ -29,8 +29,8 @@ body,
 }
 .leaflet-container a.leaflet-popup-close-button {
 	position: absolute;
-	top: .8em;
-	right: 1em;
+	/* top: .6em;
+	right: 1em; */
 }
 .inputShare {
 	max-width:95%;border-radius:5px;border: #999 solid 1px;height:30px;

@@ -1,6 +1,13 @@
 // Layers
-var districts = L.layerGroup();
-var points = L.layerGroup();
+var districts = L.layerGroup(),
+    points = L.layerGroup(),
+    ErPoints = L.layerGroup(),
+    erIcon = L.icon({
+        iconUrl: "images/er.png",
+        iconSize: [52, 48], // size of the icon
+        iconAnchor: [26, 40], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -40] // point from which the popup should open relative to the iconAnchor
+    });
 
 var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
@@ -8,11 +15,11 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     yndx = new L.Yandex(),
     yndxSat = new L.Yandex("satellite"),
     hydda = L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
-			attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}),
-    streets = L.tileLayer(mbUrl, {id: 'mapbox.streets'});
+        attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }),
+    streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', { minZoom: 12, maxZoom: 17, zoomAnimation: false, layers: [hydda, districts, points] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12, maxZoom: 17, zoomAnimation: false, layers: [hydda, points] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
     "OSMap": hydda,
@@ -28,6 +35,7 @@ var overlays = {
 };
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
+L.marker([54.7344, 20.4137], { icon: erIcon }).bindPopup('Проведена уборка активистами проекта Чистая Страна - Калининград').addTo(map);
 
 
 map.addControl(new L.Control.Search({
@@ -116,7 +124,7 @@ function styleDist(feature) {
     return {
         weight: 1,
         color: feature.properties.color,
-        opacity: .5, 
+        opacity: .5,
         fillColor: feature.properties.color,
         fillOpacity: .1
     };
@@ -162,16 +170,16 @@ function highlightFeature(e) {
             });
     }
     else if (layer.feature.properties.status == 3) {
-        layer.bindPopup('<h3>Идут работы по уборке территории</h3>');
 
-        layer.setStyle(
-            {
-                weight: 3,
-                color: '#035CE7',
-                fillColor: '#6C95D7',
-                dashArray: '',
-                fillOpacity: 0.7
-            });
+        layer.bindPopup('<h3>Идут работы по уборке территории</h3>');
+        // layer.setStyle(
+        //     {
+        //         weight: 3,
+        //         color: '#035CE7',
+        //         fillColor: '#6C95D7',
+        //         dashArray: '',
+        //         fillOpacity: 0.7
+        //     });
     }
     else if (layer.feature.properties.status == 1) {
         layer.bindPopup('<h3>Систематические загрязнения</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
@@ -197,8 +205,10 @@ function highlightFeature(e) {
             })
     };
 }
-var geojson;
-var geoDistjson;
+var geojson,
+    geoDistjson;
+// erMarker = new L.marker( [54.6982, 20.505] , {icon:erIcon}).mapAdd;
+
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -243,10 +253,11 @@ function onEachFeatureDistrict(feature, layer) {
         click: districtInfo
     });
 }
-geoDistjson = L.geoJson(district, { maxZoom:14,minZoom:14,
+geoDistjson = L.geoJson(district, {
+    // maxZoom: 14, minZoom: 14,
     style: styleDist,
     onEachFeature: onEachFeatureDistrict
-}).addTo(districts).addTo(map);
+}).addTo(districts);
 
 geojson = L.geoJson(trashData, {
     style: style,
