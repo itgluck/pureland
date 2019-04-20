@@ -14,12 +14,15 @@ body,
 	padding: 3px;
 	text-align: center;
 	border-radius: 12px;
-	min-width: 21em;
+	/* min-width: 19em; */
 }
-
+.leaflet-popup-content {
+	margin: 0 .5em;
+	line-height: 1.4;
+}
 .leaflet-popup-content-wrapper img {
 	width: 100%;
-	min-width: 18em;
+	min-width: 19em;
 	margin: 6px auto;
 	border-radius: 7px;
 	transition: transform 0.25s ease;

@@ -90,7 +90,7 @@ L.Control.Search = L.Control.extend({
 			icon: false,				//custom L.Icon for maker location or false for hide
 			animate: true,				//animate a circle over location found
 			circle: {					//draw a circle in location found
-				radius: 12,
+				radius: 16,
 				weight: 3,
 				color: '#e03',
 				stroke: true,
@@ -912,7 +912,7 @@ L.Control.Search.Marker = L.Marker.extend({
 		icon: new L.Icon.Default(),
 		animate: true,
 		circle: {
-			radius: 10,
+			radius: 20,
 			weight: 3,
 			color: '#e03',
 			stroke: true,

@@ -10,7 +10,7 @@ district = {
                 "title": "Центральный район",
                 "name": "Блеск",
                 "img": "./images/blesk.png",
-                "addres": "г.Калининград, ул. Озерова 17Б",
+                "addres": "г.Калининград, Озерова 17Б",
                 'contact': "8(4012) 303-403, 8(4012) 750-454",
                 'site': "http://gkblesk.ru",
                 "color": "#FCAD69"
@@ -33,7 +33,7 @@ district = {
                 "title": "Ленинградский район",
                 "name": "Кристалл",
                 "img": "./images/kristall.png",
-                "addres": "г.Калининград, ул. Камская 49Б",
+                "addres": "г.Калининград, Камская 49Б",
                 'contact': "8(4012) 275-60-55",
                 'site': "http://kristall-musor39.ru",
                 "color": "#C0A0F3"
@@ -58,7 +58,7 @@ district = {
                 "title": "Московский район",
                 "name": "Стрела",
                 "img": "./images/strela.png",
-                "addres": "г.Калининград, ул. А.Невского 142",
+                "addres": "г.Калининград, А.Невского 142",
                 'contact': "8(4012) 31-15-32, 8(4012) 31-15-33",
                 'site': "http://strela39.ru",
                 "color": "#69E9FC"
@@ -84,7 +84,7 @@ trashData = {
             "properties": {
                 "status": 5,
                 'date': "10.03.2019",
-                "street": "ул. Госпитальная 34",
+                "title": "Госпитальная 34",
                 'img': "./img/01.jpg",
                 'c_img': './img/01.1.jpg',
                 'c_date': '14.03.2019'
@@ -95,7 +95,7 @@ trashData = {
             "type": "Feature", "id": "02",
             "properties": {
                 'date': "01.03.2019",
-                "street": "ул. Госпитальная 34",
+                "title": "Госпитальная 34",
                 'img': "./img/02.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -107,7 +107,7 @@ trashData = {
             "type": "Feature", "id": "03",
             "properties": {
                 'date': "01.04.2019",
-                "street": "ул. Теннистая Аллея 100",
+                "title": "Теннистая Аллея 100",
                 'img': "./img/28.jpg",
                 "status": 1,
                 'c_date': '05.04.2019',
@@ -119,7 +119,7 @@ trashData = {
             "type": "Feature", "id": "24",
             "properties": {
                 'date': "02.03.2019",
-                "street": "ул. Аллея Каштановая 1а",
+                "title": "Аллея Каштановая 1а",
                 'img': "./img/24.jpg",
                 "status": 2
             },
@@ -132,7 +132,7 @@ trashData = {
             "type": "Feature", "id": "23",
             "properties": {
                 'date': "02.03.2019",
-                "street": "ул. Аллея Каштановая 1а",
+                "title": "Аллея Каштановая 1а",
                 'img': "./img/23.jpg",
                 "status": 2
             },
@@ -142,7 +142,7 @@ trashData = {
             "type": "Feature", "id": "18",
             "properties": {
                 'date': "18.03.2019",
-                "street": "ул. Комсомольская 112",
+                "title": "Комсомольская 112",
                 'img': "./img/18.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -154,7 +154,7 @@ trashData = {
             "type": "Feature", "id": "17",
             "properties": {
                 'date': "03.03.2019",
-                "street": "ул. Грибоедова 3",
+                "title": "Грибоедова 3",
                 'img': "./img/17.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -166,7 +166,7 @@ trashData = {
             "type": "Feature", "id": "13",
             "properties": {
                 'date': "03.03.2019",
-                "street": "ул. Флоренского",
+                "title": "Флоренского",
                 'img': "./img/13.jpg",
                 "status": 5,
                 'c_date': '13.04.2019',
@@ -178,7 +178,7 @@ trashData = {
             "type": "Feature", "id": "11",
             "properties": {
                 'date': "04.03.2019",
-                "street": "ул. Мусорского 10",
+                "title": "Мусорского 10",
                 'img': "./img/11.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -190,7 +190,7 @@ trashData = {
             "type": "Feature", "id": "10",
             "properties": {
                 'date': "04.03.2019",
-                "street": "ул. Захарова 1",
+                "title": "Захарова 1",
                 'img': "./img/10.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -202,7 +202,7 @@ trashData = {
             "type": "Feature", "id": "09",
             "properties": {
                 'date': "04.03.2019",
-                "street": "ул. Железнодорожная 5",
+                "title": "Железнодорожная 5",
                 'img': "./img/09.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -214,7 +214,7 @@ trashData = {
             "type": "Feature", "id": "08",
             "properties": {
                 'date': "04.03.2019",
-                "street": "ул. Озерова 41",
+                "title": "Озерова 41",
                 'img': "./img/08.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -226,7 +226,7 @@ trashData = {
             "type": "Feature", "id": "06",
             "properties": {
                 'date': "06.03.2019",
-                "street": "ул. Дубовая аллея",
+                "title": "Дубовая аллея",
                 'img': "./img/06.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -238,7 +238,7 @@ trashData = {
             "type": "Feature", "id": "36",
             "properties": {
                 'date': "07.03.2019",
-                "street": "пер. Первый Ржевский, 19А",
+                "title": "Первый Ржевский пер., 19А",
                 'img': "./img/36.jpg",
                 "status": 5,
                 'c_date': '01.04.19',
@@ -250,7 +250,7 @@ trashData = {
             "type": "Feature", "id": "37",
             "properties": {
                 'date': "06.03.2019",
-                "street": "ул. Ломоносова",
+                "title": "Ломоносова",
                 'img': "./img/37.jpg",
                 "status": 2,
                 'c_date': '',
@@ -262,7 +262,7 @@ trashData = {
             "type": "Feature", "id": "38",
             "properties": {
                 'date': "07.03.2019",
-                "street": "ул. Ломоносова",
+                "title": "Ломоносова",
                 'img': "./img/38.jpg",
                 "status": 2,
                 'c_date': '',
@@ -274,7 +274,7 @@ trashData = {
             "type": "Feature", "id": "34",
             "properties": {
                 'date': "07.03.2019",
-                "street": "ул. Ломоносова",
+                "title": "Ломоносова",
                 'img': "./img/34.jpg",
                 "status": 2,
                 'c_date': '',
@@ -286,7 +286,7 @@ trashData = {
             "type": "Feature", "id": "39",
             "properties": {
                 'date': "07.03.2019",
-                "street": "ул. Емельянова 64",
+                "title": "Емельянова 64",
                 'img': "./img/39.jpg",
                 "status": 2,
                 'c_date': '',
@@ -298,7 +298,7 @@ trashData = {
             "type": "Feature", "id": "40",
             "properties": {
                 'date': "07.03.2019",
-                "street": "ул. Дзержинского 85",
+                "title": "Дзержинского 85",
                 'img': "./img/40.jpg",
                 "status": 5,
                 'c_date': '13.03.2019',
@@ -310,7 +310,7 @@ trashData = {
             "type": "Feature", "id": "41",
             "properties": {
                 'date': "18.03.2019",
-                "street": "ул. 1-я Большая Окружная 12",
+                "title": "1-я Большая Окружная 12",
                 'img': "./img/41.jpg",
                 "status": 2,
                 'c_date': '',
@@ -322,7 +322,7 @@ trashData = {
             "type": "Feature", "id": "42",
             "properties": {
                 'date': "07.03.2019",
-                "street": "ул. 1-я Большая Окружная 12",
+                "title": "1-я Большая Окружная 12",
                 'img': "./img/42.jpg",
                 "status": 2,
                 'c_date': '',
@@ -334,7 +334,7 @@ trashData = {
             "type": "Feature", "id": "43",
             "properties": {
                 'date': "09.03.2019",
-                "street": "ул. Яблочная 49",
+                "title": "Яблочная 49",
                 'img': "./img/43.jpg",
                 "status": 5,
                 'c_date': '13.04.2019',
@@ -346,7 +346,7 @@ trashData = {
             "type": "Feature", "id": "43",
             "properties": {
                 'date': "09.03.2019",
-                "street": "ул. Яблочная 49",
+                "title": "Яблочная 49",
                 'img': "./img/43.jpg",
                 "status": 5,
                 'c_date': '13.04.2019',
@@ -358,7 +358,7 @@ trashData = {
             "type": "Feature", "id": "44",
             "properties": {
                 'date': "09.03.2019",
-                "street": "ул. Радищева 72",
+                "title": "Радищева 72",
                 'img': "./img/44.jpg",
                 "status": 2,
                 'c_date': '',
@@ -370,7 +370,7 @@ trashData = {
             "type": "Feature", "id": "46",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Красная 226",
+                "title": "Красная 226",
                 'img': "./img/46.jpg",
                 "status": 2,
                 'c_date': '',
@@ -382,7 +382,7 @@ trashData = {
             "type": "Feature", "id": "47",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Павлика Морозова 5",
+                "title": "Павлика Морозова 5",
                 'img': "./img/47.jpg",
                 "status": 2,
                 'c_date': '',
@@ -394,7 +394,7 @@ trashData = {
             "type": "Feature", "id": "48",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Харьковская 21",
+                "title": "Харьковская 21",
                 'img': "./img/48.jpg",
                 "status": 2,
                 'c_date': '',
@@ -406,7 +406,7 @@ trashData = {
             "type": "Feature", "id": "00",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Книжная 2",
+                "title": "Книжная 2",
                 'img': "./img/img.png",
                 "status": 2,
                 'c_date': '',
@@ -418,7 +418,7 @@ trashData = {
             "type": "Feature", "id": "49",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Физкультурная",
+                "title": "Физкультурная",
                 'img': "./img/49.jpg",
                 "status": 2,
                 'c_date': '',
@@ -430,7 +430,7 @@ trashData = {
             "type": "Feature", "id": "50",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Стрелецкая",
+                "title": "Стрелецкая",
                 'img': "./img/50.jpg",
                 "status": 2,
                 'c_date': '',
@@ -442,7 +442,7 @@ trashData = {
             "type": "Feature", "id": "51",
             "properties": {
                 'date': "11.03.2019",
-                "street": "ул. Грига 24",
+                "title": "Грига 24",
                 'img': "./img/51.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -454,7 +454,7 @@ trashData = {
             "type": "Feature", "id": "52",
             "properties": {
                 'date': "12.03.2019",
-                "street": "ул. Фермора 4",
+                "title": "Фермора 4",
                 'img': "./img/52.jpg",
                 "status": 5,
                 'c_date': '23.03.2019',
@@ -466,7 +466,7 @@ trashData = {
             "type": "Feature", "id": "53",
             "properties": {
                 'date': "12.03.2019",
-                "street": "Советский пр-т 103а",
+                "title": "Советский пр-т 103а",
                 'img': "./img/53.jpg",
                 "status": 2,
                 'c_date': '',
@@ -478,7 +478,7 @@ trashData = {
             "type": "Feature", "id": "03",
             "properties": {
                 'date': "03.03.2019",
-                "street": "ул. Флоренского",
+                "title": "Флоренского",
                 'img': "./img/03.jpg",
                 "status": 2
             },
@@ -488,7 +488,7 @@ trashData = {
             "type": "Feature", "id": "04",
             "properties": {
                 'date': "14.03.2019",
-                "street": "ул. Челнокова 60",
+                "title": "Челнокова 60",
                 'img': "./img/04.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -500,7 +500,7 @@ trashData = {
             "type": "Feature", "id": "54",
             "properties": {
                 'date': "14.03.2019",
-                "street": "ул. Трудовая 5",
+                "title": "Трудовая 5",
                 'img': "./img/54.jpg",
                 "status": 1,
                 'c_date': '21.03.2019',
@@ -512,7 +512,7 @@ trashData = {
             "type": "Feature", "id": "55",
             "properties": {
                 'date': "14.03.2019",
-                "street": "ул. Пацаева",
+                "title": "Пацаева",
                 'img': "./img/55.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -524,7 +524,7 @@ trashData = {
             "type": "Feature", "id": "56",
             "properties": {
                 'date': "14.03.2019",
-                "street": "ул. Ростовская 13",
+                "title": "Ростовская 13",
                 'img': "./img/56.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -536,7 +536,7 @@ trashData = {
             "type": "Feature", "id": "57",
             "properties": {
                 'date': "22.03.2019",
-                "street": "ул. Галицкого 17",
+                "title": "Галицкого 17",
                 'img': "./img/57.jpg",
                 "status": 2,
                 'c_date': '22.03.2019',
@@ -548,7 +548,7 @@ trashData = {
             "type": "Feature", "id": "58",
             "properties": {
                 'date': "14.03.2019",
-                "street": "Ленинский пр-т 8а ",
+                "title": "Ленинский пр-т 8а ",
                 'img': "./img/58.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
@@ -560,7 +560,7 @@ trashData = {
             "type": "Feature", "id": "59",
             "properties": {
                 'date': "14.03.2019",
-                "street": "Ленинский пр-т 133",
+                "title": "Ленинский пр-т 133",
                 'img': "./img/59.jpg",
                 "status": 2,
                 'c_date': '14.03.2019',
@@ -573,7 +573,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "18.03.2019",
-                "street": "ул. Волоколамская 4",
+                "title": "Волоколамская 4",
                 'img': "./img/60.jpg",
                 'c_img': './img/60.1.jpg',
                 'c_date': '14.03.2019'
@@ -585,7 +585,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "18.03.2019",
-                "street": "ул. Лесопарковая 48",
+                "title": "Лесопарковая 48",
                 'img': "./img/61.jpg",
                 'c_img': './img/61.jpg',
                 'c_date': '18.03.2019'
@@ -597,7 +597,7 @@ trashData = {
             "properties": {
                 "status": 5,
                 'date': "18.03.2019",
-                "street": "Московский пр-т 116",
+                "title": "Московский пр-т 116",
                 'img': "./img/62.jpg",
                 'c_img': './img/62.1.jpg',
                 'c_date': '23.03.2019'
@@ -609,7 +609,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "18.03.2019",
-                "street": "ул. Шиллера 11",
+                "title": "Шиллера 11",
                 'img': "./img/63.jpg",
                 'c_img': './img/63.1.jpg',
                 'c_date': '18.03.2019'
@@ -621,7 +621,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "20.03.2019",
-                "street": "ул. Артиллерийская 53",
+                "title": "Артиллерийская 53",
                 'img': "./img/64.jpg",
                 'c_img': './img/64.1.jpg',
                 'c_date': '18.03.2019'
@@ -633,7 +633,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "20.03.2019",
-                "street": "ул. Артиллерийская 41",
+                "title": "Артиллерийская 41",
                 'img': "./img/65.jpg",
                 'c_img': './img/65.1.jpg',
                 'c_date': '18.03.2019'
@@ -645,7 +645,7 @@ trashData = {
             "properties": {
                 "status": 5,
                 'date': "21.03.2019",
-                "street": "ул. Емельянова 80",
+                "title": "Емельянова 80",
                 'img': "./img/67.jpg",
                 'c_img': './img/67.1.jpg',
                 'c_date': '01.04.2019'
@@ -657,7 +657,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "22.03.2019",
-                "street": "ул. Октябрьская 8",
+                "title": "Октябрьская 8",
                 'img': "./img/68.jpg",
                 'c_img': './img/68.1.jpg',
                 'c_date': '21.03.2019'
@@ -669,7 +669,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "22.03.2019",
-                "street": "ул. Октябрьская 8",
+                "title": "Октябрьская 8",
                 'img': "./img/69.jpg",
                 'c_img': './img/69.1.jpg',
                 'c_date': '21.03.2019'
@@ -681,7 +681,7 @@ trashData = {
             "properties": {
                 "status": 5,
                 'date': "23.03.2019",
-                "street": "ул. Осенняя 3",
+                "title": "Осенняя 3",
                 'img': "./img/70.jpg",
                 'c_img': './img/70.1.jpg',
                 'c_date': '21.03.2019'
@@ -693,7 +693,7 @@ trashData = {
             "properties": {
                 "status": 5,
                 'date': "02.03.2019",
-                "street": "ул. Каштановая аллея 88",
+                "title": "Каштановая аллея 88",
                 'img': "./img/71.jpg",
                 'c_img': './img/71.1.jpg',
                 'c_date': '21.03.2019'
@@ -705,7 +705,7 @@ trashData = {
             "properties": {
                 "status": 5,
                 'date': "19.03.2019",
-                "street": "пер. Ладушкина",
+                "title": "Ладушкина пер.",
                 'img': "./img/72.jpg",
                 'c_img': './img/72.1.jpg',
                 'c_date': '23.03.2019'
@@ -717,7 +717,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "23.03.2019",
-                "street": "ул. Чапаева",
+                "title": "Чапаева",
                 'img': "./img/73.jpg",
                 'c_img': './img/73.1.jpg',
                 'c_date': '23.03.2019'
@@ -729,7 +729,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "23.03.2019",
-                "street": "ул. Чапаева",
+                "title": "Чапаева",
                 'img': "./img/74.jpg",
                 'c_img': './img/74.1.jpg',
                 'c_date': '23.03.2019'
@@ -741,7 +741,7 @@ trashData = {
             "properties": {
                 "status": 2,
                 'date': "23.03.2019",
-                "street": "ул. Чапаева",
+                "title": "Чапаева",
                 'img': "./img/75.jpg",
                 'c_img': './img/75.1.jpg',
                 'c_date': '23.03.2019'
@@ -752,7 +752,7 @@ trashData = {
             "type": "Feature", "id": "76",
             "properties": {
                 'date': "23.03.2019",
-                "street": "ул. Флоренского",
+                "title": "Флоренского",
                 'img': "./img/76.jpg",
                 'c_img': './img/76.1.jpg',
                 'c_date': '23.03.2019',
@@ -764,7 +764,7 @@ trashData = {
             "type": "Feature", "id": "77",
             "properties": {
                 'date': "25.03.2019",
-                "street": "ул. Менделеева 12",
+                "title": "Менделеева 12",
                 'img': "./img/77.jpg",
                 'c_img': './img/77.1.jpg',
                 'c_date': '25.03.2019',
@@ -776,7 +776,7 @@ trashData = {
             "type": "Feature", "id": "78",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. Дзержинского 36",
+                "title": "Дзержинского 36",
                 'img': "./img/78.jpg",
                 'c_img': './img/78.1.jpg',
                 'c_date': '26.03.2019',
@@ -788,7 +788,7 @@ trashData = {
             "type": "Feature", "id": "79",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. К. Заслонова",
+                "title": "К. Заслонова",
                 'img': "./img/79.jpg",
                 'c_img': './img/79.1.jpg',
                 'c_date': '26.03.2019',
@@ -800,7 +800,7 @@ trashData = {
             "type": "Feature", "id": "80",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. Петра Панина 9",
+                "title": "Петра Панина 9",
                 'img': "./img/80.jpg",
                 'c_img': './img/80.1.jpg',
                 'c_date': '26.03.2019',
@@ -812,7 +812,7 @@ trashData = {
             "type": "Feature", "id": "81",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. Горького 178 Б",
+                "title": "Горького 178 Б",
                 'img': "./img/81.jpg",
                 'c_img': './img/81.1.jpg',
                 'c_date': '26.03.2019',
@@ -824,7 +824,7 @@ trashData = {
             "type": "Feature", "id": "82",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. Горького 180",
+                "title": "Горького 180",
                 'img': "./img/82.jpg",
                 'c_img': './img/82.1.jpg',
                 'c_date': '01.04.2019',
@@ -836,7 +836,7 @@ trashData = {
             "type": "Feature", "id": "83",
             "properties": {
                 'date': "26.03.2019",
-                "street": "ул. Рябиновая",
+                "title": "Рябиновая",
                 'img': "./img/83.jpg",
                 'c_img': './img/83.1.jpg',
                 'c_date': '18.04.2019',
@@ -848,7 +848,7 @@ trashData = {
             "type": "Feature", "id": "84",
             "properties": {
                 'date': "28.03.2019",
-                "street": "пр-т Гвардейский 22",
+                "title": "пр-т Гвардейский 22",
                 'img': "./img/84.jpg",
                 'c_img': './img/84.1.jpg',
                 'c_date': '01.04.2019',
@@ -860,7 +860,7 @@ trashData = {
             "type": "Feature", "id": "85",
             "properties": {
                 'date': "28.03.2019",
-                "street": "ул. Красная 119",
+                "title": "Красная 119",
                 'img': "./img/85.jpg",
                 'c_img': './img/85.1.jpg',
                 'c_date': '01.04.2019',
@@ -872,7 +872,7 @@ trashData = {
             "type": "Feature", "id": "86",
             "properties": {
                 'date': "28.03.2019",
-                "street": "ул. Целлюлозная",
+                "title": "Целлюлозная",
                 'img': "./img/86.jpg",
                 'c_img': './img/86.1.jpg',
                 'c_date': '01.04.2019',
@@ -884,7 +884,7 @@ trashData = {
             "type": "Feature", "id": "87",
             "properties": {
                 'date': "28.03.2019",
-                "street": "ул. Бусловского 2",
+                "title": "Бусловского 2",
                 'img': "./img/87.jpg",
                 'c_img': './img/87.1.jpg',
                 'c_date': '01.04.2019',
@@ -896,7 +896,7 @@ trashData = {
             "type": "Feature", "id": "88",
             "properties": {
                 'date': "30.03.2019",
-                "street": "ул. Калязинская 6",
+                "title": "Калязинская 6",
                 'img': "./img/88.jpg",
                 'c_img': './img/88.1.jpg',
                 'c_date': '01.04.2019',
@@ -911,7 +911,7 @@ trashData = {
             "type": "Feature", "id": "89",
             "properties": {
                 'date': "30.03.2019",
-                "street": "ул. Элблонгская 9",
+                "title": "Элблонгская 9",
                 'img': "./img/89.jpg",
                 'c_img': './img/89.1.jpg',
                 'c_date': '01.04.2019',
@@ -926,7 +926,7 @@ trashData = {
             "type": "Feature", "id": "90",
             "properties": {
                 'date': "30.03.2019",
-                "street": "ул. Аральская",
+                "title": "Аральская",
                 'img': "./img/90.jpg",
                 'c_img': './img/90.1.jpg',
                 'c_date': '01.04.2019',
@@ -941,7 +941,7 @@ trashData = {
             "type": "Feature", "id": "91",
             "properties": {
                 'date': "31.03.2019",
-                "street": "пос. Прегольский",
+                "title": "пос. Прегольский",
                 'img': "./img/91.jpg",
                 'c_img': './img/91.1.jpg',
                 'c_date': '01.04.2019',
@@ -956,7 +956,7 @@ trashData = {
             "type": "Feature", "id": "92",
             "properties": {
                 'date': "01.04.2019",
-                "street": "ул. Беговая 41",
+                "title": "Беговая 41",
                 'img': "./img/92.jpg",
                 'c_img': './img/92.1.jpg',
                 'c_date': '02.04.2019',
@@ -971,7 +971,7 @@ trashData = {
             "type": "Feature", "id": "93",
             "properties": {
                 'date': "012.04.2019",
-                "street": "ул. Вагоностроительная 41",
+                "title": "Вагоностроительная 41",
                 'img': "./img/93.jpg",
                 'c_img': './img/93.1.jpg',
                 'c_date': '02.04.2019',
@@ -986,7 +986,7 @@ trashData = {
             "type": "Feature", "id": "94",
             "properties": {
                 'date': "01.04.2019",
-                "street": "ул. Харьковская 83",
+                "title": "Харьковская 83",
                 'img': "./img/94.jpg",
                 'c_img': './img/94.1.jpg',
                 'c_date': '02.04.2019',
@@ -1001,7 +1001,7 @@ trashData = {
             "type": "Feature", "id": "14",
             "properties": {
                 'date': "03.03.2019",
-                "street": "ул. Флоренского",
+                "title": "Флоренского",
                 'img': "./img/14.jpg",
                 "status": 5,
                 'c_date': '03.04.2019',
@@ -1013,7 +1013,7 @@ trashData = {
             "type": "Feature", "id": "95",
             "properties": {
                 'date': "01.04.2019",
-                "street": "ул. Лесопарковая 1-7",
+                "title": "Лесопарковая 1-7",
                 'img': "./img/95.jpg",
                 'c_img': './img/95.1.jpg',
                 'c_date': '02.04.2019',
@@ -1028,7 +1028,7 @@ trashData = {
             "type": "Feature", "id": "96",
             "properties": {
                 'date': "06.04.2019",
-                "street": "ул. А.Невского 1Б",
+                "title": "А.Невского 1Б",
                 'img': "./img/96.jpg",
                 'c_img': './img/96.1.jpg',
                 'c_date': '11.04.2019',
@@ -1043,7 +1043,7 @@ trashData = {
             "type": "Feature", "id": "97",
             "properties": {
                 'date': "06.04.2019",
-                "street": "ул. Рижская 34",
+                "title": "Рижская 34",
                 'img': "./img/97.jpg",
                 'c_img': './img/97.1.jpg',
                 'c_date': '10.04.2019',
@@ -1058,7 +1058,7 @@ trashData = {
             "type": "Feature", "id": "98",
             "properties": {
                 'date': "06.04.2019",
-                "street": "ул. Сержанта Мишина 32",
+                "title": "Сержанта Мишина 32",
                 'img': "./img/98.jpg",
                 'c_img': './img/98.1.jpg',
                 'c_date': '07.04.2019',
@@ -1073,7 +1073,7 @@ trashData = {
             "type": "Feature", "id": "99",
             "properties": {
                 'date': "06.04.2019",
-                "street": "ул. Тенистая Аллея 64",
+                "title": "Тенистая Аллея 64",
                 'img': "./img/99.jpg",
                 'c_img': './img/99.1.jpg',
                 'c_date': '07.04.2019',
@@ -1088,7 +1088,7 @@ trashData = {
             "type": "Feature", "id": "100",
             "properties": {
                 'date': "01.04.2019",
-                "street": "ул. Сержантская 3-5",
+                "title": "Сержантская 3-5",
                 'img': "./img/100.jpg",
                 'c_img': './img/100.1.jpg',
                 'c_date': '03.04.2019',
@@ -1103,7 +1103,7 @@ trashData = {
             "type": "Feature", "id": "101",
             "properties": {
                 'date': "07.04.2019",
-                "street": "ул. Емельянова 80",
+                "title": "Емельянова 80",
                 'img': "./img/101.jpg",
                 'c_img': './img/101.1.jpg',
                 'c_date': '09.04.2019',
@@ -1118,7 +1118,7 @@ trashData = {
             "type": "Feature", "id": "102",
             "properties": {
                 'date': "08.04.2019",
-                "street": "ул. Карамзина 46",
+                "title": "Карамзина 46",
                 'img': "./img/102.jpg",
                 'c_img': './img/102.1.jpg',
                 'c_date': '08.04.2019',
@@ -1133,7 +1133,7 @@ trashData = {
             "type": "Feature", "id": "103",
             "properties": {
                 'date': "10.04.2019",
-                "street": "ул. Орудийная 32а",
+                "title": "Орудийная 32а",
                 'img': "./img/103.jpg",
                 'c_img': './img/103.1.jpg',
                 'c_date': '12.04.2019',
@@ -1148,7 +1148,7 @@ trashData = {
             "type": "Feature", "id": "104",
             "properties": {
                 'date': "10.04.2019",
-                "street": "ул. Лесопарковая 1-7",
+                "title": "Лесопарковая 1-7",
                 'img': "./img/104.jpg",
                 'c_img': './img/104.1.jpg',
                 'c_date': '10.04.2019',
@@ -1163,7 +1163,7 @@ trashData = {
             "type": "Feature", "id": "105",
             "properties": {
                 'date': "12.04.2019",
-                "street": "ул. Книжная 1А",
+                "title": "Книжная 1А",
                 'img': "./img/105.jpg",
                 'c_img': './img/105.1.jpg',
                 'c_date': '15.04.2019',
@@ -1178,7 +1178,7 @@ trashData = {
             "type": "Feature", "id": "106",
             "properties": {
                 'date': "12.04.2019",
-                "street": "ул. Костикова 3",
+                "title": "Костикова 3",
                 'img': "./img/106.jpg",
                 'c_img': './img/106.1.jpg',
                 'c_date': '15.04.2019',
@@ -1193,7 +1193,7 @@ trashData = {
             "type": "Feature", "id": "107",
             "properties": {
                 'date': "14.04.2019",
-                "street": "Район оз. Пелавское",
+                "title": "Район оз. Пелавское",
                 'img': "./img/107.jpg",
                 'c_img': './img/107.1.jpg',
                 'c_date': '15.04.2019',
@@ -1208,7 +1208,7 @@ trashData = {
             "type": "Feature", "id": "108",
             "properties": {
                 'date': "14.04.2019",
-                "street": "Район оз. Пелавское",
+                "title": "Район оз. Пелавское",
                 'img': "./img/108.jpg",
                 'c_img': './img/108.1.jpg',
                 'c_date': '15.04.2019',
@@ -1223,7 +1223,7 @@ trashData = {
             "type": "Feature", "id": "109",
             "properties": {
                 'date': "14.04.2019",
-                "street": "ул. Баграмяна 4",
+                "title": "Баграмяна 4",
                 'img': "./img/109.jpg",
                 'c_img': './img/109.1.jpg',
                 'c_date': '15.04.2019',

@@ -1,7 +1,7 @@
 // Layers
 var districts = L.layerGroup(),
     points = L.layerGroup(),
-    ErPoints = L.layerGroup(),
+    // ErPoints = L.layerGroup(),
     erIcon = L.icon({
         iconUrl: "images/er.png",
         iconSize: [52, 48], // size of the icon
@@ -33,22 +33,38 @@ var overlays = {
     "Проблемные зоны": points,
     "Городсие районы": districts
 };
-var test = '<img src="img/er1.jpg">';
-{/* <div class="w3-content w3-section" style="max-width:500px"><img class="mySlides" src="img_la.jpg" style="width:100%"><img class="mySlides" src="img_ny.jpg" style="width:100%"><img class="mySlides" src="img_chicago.jpg" style="width:100%"></div>'; */}
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
-L.marker([54.7344, 20.4137], { icon: erIcon }).bindPopup('Проведена уборка активистами проекта Чистая Страна - Калининград' + test ).addTo(map);
+// L.marker([54.7344, 20.4137], { icon: erIcon }).bindPopup('Проведена уборка активистами проекта Чистая Страна - Калининград' + test ).addTo(map);
+
+var markersLayer = new L.LayerGroup();	//layer contain searched elements
+map.addLayer(markersLayer);
+
+
+////////////populate map with markers from sample data
+for (i in erSub) {
+    var title = erSub[i].email,	//value searched
+        loc = erSub[i].loc,		//position found
+        description = erSub[i].description,
+        marker = new L.Marker(new L.latLng(loc), { title: title, icon: erIcon });//se property searched
+    marker.bindPopup('Уборка проведена активистами проекта Чистая Страна - Калининград' + description);
+    markersLayer.addLayer(marker);
+}
+
+
 
 
 map.addControl(new L.Control.Search({
+
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',
     jsonpParam: 'json_callback',
     propertyName: 'display_name',
+    textPlaceholder: 'Поиск по адресу',
     propertyLoc: ['lat', 'lon'],
-    marker: L.circleMarker([0, 0], { radius: 12 }),
+    marker: L.circleMarker([0, 0], { radius: 16 }),
     autoCollapse: true,
     autoType: false,
-    minLength: 2
+    minLength: 2,
 }));
 
 var info = L.control();
@@ -73,7 +89,7 @@ info.update = function (props) {
 
     this._div.innerHTML = (props ?
         ' <input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + props.img + '"></label><br>' +
-        'Адрес: <b>' + props.street +
+        'Адрес: <b>ул. ' + props.title +
         '</b><br>Дата: ' + props.date
         : '<i>Обновлено: 19.04.19|23:50<br>* Точность меток ~ 70м</i>');
 
@@ -88,6 +104,8 @@ legend.onAdd = function (map) {
     this.div = L.DomUtil.create('div', 'legend'),
         this.update();
     return this.div;
+
+    
 };
 
 legend.update = function (props) {
@@ -151,6 +169,8 @@ function districtSelect() {
 }
 
 function highlightFeature(e) {
+
+
     var layer = e.target;
 
     if (!L.Browser.ie) {
@@ -261,7 +281,6 @@ geoDistjson = L.geoJson(district, {
 
 geojson = L.geoJson(trashData, {
     style: style,
-    icon: erIcon,
     onEachFeature: onEachFeature,
 
     pointToLayer: function (feature, latlng) {
@@ -275,6 +294,11 @@ geojson = L.geoJson(trashData, {
         });
     }
 }).addTo(points).addTo(map);
+map.addControl(new L.Control.Search({
+    layer: geojson,
+    title: "Поиск по меткам",
+    textPlaceholder: 'Поиск по меткам на карте'
+}));  //inizialize search control
 
 map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 
