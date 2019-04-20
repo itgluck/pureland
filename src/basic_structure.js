@@ -19,7 +19,7 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     }),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', { minZoom: 12, maxZoom: 18, zoomAnimation: false, layers: [hydda] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12, maxZoom: 18, zoomAnimation: false, layers: [hydda, points, districts] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
     "OSMap": hydda,
