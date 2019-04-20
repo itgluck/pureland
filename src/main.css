@@ -22,7 +22,7 @@ body,
 }
 .leaflet-popup-content-wrapper img {
 	width: 100%;
-	min-width: 14em;
+	min-width: 18em;
 	margin: 6px auto;
 	border-radius: 7px;
 	transition: transform 0.25s ease;
@@ -175,5 +175,7 @@ body,
 	.leaflet-popup-content-wrapper {
 		max-width: 18em;
 	}
-
+	.leaflet-popup-content-wrapper img {
+		min-width: 16em;
+	}
 }
