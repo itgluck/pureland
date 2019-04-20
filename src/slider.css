@@ -14,13 +14,14 @@
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 20s slidy infinite; 
+  animation: 16s slidy infinite; 
 }
 
 #bgslider figure img { 
 	width: 25%; 
 	float: left; 
-	height:15vh;
+  height:15vh;
+  cursor: default;
 }
 
 
