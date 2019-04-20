@@ -22,7 +22,7 @@ body,
 }
 .leaflet-popup-content-wrapper img {
 	width: 100%;
-	min-width: 19em;
+	min-width: 14em;
 	margin: 6px auto;
 	border-radius: 7px;
 	transition: transform 0.25s ease;

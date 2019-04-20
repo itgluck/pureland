@@ -683,7 +683,7 @@ trashData = {
                 'date': "23.03.2019",
                 "title": "Осенняя 3",
                 'img': "./img/70.jpg",
-                'c_img': './img/70.1.jpg',
+                'c_img': './img/70.2.jpg',
                 'c_date': '21.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.466569, 54.736961] }
@@ -695,7 +695,7 @@ trashData = {
                 'date': "02.03.2019",
                 "title": "Каштановая аллея 88",
                 'img': "./img/71.jpg",
-                'c_img': './img/71.1.jpg',
+                'c_img': './img/71.2.jpg',
                 'c_date': '21.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.46437, 54.727049] }
