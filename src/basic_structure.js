@@ -4,8 +4,8 @@ var districts = L.layerGroup(),
     // ErPoints = L.layerGroup(),
     erIcon = L.icon({
         iconUrl: "images/er.png",
-        iconSize: [52, 48], // size of the icon
-        iconAnchor: [26, 40], // point of the icon which will correspond to marker's location
+        iconSize: [40, 38], // size of the icon
+        iconAnchor: [20, 40], // point of the icon which will correspond to marker's location
         popupAnchor: [0, -40] // point from which the popup should open relative to the iconAnchor
     });
 
@@ -19,7 +19,7 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     }),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', { minZoom: 12, maxZoom: 17, zoomAnimation: false, layers: [hydda, points] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12, maxZoom: 18, zoomAnimation: false, layers: [hydda, points] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
     "OSMap": hydda,
@@ -63,8 +63,8 @@ map.addControl(new L.Control.Search({
     propertyLoc: ['lat', 'lon'],
     marker: L.circleMarker([0, 0], { radius: 16 }),
     autoCollapse: true,
-    autoType: false,
-    minLength: 2,
+    // autoType: false,
+    // minLength: 2,
 }));
 
 var info = L.control();
@@ -176,7 +176,7 @@ function highlightFeature(e) {
     if (!L.Browser.ie) {
         layer.bringToFront();
     }
-    legend.update()
+    // legend.update()
     info.update(layer.feature.properties);
     if (layer.feature.properties.status > 4) {
 
@@ -228,10 +228,15 @@ function highlightFeature(e) {
 var geojson,
     geoDistjson;
 // erMarker = new L.marker( [54.6982, 20.505] , {icon:erIcon}).mapAdd;
-
+function onMapClick() {
+    info.update();
+    }
+    
+    map.on('dblclick', onMapClick);
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
+    // info.update();
     // map.closePopup();
 
     // if (L.Browser.android) {
@@ -296,6 +301,7 @@ geojson = L.geoJson(trashData, {
 }).addTo(points).addTo(map);
 map.addControl(new L.Control.Search({
     layer: geojson,
+    autoCollapse: true,
     title: "Поиск по меткам",
     textPlaceholder: 'Поиск по меткам на карте'
 }));  //inizialize search control

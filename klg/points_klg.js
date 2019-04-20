@@ -220,7 +220,7 @@ trashData = {
                 'c_date': '14.03.2019',
                 'c_img': './img/08.1.png'
             },
-            "geometry": { "type": "Point", "coordinates": [20.507201, 54.724991] }
+            "geometry": { "type": "Point", "coordinates": [20.50755,54.72545] }
         },
         {
             "type": "Feature", "id": "06",
@@ -1232,6 +1232,36 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.50157,54.70721]
+            }
+        },
+        {
+            "type": "Feature", "id": "110",
+            "properties": {
+                'date': "20.04.2019",
+                "title": "Невского 74",
+                'img': "./img/110.jpg",
+                'c_img': './img/110.1.jpg',
+                'c_date': '23.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.53357,54.73656]
+            }
+        },
+        {
+            "type": "Feature", "id": "111",
+            "properties": {
+                'date': "16.04.2019",
+                "title": "Радищева пер. 4",
+                'img': "./img/111.jpg",
+                'c_img': './img/111.1.jpg',
+                'c_date': '17.04.2019',
+                "status": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45170,54.71231]
             }
         },
     ]
