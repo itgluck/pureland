@@ -19,7 +19,7 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     }),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', { minZoom: 12, maxZoom: 18, zoomAnimation: false, layers: [hydda, points] }).setView([54.6982, 20.505], 12);
+var map = L.map('map', { minZoom: 12, maxZoom: 18, zoomAnimation: false, layers: [hydda] }).setView([54.6982, 20.505], 12);
 
 var baseLayers = {
     "OSMap": hydda,
@@ -39,11 +39,13 @@ L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
 
 var markersLayer = new L.LayerGroup();	//layer contain searched elements
 map.addLayer(markersLayer);
+markersLayer.on('click', onMapClick);
 
 
 ////////////populate map with markers from sample data
 for (i in erSub) {
-    var title = erSub[i].email,	//value searched
+    var 
+    title = erSub[i].email,	//value searched
         loc = erSub[i].loc,		//position found
         description = erSub[i].description,
         marker = new L.Marker(new L.latLng(loc), { title: title, icon: erIcon });//se property searched
@@ -230,6 +232,8 @@ var geojson,
 // erMarker = new L.marker( [54.6982, 20.505] , {icon:erIcon}).mapAdd;
 function onMapClick() {
     info.update();
+    legend.update();
+    geoDistjson.remove();
     }
     
     map.on('dblclick', onMapClick);
@@ -282,7 +286,7 @@ geoDistjson = L.geoJson(district, {
     // maxZoom: 14, minZoom: 14,
     style: styleDist,
     onEachFeature: onEachFeatureDistrict
-}).addTo(districts);
+}).addTo(districts).addTo(map);
 
 geojson = L.geoJson(trashData, {
     style: style,
@@ -305,6 +309,6 @@ map.addControl(new L.Control.Search({
     title: "Поиск по меткам",
     textPlaceholder: 'Поиск по меткам на карте'
 }));  //inizialize search control
-
+// markersLayer.on('click', onMapClick);
 map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 
