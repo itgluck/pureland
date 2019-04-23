@@ -242,19 +242,11 @@ function onMapClick() {
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
-    // info.update();
-    // map.closePopup();
-
-    // if (L.Browser.android) {
-    //     map.flyTo(e.latlng, 12);
-    // }
 }
 function resetAll() {
-    // geojson.resetStyle(e.target);
     info.update();
     legend.update();
     map.closePopup();
-
 }
 
 function zoomToFeature(e) {
