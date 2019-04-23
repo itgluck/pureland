@@ -1,7 +1,6 @@
 // Layers
 var districts = L.layerGroup(),
-    points = L.layerGroup(),
-    // ErPoints = L.layerGroup(),
+    points = L.layerGroup(),    
     erIcon = L.icon({
         iconUrl: "images/er.png",
         iconSize: [40, 38], // size of the icon
@@ -44,11 +43,13 @@ markersLayer.on('click', onMapClick);
 ////////////populate map with markers from sample data
 for (i in erSub) {
     var 
+    erPadding= L.point(48, 120),
     title = erSub[i].email,	//value searched
         loc = erSub[i].loc,		//position found
         description = erSub[i].description,
         marker = new L.Marker(new L.latLng(loc), { title: title, icon: erIcon });//se property searched
-    marker.bindPopup('Уборка проведена активистами проекта Чистая Страна - Калининград' + description);
+    marker.bindPopup('Уборка проведена активистами проекта Чистая Страна - Калининград' + description,
+    {autoPanPaddingTopLeft: erPadding});
     
     markersLayer.addLayer(marker);
 }
@@ -168,7 +169,7 @@ function districtSelect() {
 }
 
 function highlightFeature(e) {
-    var point = L.point(48,340);
+    var point = L.point(48,300);
     var layer = e.target;
     if (!L.Browser.ie) {
         layer.bringToFront();
@@ -189,7 +190,8 @@ function highlightFeature(e) {
     }
     else if (layer.feature.properties.status == 3) {
 
-        layer.bindPopup('<h3>Идут работы по уборке территории</h3>');
+        layer.bindPopup('<h3>Идут работы по уборке территории</h3>',
+        {autoPanPaddingTopLeft: point});
         layer.setStyle(
             {
                 weight: 3,
@@ -200,7 +202,9 @@ function highlightFeature(e) {
             });
     }
     else if (layer.feature.properties.status == 1) {
-        layer.bindPopup('<h3>Систематические загрязнения</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
+        layer.bindPopup('<h3>Систематические загрязнения</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date,
+        {autoPanPaddingTopLeft: point}
+        );
         // layer.openPopup();
         layer.setStyle(
             {
@@ -230,11 +234,11 @@ function onMapClick() {
     // map.panTo(e.latlng);
     info.update();
     legend.update();
-    geoDistjson.remove();
+    // geoDistjson.remove();
     }
-    
-    // map.on('click', onMapClick);
-    map.on('dblclick', onMapClick);
+    map.on(
+        {dblclick:onMapClick,
+    contextmenu:resetAll});
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -244,6 +248,13 @@ function resetHighlight(e) {
     // if (L.Browser.android) {
     //     map.flyTo(e.latlng, 12);
     // }
+}
+function resetAll() {
+    // geojson.resetStyle(e.target);
+    info.update();
+    legend.update();
+    map.closePopup();
+
 }
 
 function zoomToFeature(e) {
@@ -258,7 +269,7 @@ function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
         mouseout: resetHighlight,
-        click: zoomToFeature
+        click: zoomToFeature        
     });
 }
 function districtClear(e) {
