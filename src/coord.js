@@ -8,5 +8,5 @@ function onMapClick(e) {
         geoDistjson.remove();
 }
 
-map.on('dblclick', onMapClick);
+map.on('contextmenu', onMapClick);
 

@@ -19,8 +19,8 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     }),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', { minZoom: 12, maxZoom: 18, zoomAnimation: false, layers: [hydda, points, districts] }).setView([54.6982, 20.505], 12);
-
+var map = L.map('map', {minZoom:12,zoomAnimation: false, layers: [hydda, points, districts] }).setView([54.6982, 20.505], 12)
+// .setMaxBounds([    [54.8, 20.2],    [54.6, 20.97]]);
 var baseLayers = {
     "OSMap": hydda,
     "OSM": osm,
@@ -50,11 +50,9 @@ for (i in erSub) {
         description = erSub[i].description,
         marker = new L.Marker(new L.latLng(loc), { title: title, icon: erIcon });//se property searched
     marker.bindPopup('Уборка проведена активистами проекта Чистая Страна - Калининград' + description);
+    
     markersLayer.addLayer(marker);
 }
-
-
-
 
 map.addControl(new L.Control.Search({
 
@@ -171,18 +169,18 @@ function districtSelect() {
 }
 
 function highlightFeature(e) {
-
-
     var layer = e.target;
-
     if (!L.Browser.ie) {
         layer.bringToFront();
     }
     // legend.update()
     info.update(layer.feature.properties);
     if (layer.feature.properties.status > 4) {
-
-        layer.bindPopup('<h3>Проведена уборка</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date);
+        var point = L.point(40,360);
+    
+        layer.bindPopup('<h3>Проведена уборка</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date,
+        {autoPan:true,
+        autoPanPaddingTopLeft: point});
         // layer.openPopup();
         layer.setStyle(
             {
@@ -190,6 +188,7 @@ function highlightFeature(e) {
                 color: '#3ECF60',
                 fillColor: '#9AEEAE'
             });
+            
     }
     else if (layer.feature.properties.status == 3) {
 
@@ -231,11 +230,13 @@ var geojson,
     geoDistjson;
 // erMarker = new L.marker( [54.6982, 20.505] , {icon:erIcon}).mapAdd;
 function onMapClick() {
+    // map.panTo(e.latlng);
     info.update();
     legend.update();
     geoDistjson.remove();
     }
     
+    // map.on('click', onMapClick);
     map.on('dblclick', onMapClick);
 
 function resetHighlight(e) {

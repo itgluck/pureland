@@ -1327,19 +1327,6 @@ trashData = {
                 "coordinates": [20.42053,54.72110]
             }
         },
-
-        // {
-        //     "type": "Feature", "id": "61",
-        //     "properties": {
-        //         "status": 2,
-        //         'date': "18.03.2019",
-        //         "title": "Лесопарковая 48",
-        //         'img': "./img/61.jpg",
-        //         'c_img': './img/61.jpg',
-        //         'c_date': '18.03.2019'
-        //     },
-        //     "geometry": { "type": "Point", "coordinates": [20.45811,54.71930] }
-        // },
     ]
 };
 
