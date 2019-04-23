@@ -21,18 +21,18 @@ var tile = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?acc
 }).addTo(map);
 
 
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("Координаты " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
 
 
 
 map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 
-// var popup = L.popup();
-
-// function onMapClick(e) {
-//     popup
-//         .setLatLng(e.latlng)
-//         .setContent("Координаты " + e.latlng.toString())
-//         .openOn(map);
-// }
-
-// map.on('click', onMapClick);

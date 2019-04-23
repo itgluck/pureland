@@ -11,7 +11,7 @@ body,
 }
 
 .leaflet-popup-content-wrapper {
-	padding: 3px;
+	padding: 2em .5em;
 	text-align: center;
 	border-radius: 12px;
 	/* min-width: 19em; */

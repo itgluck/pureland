@@ -141,14 +141,14 @@ trashData = {
         {
             "type": "Feature", "id": "18",
             "properties": {
-                'date': "18.03.2019",
+                'date': "22.04.2019",
                 "title": "Комсомольская 112",
-                'img': "./img/18.jpg",
-                "status": 5,
-                'c_date': '14.03.2019',
-                'c_img': './img/18.1.png'
+                'img': "./img/18.1.png",
+                "status": 1,
+                'c_date': '18.03.2019',
+                'c_img': './img/18.jpg'
             },
-            "geometry": { "type": "Point", "coordinates": [20.478388, 54.735980] }
+            "geometry": { "type": "Point", "coordinates": [20.47834,54.73605] }
         },
         {
             "type": "Feature", "id": "17",
@@ -579,18 +579,6 @@ trashData = {
                 'c_date': '14.03.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.542890, 54.679962] }
-        },
-        {
-            "type": "Feature", "id": "61",
-            "properties": {
-                "status": 2,
-                'date': "18.03.2019",
-                "title": "Лесопарковая 48",
-                'img': "./img/61.jpg",
-                'c_img': './img/61.jpg',
-                'c_date': '18.03.2019'
-            },
-            "geometry": { "type": "Point", "coordinates": [20.45746, 54.720475] }
         },
         {
             "type": "Feature", "id": "62",
@@ -1264,6 +1252,94 @@ trashData = {
                 "coordinates": [20.45170,54.71231]
             }
         },
+        {
+            "type": "Feature", "id": "112",
+            "properties": {
+                'date': "21.04.2019",
+                "title": "Лесопарковая 56",
+                'img': "./img/112.jpg",
+                'c_img': './img/112.1.jpg',
+                'c_date': '25.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45779,54.72046]
+            }
+        },
+        {
+            "type": "Feature", "id": "113",
+            "properties": {
+                'date': "21.04.2019",
+                "title": "Лесопарковая 38А",
+                'img': "./img/113.jpg",
+                'c_img': './img/113.1.jpg',
+                'c_date': '25.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45777,54.71846]
+            }
+        },
+        {
+            "type": "Feature", "id": "114",
+            "properties": {
+                'img': "./img/114.jpg",
+                'c_img': './img/114.1.jpg',
+                "title": "Яблоневая Аллея 16",
+                'date': "21.04.2019",
+                'c_date': '25.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45823,54.71682]
+            }
+        },
+        {
+            "type": "Feature", "id": "115",
+            "properties": {
+                'img': "./img/115.jpg",
+                'c_img': './img/115.1.jpg',
+                "title": "Нахимова 22",
+                'date': "21.04.2019",
+                'c_date': '25.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45873,54.71774]
+            }
+        },
+        {
+            "type": "Feature", "id": "116",
+            "properties": {
+                'img': "./img/116.jpg",
+                'c_img': './img/116.1.jpg',
+                "title": "Отдельная 1",
+                'date': "23.04.2019",
+                'c_date': '25.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.42053,54.72110]
+            }
+        },
+
+        // {
+        //     "type": "Feature", "id": "61",
+        //     "properties": {
+        //         "status": 2,
+        //         'date': "18.03.2019",
+        //         "title": "Лесопарковая 48",
+        //         'img': "./img/61.jpg",
+        //         'c_img': './img/61.jpg',
+        //         'c_date': '18.03.2019'
+        //     },
+        //     "geometry": { "type": "Point", "coordinates": [20.45811,54.71930] }
+        // },
     ]
 };
 

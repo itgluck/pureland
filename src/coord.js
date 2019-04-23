@@ -5,7 +5,8 @@ function onMapClick(e) {
         .setLatLng(e.latlng)
         .setContent( e.latlng.toString())
         .openOn(map);
+        geoDistjson.remove();
 }
 
-map.on('click', onMapClick);
+map.on('dblclick', onMapClick);
 
