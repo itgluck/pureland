@@ -19,7 +19,7 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     }),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', {minZoom:12,zoomAnimation: false, layers: [hydda, points, districts] }).setView([54.6982, 20.505], 12)
+var map = L.map('map', {minZoom:12,zoomAnimation: false, layers: [hydda, points] }).setView([54.6982, 20.505], 12)
 // .setMaxBounds([    [54.8, 20.2],    [54.6, 20.97]]);
 var baseLayers = {
     "OSMap": hydda,
@@ -35,7 +35,6 @@ var overlays = {
 };
 
 L.control.layers(baseLayers, overlays, { position: "bottomright" }).addTo(map);
-// L.marker([54.7344, 20.4137], { icon: erIcon }).bindPopup('Проведена уборка активистами проекта Чистая Страна - Калининград' + test ).addTo(map);
 
 var markersLayer = new L.LayerGroup();	//layer contain searched elements
 map.addLayer(markersLayer);
@@ -169,6 +168,7 @@ function districtSelect() {
 }
 
 function highlightFeature(e) {
+    var point = L.point(48,340);
     var layer = e.target;
     if (!L.Browser.ie) {
         layer.bringToFront();
@@ -176,12 +176,9 @@ function highlightFeature(e) {
     // legend.update()
     info.update(layer.feature.properties);
     if (layer.feature.properties.status > 4) {
-        var point = L.point(40,360);
     
         layer.bindPopup('<h3>Проведена уборка</h3><input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + layer.feature.properties.c_img + '"></label><br>Дата: ' + layer.feature.properties.c_date,
-        {autoPan:true,
-        autoPanPaddingTopLeft: point});
-        // layer.openPopup();
+        {autoPanPaddingTopLeft: point});
         layer.setStyle(
             {
                 weight: 3,
@@ -287,7 +284,7 @@ geoDistjson = L.geoJson(district, {
     // maxZoom: 14, minZoom: 14,
     style: styleDist,
     onEachFeature: onEachFeatureDistrict
-}).addTo(districts).addTo(map);
+}).addTo(districts);
 
 geojson = L.geoJson(trashData, {
     style: style,
