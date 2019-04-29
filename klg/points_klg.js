@@ -1064,8 +1064,8 @@ trashData = {
                 "title": "Тенистая Аллея 64",
                 'img': "./img/99.jpg",
                 'c_img': './img/99.1.jpg',
-                'c_date': '07.04.2019',
-                "status": 2
+                'c_date': '29.04.2019',
+                "status": 1
             },
             "geometry": {
                 "type": "Point",
@@ -1094,8 +1094,8 @@ trashData = {
                 "title": "Емельянова 80",
                 'img': "./img/101.jpg",
                 'c_img': './img/101.1.jpg',
-                'c_date': '09.04.2019',
-                "status": 2
+                'c_date': '23.04.2019',
+                "status": 1
             },
             "geometry": {
                 "type": "Point",
@@ -1319,12 +1319,27 @@ trashData = {
                 'c_img': './img/116.1.jpg',
                 "title": "Отдельная 1",
                 'date': "23.04.2019",
-                'c_date': '25.04.2019',
-                "status": 2
+                'c_date': '29.04.2019',
+                "status": 1
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.42053,54.72110]
+            }
+        },
+        {
+            "type": "Feature", "id": "117",
+            "properties": {
+                'img': "./img/117.jpg",
+                'c_img': './img/117.1.jpg',
+                "title": "Интернациональная 76",
+                'date': "29.04.2019",
+                'c_date': '29.04.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.51136,54.66850]
             }
         },
     ]
