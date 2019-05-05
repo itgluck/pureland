@@ -725,18 +725,6 @@ trashData = {
             "geometry": { "type": "Point", "coordinates": [20.465405, 54.719645] }
         },
         {
-            "type": "Feature", "id": "75",
-            "properties": {
-                "status": 2,
-                'date': "23.03.2019",
-                "title": "Чапаева",
-                'img': "./img/75.jpg",
-                'c_img': './img/75.1.jpg',
-                'c_date': '23.03.2019'
-            },
-            "geometry": { "type": "Point", "coordinates": [20.500461, 54.743235] }
-        },
-        {
             "type": "Feature", "id": "76",
             "properties": {
                 'date': "23.03.2019",
