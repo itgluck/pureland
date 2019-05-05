@@ -703,12 +703,12 @@ trashData = {
         {
             "type": "Feature", "id": "73",
             "properties": {
-                "status": 2,
+                "status": 1,
                 'date': "23.03.2019",
                 "title": "Чапаева",
                 'img': "./img/73.jpg",
                 'c_img': './img/73.1.jpg',
-                'c_date': '23.03.2019'
+                'c_date': '03.05.2019'
             },
             "geometry": { "type": "Point", "coordinates": [20.465019, 54.719706] }
         },
@@ -1334,12 +1334,57 @@ trashData = {
                 'c_img': './img/117.1.jpg',
                 "title": "Интернациональная 76",
                 'date': "29.04.2019",
-                'c_date': '29.04.2019',
-                "status": 2
+                'c_date': '03.05.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.51136,54.66850]
+            }
+        },
+        {
+            "type": "Feature", "id": "118",
+            "properties": {
+                'img': "./img/118.jpg",
+                'c_img': './img/118.1.jpg',
+                "title": "Ленинский пр-т 47-49",
+                'date': "04.05.2019",
+                'c_date': '06.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.50658,54.71449]
+            }
+        },
+        {
+            "type": "Feature", "id": "119",
+            "properties": {
+                'img': "./img/119.jpg",
+                'c_img': './img/119.1.jpg',
+                "title": "Энгельса 16",
+                'date': "04.05.2019",
+                'c_date': '06.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.45933,54.71753]
+            }
+        },
+        {
+            "type": "Feature", "id": "120",
+            "properties": {
+                'img': "./img/120.jpg",
+                'c_img': './img/120.1.jpg',
+                "title": "Чикистов 72",
+                'date': "04.05.2019",
+                'c_date': '06.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.46691,54.73350]
             }
         },
     ]
