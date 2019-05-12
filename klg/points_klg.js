@@ -1375,6 +1375,51 @@ trashData = {
                 "coordinates": [20.46691,54.73350]
             }
         },
+        {
+            "type": "Feature", "id": "121",
+            "properties": {
+                'img': "./img/121.jpg",
+                'c_img': './img/121.1.jpg',
+                "title": "Свердлова 25Б",
+                'date': "05.05.2019",
+                'c_date': '15.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.56569,54.71050]
+            }
+        },
+        {
+            "type": "Feature", "id": "122",
+            "properties": {
+                'img': "./img/122.jpg",
+                'c_img': './img/122.1.jpg',
+                "title": "Князева 30",
+                'date': "07.05.2019",
+                'c_date': '15.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.52513,54.74089]
+            }
+        },
+        {
+            "type": "Feature", "id": "123",
+            "properties": {
+                'img': "./img/123.jpg",
+                'c_img': './img/123.1.jpg',
+                "title": "Старорусская 2",
+                'date': "08.05.2019",
+                'c_date': '15.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47554,54.74181]
+            }
+        },
     ]
 };
 
