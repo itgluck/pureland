@@ -1307,8 +1307,8 @@ trashData = {
                 'c_img': './img/116.1.jpg',
                 "title": "Отдельная 1",
                 'date': "23.04.2019",
-                'c_date': '29.04.2019',
-                "status": 1
+                'c_date': '12.05.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
@@ -1382,8 +1382,8 @@ trashData = {
                 'c_img': './img/121.1.jpg',
                 "title": "Свердлова 25Б",
                 'date': "05.05.2019",
-                'c_date': '15.05.2019',
-                "status": 2
+                'c_date': '12.05.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
