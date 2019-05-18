@@ -1420,6 +1420,36 @@ trashData = {
                 "coordinates": [20.47554,54.74181]
             }
         },
+        {
+            "type": "Feature", "id": "124",
+            "properties": {
+                'img': "./img/124.jpg",
+                'c_img': './img/124.1.jpg',
+                "title": "Леонова 38",
+                'date': "17.05.2019",
+                'c_date': '25.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.48245,54.72986]
+            }
+        },
+        {
+            "type": "Feature", "id": "125",
+            "properties": {
+                'img': "./img/125.jpg",
+                'c_img': './img/125.1.jpg',
+                "title": "Чернышевского 15",
+                'date': "17.05.2019",
+                'c_date': '25.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.475753,54.727828]
+            }
+        },
     ]
 };
 

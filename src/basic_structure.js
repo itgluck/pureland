@@ -53,7 +53,16 @@ for (i in erSub) {
     
     markersLayer.addLayer(marker);
 }
+var logo = L.control({ position: "topleft" });
 
+logo.onAdd = function (map) {
+    this.logodiv = L.DomUtil.create('div', 'logo');
+    this.logodiv.innerHTML = '<a href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич"><img src="images/logo_m.png" title="Сообщить о проблемной зоне"> </a>'
+    //  
+
+    return this.logodiv;
+}
+logo.addTo(map);
 map.addControl(new L.Control.Search({
 
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',
@@ -67,17 +76,8 @@ map.addControl(new L.Control.Search({
     // minLength: 2,
 }));
 
-var info = L.control();
-var logo = L.control({ position: "topleft" });
+var info = L.control({ position: "topright" });
 
-logo.onAdd = function (map) {
-    this.logodiv = L.DomUtil.create('div', 'logo');
-    this.logodiv.innerHTML = '<a href="mailto:pronin.s@i-labs.ru?subject=Чистая Страна - Калининград&body=Вы можете внести свой вклад в чистоту города, отправляйте фотографии мусорных контейнеров и свалок (укажите адрес и дату). Вместе мы сделаем город чище!По вопросам тел. 89673549307 Сергей Николаевич"><img src="images/logo_m.png" title="Сообщить о проблемной зоне"> </a>'
-    //  
-
-    return this.logodiv;
-}
-logo.addTo(map);
 
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info width');
