@@ -1447,7 +1447,7 @@ trashData = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [20.475753,54.727828]
+                "coordinates": [20.47499,54.72799]
             }
         },
     ]
