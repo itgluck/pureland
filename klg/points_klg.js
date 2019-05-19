@@ -1450,6 +1450,51 @@ trashData = {
                 "coordinates": [20.47499,54.72799]
             }
         },
+        {
+            "type": "Feature", "id": "126",
+            "properties": {
+                'img': "./img/126.jpg",
+                'c_img': './img/126.1.jpg',
+                "title": "Герцена 22",
+                'date': "18.05.2019",
+                'c_date': '25.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.52716,54.74846]
+            }
+        },
+        {
+            "type": "Feature", "id": "127",
+            "properties": {
+                'img': "./img/127.jpg",
+                'c_img': './img/127.1.jpg',
+                "title": "1-й Октябрьский пр-д",
+                'date': "18.05.2019",
+                'c_date': '25.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.48106,54.720215]
+            }
+        },
+        {
+            "type": "Feature", "id": "128",
+            "properties": {
+                'img': "./img/128.jpg",
+                'c_img': './img/128.1.jpg',
+                "title": "2-й Октябрьский пр-д",
+                'date': "18.05.2019",
+                'c_date': '25.05.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47985,54.71947]
+            }
+        },
     ]
 };
 
