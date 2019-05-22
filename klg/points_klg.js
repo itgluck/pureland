@@ -731,8 +731,8 @@ trashData = {
                 "title": "Флоренского",
                 'img': "./img/76.jpg",
                 'c_img': './img/76.1.jpg',
-                'c_date': '23.03.2019',
-                "status": 1
+                'c_date': '21.05.2019',
+                "status": 5
             },
             "geometry": { "type": "Point", "coordinates": [20.440841, 54.740058] }
         },
