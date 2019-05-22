@@ -1488,11 +1488,26 @@ trashData = {
                 "title": "2-й Октябрьский пр-д",
                 'date': "18.05.2019",
                 'c_date': '25.05.2019',
-                "status": 2
+                "status": 1
             },
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.47985,54.71947]
+            }
+        },
+        {
+            "type": "Feature", "id": "129",
+            "properties": {
+                'date': "20.05.2019",
+                "title": "Мишина 32",
+                'img': "./img/129.jpg",
+                'c_img': './img/129.1.jpg',
+                'c_date': '07.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.433142, 54.717253]
             }
         },
     ]
