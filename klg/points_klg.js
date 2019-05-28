@@ -1528,6 +1528,36 @@ trashData = {
                 "coordinates": [20.46538,54.71460]
             }
         },
+        {
+            "type": "Feature", "id": "132",
+            "properties": {
+                'date': "28.05.2019",
+                "title": "Тобольская 2",
+                'img': "./img/132.jpg",
+                'c_img': './img/132.1.jpg',
+                'c_date': '27.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47259,54.68217]
+            }
+        },
+        {
+            "type": "Feature", "id": "133",
+            "properties": {
+                'date': "28.05.2019",
+                "title": "Вернадского 1",
+                'img': "./img/133.jpg",
+                'c_img': './img/133.1.jpg',
+                'c_date': '27.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47214,54.73453]
+            }
+        },
     ]
 };
 
