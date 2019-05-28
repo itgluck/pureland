@@ -82,8 +82,8 @@ trashData = {
         {
             "type": "Feature", "id": "01",
             "properties": {
-                "status": 5,
-                'date': "10.03.2019",
+                "status": 2,
+                'date': "26.05.2019",
                 "title": "Госпитальная 34",
                 'img': "./img/01.jpg",
                 'c_img': './img/01.1.jpg',
@@ -94,10 +94,10 @@ trashData = {
         {
             "type": "Feature", "id": "02",
             "properties": {
-                'date': "01.03.2019",
+                'date': "26.05.2019",
                 "title": "Госпитальная 34",
                 'img': "./img/02.jpg",
-                "status": 5,
+                "status": 2,
                 'c_date': '14.03.2019',
                 'c_img': './img/02.1.jpg'
             },
@@ -703,26 +703,14 @@ trashData = {
         {
             "type": "Feature", "id": "73",
             "properties": {
-                "status": 1,
-                'date': "23.03.2019",
-                "title": "Чапаева",
+                "status": 2,
+                'date': "27.05.2019",
+                "title": "Чапаева 24",
                 'img': "./img/73.jpg",
                 'c_img': './img/73.1.jpg',
-                'c_date': '03.05.2019'
+                'c_date': '20.05.2019'
             },
-            "geometry": { "type": "Point", "coordinates": [20.465019, 54.719706] }
-        },
-        {
-            "type": "Feature", "id": "74",
-            "properties": {
-                "status": 2,
-                'date': "23.03.2019",
-                "title": "Чапаева",
-                'img': "./img/74.jpg",
-                'c_img': './img/74.1.jpg',
-                'c_date': '23.03.2019'
-            },
-            "geometry": { "type": "Point", "coordinates": [20.465405, 54.719645] }
+            "geometry": { "type": "Point", "coordinates": [20.46445,54.71986] }
         },
         {
             "type": "Feature", "id": "76",
@@ -1213,12 +1201,12 @@ trashData = {
         {
             "type": "Feature", "id": "110",
             "properties": {
-                'date': "20.04.2019",
+                'date': "28.05.2019",
                 "title": "Невского 74",
                 'img': "./img/110.jpg",
                 'c_img': './img/110.1.jpg',
-                'c_date': '23.04.2019',
-                "status": 2
+                'c_date': '28.05.2019',
+                "status": 1
             },
             "geometry": {
                 "type": "Point",
@@ -1508,6 +1496,36 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.433142, 54.717253]
+            }
+        },
+        {
+            "type": "Feature", "id": "130",
+            "properties": {
+                'date': "28.05.2019",
+                "title": "Комсомольская 30",
+                'img': "./img/130.jpg",
+                'c_img': './img/130.1.jpg',
+                'c_date': '27.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47913,54.72502]
+            }
+        },
+        {
+            "type": "Feature", "id": "131",
+            "properties": {
+                'date': "28.05.2019",
+                "title": "Каштановая аллея 11",
+                'img': "./img/131.jpg",
+                'c_img': './img/131.1.jpg',
+                'c_date': '27.06.2019',
+                "status": 1
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.46538,54.71460]
             }
         },
     ]
