@@ -1036,11 +1036,11 @@ trashData = {
         {
             "type": "Feature", "id": "99",
             "properties": {
-                'date': "06.04.2019",
-                "title": "Тенистая Аллея 64",
+                'date': "30.05.2019",
+                "title": "Тенистая Аллея 66",
                 'img': "./img/99.jpg",
                 'c_img': './img/99.1.jpg',
-                'c_date': '29.04.2019',
+                'c_date': '30.05.2019',
                 "status": 1
             },
             "geometry": {
@@ -1556,6 +1556,21 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.47214,54.73453]
+            }
+        },
+        {
+            "type": "Feature", "id": "134",
+            "properties": {
+                'date': "30.05.2019",
+                "title": "Краснодарский пер. 15а",
+                'img': "./img/134.jpg",
+                'c_img': './img/134.1.jpg',
+                'c_date': '27.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.55336,54.72528]
             }
         },
     ]
