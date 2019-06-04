@@ -143,7 +143,7 @@ trashData = {
             "properties": {
                 'date': "22.04.2019",
                 "title": "Комсомольская 112",
-                'img': "./img/18.1.png",
+                'img': "./img/18.1.jpg",
                 "status": 1,
                 'c_date': '18.03.2019',
                 'c_img': './img/18.jpg'
@@ -158,7 +158,7 @@ trashData = {
                 'img': "./img/17.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/17.1.png'
+                'c_img': './img/17.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.526587, 54.733437] }
         },
@@ -194,7 +194,7 @@ trashData = {
                 'img': "./img/10.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/10.1.png'
+                'c_img': './img/10.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.471876, 54.734712] }
         },
@@ -206,7 +206,7 @@ trashData = {
                 'img': "./img/09.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/09.1.png'
+                'c_img': './img/09.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.504913, 54.691091] }
         },
@@ -218,7 +218,7 @@ trashData = {
                 'img': "./img/08.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/08.1.png'
+                'c_img': './img/08.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.50755,54.72545] }
         },
@@ -230,7 +230,7 @@ trashData = {
                 'img': "./img/06.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/06.1.png'
+                'c_img': './img/06.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.423825, 54.718966] }
         },
@@ -305,18 +305,6 @@ trashData = {
                 'c_img': './img/40.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.535780, 54.683431] }
-        },
-        {
-            "type": "Feature", "id": "41",
-            "properties": {
-                'date': "18.03.2019",
-                "title": "1-я Большая Окружная 12",
-                'img': "./img/41.jpg",
-                "status": 2,
-                'c_date': '',
-                'c_img': ''
-            },
-            "geometry": { "type": "Point", "coordinates": [20.418927, 54.720922] }
         },
         {
             "type": "Feature", "id": "42",
@@ -446,7 +434,7 @@ trashData = {
                 'img': "./img/51.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/51.1.png'
+                'c_img': './img/51.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.531922, 54.710908] }
         },
@@ -492,7 +480,7 @@ trashData = {
                 'img': "./img/04.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/04.1.png'
+                'c_img': './img/04.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.479537, 54.749100,] }
         },
@@ -516,7 +504,7 @@ trashData = {
                 'img': "./img/55.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/55.1.png'
+                'c_img': './img/55.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.477875, 54.725585] }
         },
@@ -528,7 +516,7 @@ trashData = {
                 'img': "./img/56.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/56.1.png'
+                'c_img': './img/56.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.461457, 54.726548] }
         },
@@ -540,7 +528,7 @@ trashData = {
                 'img': "./img/57.jpg",
                 "status": 2,
                 'c_date': '22.03.2019',
-                'c_img': './img/57.1.png'
+                'c_img': './img/57.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.498868, 54.714448] }
         },
@@ -552,7 +540,7 @@ trashData = {
                 'img': "./img/58.jpg",
                 "status": 5,
                 'c_date': '14.03.2019',
-                'c_img': './img/58.1.png'
+                'c_img': './img/58.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.502701, 54.715373] }
         },
@@ -1386,11 +1374,11 @@ trashData = {
                 "title": "Князева 30",
                 'date': "07.05.2019",
                 'c_date': '15.05.2019',
-                "status": 2
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [20.52513,54.74089]
+                "coordinates": [20.52465,54.74078]
             }
         },
         {
@@ -1571,6 +1559,21 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.55336,54.72528]
+            }
+        },
+        {
+            "type": "Feature", "id": "135",
+            "properties": {
+                'date': "04.06.2019",
+                "title": "Артиллерийская 65",
+                'img': "./img/135.jpg",
+                'c_img': './img/135.1.jpg',
+                'c_date': '09.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.55079,54.73247]
             }
         },
     ]
