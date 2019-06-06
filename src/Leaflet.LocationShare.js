@@ -72,7 +72,7 @@ populateMarker = function (selectedMap) {
 //    LS.Receive.Popup.setContent(LS.Receive.message)
     LS.Receive.Marker = L.marker( [ LS.Receive.lat , LS.Receive.lng] , {icon:receiveIcon})
     console.log( LS.Receive.Marker._latlng )
-    LS.Receive.Marker.bindPopup(LS.Receive.message) 
+    // LS.Receive.Marker.bindPopup(LS.Receive.message) 
     LS.Receive.Marker.addTo(selectedMap)
     LS.Receive.Marker.openPopup()  
   } 
@@ -151,10 +151,10 @@ function placeMarker( selectedMap ){
 //  }
 };
 
-LS.Send.UpdateMessage = function( text ){
-  var encodedForUrl = encodeURIComponent( text.value );
-  LS.Send.Message = encodedForUrl
-}
+// LS.Send.UpdateMessage = function( text ){
+//   var encodedForUrl = encodeURIComponent( text.value );
+//   LS.Send.Message = encodedForUrl
+// }
 
 function setSendValues( result ){
   LS.Send.lat = result.lat.toFixed(5);
