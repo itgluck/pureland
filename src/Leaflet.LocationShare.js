@@ -104,7 +104,7 @@ function copyPrompt() {
   
   // let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
   // var res = location.origin + location.pathname  + '?' + 
-  var res = 'https://itgluck.github.io/pureland/app.html'  + '?' + 
+  var res = 'https://itgluck.github.io/pureland/index.html'  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&' +
    'M' + '= Обратите внимание на этот район!' ;
