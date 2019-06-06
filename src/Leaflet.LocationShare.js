@@ -18,8 +18,8 @@ var sendIcon = L.icon({
 
 receiveIcon = L.icon({
   iconUrl: "images/location.png",
-  iconSize:     [54, 70], // size of the icon
-  iconAnchor:   [27, 60], // point of the icon which will correspond to marker's location
+  iconSize:     [220, 54], // size of the icon
+  iconAnchor:   [110, 50], // point of the icon which will correspond to marker's location
   popupAnchor:  [0, -60] // point from which the popup should open relative to the iconAnchor
 })
 
