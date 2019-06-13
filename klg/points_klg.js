@@ -107,7 +107,7 @@ trashData = {
             "type": "Feature", "id": "03",
             "properties": {
                 'date': "01.04.2019",
-                "title": "Теннистая Аллея 100",
+                "title": "Тенистая Аллея 100",
                 'img': "./img/28.jpg",
                 "status": 1,
                 'c_date': '05.04.2019',
