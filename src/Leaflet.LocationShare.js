@@ -107,7 +107,7 @@ function copyPrompt() {
   var res = location.origin + location.pathname  + '?' + 
   // var res = 'https://itgluck.github.io/pureland/index.html'  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
-  'lng' + '=' + LS.Send.lng + '&';
+  'lng' + '=' + LS.Send.lng;
   //  +
   //  'M' + '= Обратите внимание на этот район!' ;
   //  'M' + '=' +  LS.Send.Message;
