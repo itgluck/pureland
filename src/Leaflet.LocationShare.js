@@ -76,6 +76,7 @@ populateMarker = function (selectedMap) {
     LS.Receive.Marker.addTo(selectedMap)
     LS.Receive.Marker.openPopup()  
   } 
+  
 }
 
 function getJsonFromUrl () {
@@ -103,8 +104,8 @@ function getJsonFromUrl () {
 function copyPrompt() {
   
   // let res = 'https://itgluck.github.io/pureland/point_add' + '?' + 
-  // var res = location.origin + location.pathname  + '?' + 
-  var res = 'https://itgluck.github.io/pureland/index.html'  + '?' + 
+  var res = location.origin + location.pathname  + '?' + 
+  // var res = 'https://itgluck.github.io/pureland/index.html'  + '?' + 
   'lat' + '=' + LS.Send.lat + '&' +
   'lng' + '=' + LS.Send.lng + '&';
   //  +

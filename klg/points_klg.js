@@ -1519,11 +1519,11 @@ trashData = {
         {
             "type": "Feature", "id": "132",
             "properties": {
-                'date': "28.05.2019",
+                'date': "12.06.2019",
                 "title": "Тобольская 2",
                 'img': "./img/132.jpg",
                 'c_img': './img/132.1.jpg',
-                'c_date': '27.06.2019',
+                'c_date': '12.06.2019',
                 "status": 2
             },
             "geometry": {
@@ -1574,6 +1574,21 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.55079,54.73247]
+            }
+        },
+        {
+            "type": "Feature", "id": "136",
+            "properties": {
+                'date': "11.06.2019",
+                "title": "Киевская 132А",
+                'img': "./img/136.jpg",
+                'c_img': './img/136.1.jpg',
+                'c_date': '11.06.2019',
+                "status": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.46299,54.68258]
             }
         },
     ]
