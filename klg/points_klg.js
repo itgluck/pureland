@@ -106,11 +106,11 @@ trashData = {
         {
             "type": "Feature", "id": "03",
             "properties": {
-                'date': "01.04.2019",
+                'date': "09.06.2019",
                 "title": "Тенистая Аллея 100",
                 'img': "./img/28.jpg",
-                "status": 1,
-                'c_date': '05.04.2019',
+                "status": 5,
+                'c_date': '14.06.2019',
                 'c_img': './img/28.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.413153, 54.724170] }
@@ -1010,11 +1010,11 @@ trashData = {
             "type": "Feature", "id": "98",
             "properties": {
                 'date': "06.04.2019",
-                "title": "Сержанта Мишина 32",
+                "title": "Мишина д.32",
                 'img': "./img/98.jpg",
                 'c_img': './img/98.1.jpg',
-                'c_date': '07.04.2019',
-                "status": 2
+                'c_date': '15.06.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
@@ -1478,8 +1478,8 @@ trashData = {
                 "title": "Мишина 32",
                 'img': "./img/129.jpg",
                 'c_img': './img/129.1.jpg',
-                'c_date': '07.06.2019',
-                "status": 2
+                'c_date': '14.06.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
@@ -1523,8 +1523,8 @@ trashData = {
                 "title": "Тобольская 2",
                 'img': "./img/132.jpg",
                 'c_img': './img/132.1.jpg',
-                'c_date': '12.06.2019',
-                "status": 2
+                'c_date': '14.06.2019',
+                "status": 5
             },
             "geometry": {
                 "type": "Point",
@@ -1589,6 +1589,36 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.46299,54.68258]
+            }
+        },
+        {
+            "type": "Feature", "id": "137",
+            "properties": {
+                'date': "12.06.2019",
+                "title": "Киевская 86",
+                'img': "./img/137.jpg",
+                'c_img': './img/137.1.jpg',
+                'c_date': '14.06.2019',
+                "status": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47275,54.68147]
+            }
+        },
+        {
+            "type": "Feature", "id": "138",
+            "properties": {
+                'date': "13.06.2019",
+                "title": "Льва Толстого 16",
+                'img': "./img/138.jpg",
+                'c_img': './img/138.1.jpg',
+                'c_date': '13.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.52958,54.73774]
             }
         },
     ]
