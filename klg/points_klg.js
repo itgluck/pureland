@@ -1621,6 +1621,21 @@ trashData = {
                 "coordinates": [20.52958,54.73774]
             }
         },
+        {
+            "type": "Feature", "id": "139",
+            "properties": {
+                'date': "16.06.2019",
+                "title": "Самаркандская 28",
+                'img': "./img/139.jpg",
+                'c_img': './img/139.1.jpg',
+                'c_date': '17.06.2019',
+                "status": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.50206,54.67738]
+            }
+        },
     ]
 };
 
