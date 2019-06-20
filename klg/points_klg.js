@@ -1636,6 +1636,21 @@ trashData = {
                 "coordinates": [20.50206,54.67738]
             }
         },
+        {
+            "type": "Feature", "id": "140",
+            "properties": {
+                'date': "20.06.2019",
+                "title": "Льва Толстого 15",
+                'img': "./img/140.jpg",
+                'c_img': './img/140.1.jpg',
+                'c_date': '20.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.531079,54.738382] 
+            }
+        },
     ]
 };
 
