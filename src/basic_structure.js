@@ -39,7 +39,14 @@ var markersLayer = new L.LayerGroup();	//layer contain searched elements
 map.addLayer(markersLayer);
 markersLayer.on('click', onMapClick);
 
-
+// var popup = L.popup();
+// myShare = function (e){
+//     popup
+//     .setLatLng(e.latlng)
+//     // .setContent( e.latlng.toString())
+//     .setContent( "<a href='?lat=54.75237&lng=20.4473' onclick='  window.open('https://www.facebook.com/sharer/sharer.php?s=100&p[title]=titlehere&p[url]=' + encodeURIComponent(location.href) + '&p[summary]=yoursummaryhere&p[images][0]=https%3A%2F%2Fwww.google.com%2Fimages%2Fsrpr%2Flogo3w.png,     'facebook-share-dialog',     'width=626,height=436');   return false;'>  Share on Facebook  </a>")
+//         .openOn(map);
+// }
 ////////////populate map with markers from sample data
 for (i in erSub) {
     var 
@@ -73,7 +80,7 @@ map.addControl(new L.Control.Search({
     marker: L.circleMarker([0, 0], { radius: 16 }),
     autoCollapse: true,
     // autoType: false,
-    // minLength: 2,
+    // minLength: 3,
 }));
 
 var info = L.control({ position: "topright" });
@@ -238,7 +245,9 @@ function onMapClick() {
     }
     map.on(
         {dblclick:onMapClick,
-    contextmenu:resetAll});
+        contextmenu:resetAll
+        // contextmenu:myShare
+});
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -304,6 +313,7 @@ geojson = L.geoJson(trashData, {
         });
     }
 }).addTo(points).addTo(map);
+
 map.addControl(new L.Control.Search({
     layer: geojson,
     autoCollapse: true,
@@ -313,3 +323,4 @@ map.addControl(new L.Control.Search({
 // markersLayer.on('click', onMapClick);
 map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
 logo.addTo(map);
+
