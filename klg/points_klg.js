@@ -106,11 +106,11 @@ trashData = {
         {
             "type": "Feature", "id": "03",
             "properties": {
-                'date': "09.06.2019",
+                'date': "24.06.2019",
                 "title": "Тенистая Аллея 100",
                 'img': "./img/28.jpg",
-                "status": 5,
-                'c_date': '14.06.2019',
+                "status": 2,
+                'c_date': '24.06.2019',
                 'c_img': './img/28.1.jpg'
             },
             "geometry": { "type": "Point", "coordinates": [20.413153, 54.724170] }
@@ -1519,12 +1519,12 @@ trashData = {
         {
             "type": "Feature", "id": "132",
             "properties": {
-                'date': "12.06.2019",
+                'date': "24.06.2019",
                 "title": "Тобольская 2",
                 'img': "./img/132.jpg",
                 'c_img': './img/132.1.jpg',
                 'c_date': '14.06.2019',
-                "status": 5
+                "status": 2
             },
             "geometry": {
                 "type": "Point",
@@ -1644,6 +1644,21 @@ trashData = {
                 'img': "./img/140.jpg",
                 'c_img': './img/140.1.jpg',
                 'c_date': '20.06.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.531079,54.738382] 
+            }
+        },
+        {
+            "type": "Feature", "id": "141",
+            "properties": {
+                'date': "24.06.2019",
+                "title": "Бровковича 2А",
+                'img': "./img/141.jpg",
+                'c_img': './img/141.1.jpg',
+                'c_date': '24.06.2019',
                 "status": 2
             },
             "geometry": {

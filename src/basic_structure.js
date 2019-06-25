@@ -18,7 +18,7 @@ var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
     }),
     streets = L.tileLayer(mbUrl, { id: 'mapbox.streets' });
 
-var map = L.map('map', {minZoom:12,zoomAnimation: false, layers: [yndx, points] }).setView([54.6982, 20.505], 12)
+var map = L.map('map', {minZoom:12,maxZoom:18,zoomAnimation: false, layers: [hydda, points] }).setView([54.6982, 20.505], 12)
 // .setMaxBounds([    [54.8, 20.2],    [54.6, 20.97]]);
 var baseLayers = {
     "OSMap": hydda,
@@ -91,7 +91,7 @@ info.update = function (props) {
         ' <input type="checkbox" id="zoomCheck"><label for="zoomCheck"><img src="' + props.img + '"></label><br>' +
         'Адрес: <b>ул. ' + props.title +
         '</b><br>Дата: ' + props.date
-        : '<i>Обновлено: 20.06.19|22:30<br>* Точность меток ~ 70м</i>');
+        : '<i>Обновлено: 25.06.19|22:00<br>* Точность меток ~ 70м</i>');
 
 }
 
