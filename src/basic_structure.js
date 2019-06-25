@@ -62,7 +62,7 @@ logo.onAdd = function (map) {
 
     return this.logodiv;
 }
-logo.addTo(map);
+
 map.addControl(new L.Control.Search({
 
     url: 'https://nominatim.openstreetmap.org/search?format=json&q={s} городской округ Калининград',
@@ -312,4 +312,4 @@ map.addControl(new L.Control.Search({
 }));  //inizialize search control
 // markersLayer.on('click', onMapClick);
 map.attributionControl.addAttribution('&copy; <a href="mailto:it.gluck@ya.ru?subject=Чистая Страна - Калининград&body=Задайте вопрос, о данных на карте.">IT_GLu(:k</a>');
-
+logo.addTo(map);
