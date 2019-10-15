@@ -667,8 +667,8 @@ trashData = {
         {
             "type": "Feature", "id": "71",
             "properties": {
-                "status": 5,
-                'date': "02.03.2019",
+                "status": 2,
+                'date': "26.06.2019",
                 "title": "Каштановая аллея 88",
                 'img': "./img/71.jpg",
                 'c_img': './img/71.2.jpg',
@@ -1664,6 +1664,82 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.531079,54.738382] 
+            }
+        },
+        // ** new season **
+        {
+            "type": "Feature", "id": "142",
+            "properties": {
+                'date': "26.06.2019",
+                "title": "Школьная 2",
+                'img': "./img/142.jpg",
+                'c_img': './img/142.1.jpg',
+                'c_date': '24.09.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.48275,54.68335] 
+            }
+        },
+        {
+            "type": "Feature", "id": "143",
+            "properties": {
+                'date': "08.07.2019",
+                "title": "Потемкина",
+                'img': "./img/143.jpg",
+                'c_img': './img/143.1.jpg',
+                'c_date': '24.09.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.52716,54.72883] 
+            }
+        },
+        {
+            "type": "Feature", "id": "144",
+            "properties": {
+                'date': "07.08.2019",
+                "title": "Павлика Морозова 118",
+                'img': "./img/144.jpg",
+                'c_img': './img/144.1.jpg',
+                'c_date': '20.08.2019',
+                "status": 5
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47951,54.67412] 
+            }
+        },
+        {
+            "type": "Feature", "id": "145",
+            "properties": {
+                'date': "22.08.2019",
+                "title": "Чекистов 72",
+                'img': "./img/145.jpg",
+                'c_img': './img/145.1.jpg',
+                'c_date': '22.08.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47759,54.73204] 
+            }
+        },
+        {
+            "type": "Feature", "id": "146",
+            "properties": {
+                'date': "22.08.2019",
+                "title": "Тельмана 82",
+                'img': "./img/146.jpg",
+                'c_img': './img/146.1.jpg',
+                'c_date': '22.08.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.47759,54.73204] 
             }
         },
     ]
