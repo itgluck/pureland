@@ -487,7 +487,7 @@ trashData = {
         {
             "type": "Feature", "id": "54",
             "properties": {
-                'date': "14.03.2019",
+                'date': "18.09.2019",
                 "title": "Трудовая 5",
                 'img': "./img/54.jpg",
                 "status": 1,
@@ -1740,6 +1740,141 @@ trashData = {
             "geometry": {
                 "type": "Point",
                 "coordinates": [20.51908,54.73301] 
+            }
+        },
+        {
+            "type": "Feature", "id": "147",
+            "properties": {
+                'date': "26.08.2019",
+                "title": "СНТ Чайка",
+                'img': "./img/147.jpg",
+                'c_img': './img/147.1.jpg',
+                'c_date': '26.08.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.597069, 54.698558] 
+            }
+        },
+        {
+            "type": "Feature", "id": "148",
+            "properties": {
+                'date': "28.08.2019",
+                "title": "Павлика Морозова, 67",
+                'img': "./img/148.jpg",
+                'c_img': './img/148.1.jpg',
+                'c_date': '28.08.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.473859,54.67701]
+            }
+        },
+        {
+            "type": "Feature", "id": "149",
+            "properties": {
+                'date': "30.08.2019",
+                "title": "Советский пр-т, 21а",
+                'img': "./img/149.jpg",
+                'c_img': './img/149.1.jpg',
+                'c_date': '28.08.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.493064,54.727002]
+            }
+        },
+        {
+            "type": "Feature", "id": "150",
+            "properties": {
+                'date': "06.10.2019",
+                "title": "Воздушный пер, 2",
+                'img': "./img/150.jpg",
+                'c_img': './img/150.1.jpg',
+                'c_date': '06.10.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.441222,54.714349]
+            }
+        },
+        {
+            "type": "Feature", "id": "151",
+            "properties": {
+                'date': "13.10.2019",
+                "title": "Севастьянова, 5",
+                'img': "./img/151.jpg",
+                'c_img': './img/151.1.jpg',
+                'c_date': '10.10.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.507596,54.714755]
+            }
+        },
+        {
+            "type": "Feature", "id": "152",
+            "properties": {
+                'date': "13.10.2019",
+                "title": "Пацаева-Красная",
+                'img': "./img/152.jpg",
+                'c_img': './img/152.1.jpg',
+                'c_date': '10.10.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.474256,54.726188]
+            }
+        },
+        {
+            "type": "Feature", "id": "153",
+            "properties": {
+                'date': "13.10.2019",
+                "title": "Аксакова, 131А",
+                'img': "./img/153.jpg",
+                'c_img': './img/153.1.jpg',
+                'c_date': '10.10.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.58394,54.71226]
+            }
+        },
+        {
+            "type": "Feature", "id": "154",
+            "properties": {
+                'date': "14.10.2019",
+                "title": "Чернышевского, 72А",
+                'img': "./img/154.jpg",
+                'c_img': './img/154.1.jpg',
+                'c_date': '14.10.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.46337,54.72568]
+            }
+        },
+        {
+            "type": "Feature", "id": "155",
+            "properties": {
+                'date': "14.10.2019",
+                "title": "Мира, 142Д",
+                'img': "./img/155.jpg",
+                'c_img': './img/155.1.jpg',
+                'c_date': '14.10.2019',
+                "status": 2
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.450191,54.721029]
             }
         },
     ]
