@@ -1731,7 +1731,7 @@ trashData = {
             "type": "Feature", "id": "146",
             "properties": {
                 'date': "22.08.2019",
-                "title": "Тельмана 82",
+                "title": "Тельмана 15а",
                 'img': "./img/146.jpg",
                 'c_img': './img/146.1.jpg',
                 'c_date': '22.08.2019',
@@ -1739,7 +1739,7 @@ trashData = {
             },
             "geometry": {
                 "type": "Point",
-                "coordinates": [20.47759,54.73204] 
+                "coordinates": [20.51908,54.73301] 
             }
         },
     ]
